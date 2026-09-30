@@ -1,0 +1,212 @@
+<Window>
+<MacroControl name="MacroControlItem" width="770" height="490">
+    <VerticalLayout width="770" height="490" bkcolor="#ffffffff" bkcolor="#00dd00ff">
+        <HorizontalLayout width="770" height="490" bkimage="macro/macro_bg.png" padding="0,0,0,0">
+            <!-- 宏列表 -->
+            <VerticalLayout name="macro_name_tab" width="177" height="490" bordersize="0" bkcolor="#00ffffff" padding="15,0,0,0" bordercolor="#FF333333">
+				<!--宏名列表-->
+				<ListEx name="macro_name_list" vscrollbar="true" hscrollbar="false" style="list_style" itemalign="center" scrollstepsize="50" height="179" padding="0,28,0,0">
+					<ListHeader height="31" menu="true" mouse="false">
+						<ListContainerHeaderItem text="macro_name_label_text" width="177" height="28" mouse="false" textcolor="#FFFFFFFF"
+												 resourcetext="true"
+												 editable="true"
+												 sepwidth="1"/>
+					</ListHeader>
+				</ListEx>
+				<!--鼠标事件 宏名列表-->
+				<VerticalLayout width="177" height="260"  padding="0,10,0,0">
+					<!--鼠标事件-->
+					<VerticalLayout width="177" height="150" name="mouse_move_layout" enabled="false">
+						<Label  text="macro_btn_shubiao" textcolor="#FFdadada" resourcetext="true" width="177" height="20" textpadding="0,0,0,0"/>	
+						<VerticalLayout  width="177" padding="0,0,0,0"  childpadding="3">
+							<HorizontalLayout width="177" height="30" padding="0,0,0,0">
+								<Button name="macro_inset_moveleftkey_btn" style="button_style" width="130" height="28" text="mouse_move_to_left_text" align="center"  resourcetext="true" padding="0,1,0,0" />
+										
+								<Edit name="mouse_x_left_edit" float="false" pos="145,5,0,0" style="edit_style" width="46" height="30" text="1" padding="1,0,0,0" numberonly="true"  min="1" max="255"/>
+							</HorizontalLayout>	
+							<HorizontalLayout width="177" height="30" >
+								<Button name="macro_inset_moverightkey_btn" width="130" style="button_style" height="28" align="center" text="mouse_move_to_right_text" resourcetext="true" padding="0,1,0,0"/>
+										
+								<Edit name="mouse_x_right_edit" float="false" pos="145,5,0,0" style="edit_style" width="46" height="30" padding="1,0,0,0" text="1" numberonly="true" min="1" max="255"/>
+							</HorizontalLayout>
+							
+							<HorizontalLayout width="177" height="30" >
+								<Button name="macro_inset_moveupkey_btn" style="button_style" width="130" height="28" align="center" text="mouse_move_to_up_text" resourcetext="true" padding="0,1,0,0" />
+								<Edit name="mouse_y_up_edit" float="false" pos="145,5,0,0" style="edit_style"  width="46" height="30" padding="1,0,0,0"  text="1" numberonly="true" min="1" max="255"/>
+							</HorizontalLayout>
+							<HorizontalLayout width="177" height="30"  >
+								<Button name="macro_inset_movedownkey_btn"  style="button_style" width="130" height="30" align="center" text="mouse_move_to_down_text" resourcetext="true" />
+										
+								<Edit name="mouse_y_down_edit" float="false" pos="145,5,0,0" style="edit_style" width="46" height="30" padding="1,0,0,0"  text="1" numberonly="true" min="1" max="255"/>
+							</HorizontalLayout>														
+						</VerticalLayout>
+					</VerticalLayout>
+					<Edit name="macro_edit_macroname" style="edit_style"  height="30"  width="177" padding="0,34,0,0" maxchar="10"/>
+					<HorizontalLayout  height="30" width="177" bkcolor="#FF17393c" padding="0,10,0,0">
+						<!-- 添加/删除 -->
+						<Button name="macro_btn_export" resourcetext="true" tooltip="profile_export_text" padding="0,0,0,0" enabled="false"
+								normalimage="file='common/profile_export_normal.png'"
+								hotimage="file='common/profile_export_hot.png'"
+								pushedimage="file='common/profile_export_down.png'" 
+								disabledimage="file='common/profile_export_disable.png'"
+								width="30" height="30"/>
+						<Button name="macro_btn_name_sub" textcolor="#FF000000" tooltip="profile_delete_text" enabled="false"     
+								normalimage="common/profile_macrosub_normal.png"
+								hotimage="common/profile_macrosub_hot.png"
+								pushedimage="common/profile_macrosub_down.png"
+								disabledimage="common/profile_macrosub_disable.png" width="30" height="30" padding="5,0,0,0" resourcetext="true"/>
+								
+						<Button name="macro_btn_name_add" textcolor="#FF000000" tooltip="profile_add_text"
+								normalimage="file='common/profile_add_normal.png'"
+								hotimage="file='common/profile_add_hot.png'"
+								pushedimage="file='common/profile_add_down.png'"
+								disabledimage="file='common/profile_add_disable.png'"
+								width="30" height="30" resourcetext="true" padding="5,0,0,0"/>
+						
+						<!-- 更改宏名 -->
+						<Button name="macro_btn_name_edit" textcolor="#FF000000" visible="true" tooltip="macro_btn_rename_text" enabled="false"
+								normalimage="common/profile_editname_normal.png"
+								hotimage="common/profile_editname_hot.png"
+								pushedimage="common/profile_editname_down.png"
+								disabledimage="common/profile_editname_disable.png"
+								width="30" height="30" padding="5,0,0,0" resourcetext="true"/>   
+						
+						<Button name="macro_btn_import" tooltip="profile_import_text" padding="5,0,0,0"
+								resourcetext="true"
+								normalimage="file='common/profile_import_normal.png'"
+								hotimage="file='common/profile_import_hot.png'"
+								pushedimage="file='common/profile_import_down.png'" 
+								disabledimage="file='common/profile_import_disable.png'" 
+								width="30" height="30"/>								
+								
+					</HorizontalLayout>
+				</VerticalLayout>
+				
+            </VerticalLayout>
+
+            <!-- 右侧 -->
+            <VerticalLayout name="macro_action_layout" bkcolor="#00ffffff" enabled="false" width="542" height="462" padding="13,28,0,0" bordercolor="#FF333333"  bordersize="0">
+				<!-- 动作列表 -->
+				<HorizontalLayout width="542" height="403" bordersize="0" bordercolor="#FF333333">
+					<!--宏列表-->
+					<List name="macro_action_list" width="542" height="403" vscrollbar="true" style="list_style" itemvalign="vcenter" scrollstepsize="30" bordersize="1" bordercolor="#FF333333" inset="1,0,1,1">
+						<!-- 列表头 -->
+						<ListHeader width="542" height="26" menu="true" mouse="false" bordercolor="#FF2a2b2a"
+									bordersize="1">
+							<ListHeaderItem text="macro_list_header_key_text" mouse="false" textcolor="#FFdadada" bkcolor="#FF009089" scale="40"
+											bordercolor="#FF2a2b2a" bordersize="1" sepwidth="1" resourcetext="true"/>
+							<ListHeaderItem text="macro_list_header_action_text" mouse="false" textcolor="#FFdadada" bkcolor="#FF009089" scale="30"
+											bordercolor="#FF2a2b2a" bordersize="1" sepwidth="1" resourcetext="true"/>
+							<ListHeaderItem text="macro_list_header_delay_text" mouse="false" textcolor="#FFdadada" bkcolor="#FF009089" scale="30"
+											bordercolor="#FF2a2b2a" bordersize="1" sepwidth="1" resourcetext="true"/>
+						</ListHeader>
+					</List>
+					<!-- 操作 -->					
+				</HorizontalLayout>
+				<!--宏动作操作-->
+				<HorizontalLayout width="542" height="30" bkcolor="#FF17393c" padding="0,10,0,0">
+					<!-- 开始/停止录制 -->
+					<VerticalLayout width="55" height="30" childpadding="2" padding="0,0,0,0">
+						<Button name="macro_btn_starredio" tooltip="macro_btn_star_redio_text"
+								width="50" height="30" padding="0,0,0,0" resourcetext="true"
+								normalimage="macro/rec_normal.png"
+								hotimage="macro/rec_hot.png"
+								pushedimage="macro/rec_down.png"
+								disabledimage="macro/rec_disabled.png"/>
+						<RedioMacroButton name="macro_btn_stopredio" tooltip="macro_btn_stop_redio_text" visible="false"
+								width="50" height="30" padding="0,0,0,0" resourcetext="true" 
+								redioimage="macro/stop_normal.png"
+								normalimage="macro/stop_normal.png"
+								hotimage="macro/stop_hot.png"
+								pushedimage="macro/stop_down.png"
+								disabledimage="macro/stop_disabled.png"/>
+					</VerticalLayout>
+					<!--录制选项-->
+					<HorizontalLayout width="240" height="30" name="macro_tab_macrodelay_edit" padding="10,0,0,0">
+						<!-- 录制选项 -->
+						<HorizontalLayout width="240" height="30" bkcolor="#00ffffff" padding="0,0,0,0">
+							<HorizontalLayout width="240" height="30">
+								<CheckBox name="macro_check_time" style="checkbox_style" style="label_style" width="140" text="redio_constant_time" align="left" padding="0,0,0,0" resourcetext="true" height="30" padding="1,2,0,0" textpadding="17,0,0,0"/>
+								<Edit name="macro_fixed_time_edit" height="28" style="edit_style" numberonly="true" maxchar="5" padding="0,1,0,0" width="55"/>
+								<Label style="label_style" text="ms" width="30" height="29" visible="true" padding="2,1,0,0"/>
+						   </HorizontalLayout>
+						</HorizontalLayout>
+					</HorizontalLayout>
+					<!--宏动作的操作-->
+					<HorizontalLayout name="macro_tab_macroaction_edit" width="260" padding="5,0,0,0"  childpadding="2">
+						<!-- <Control /> -->
+						<Button name="macro_btn_uptop" textcolor="#FF000000" textpadding="6,0,6,0" width="30" padding="5,0,0,0"
+								height="30"
+								resourcetext="true"
+								tooltip="macro_btn_uptop_text"
+								normalimage="macro/up_top_normal.png"
+								hotimage="macro/up_top_over.png"
+								pushedimage="macro/up_top_pushed.png"
+								disabledimage="macro/up_top_disabled.png"/>
+							
+						<Button name="macro_btn_up" textcolor="#FF000000" textpadding="6,0,6,0" width="30" padding="5,0,0,0"
+								height="30"
+								resourcetext="true"
+								tooltip="macro_btn_up_text"
+								normalimage="macro/up_normal.png"
+								hotimage="macro/up_over.png"
+								pushedimage="macro/up_pushed.png"
+								disabledimage="macro/up_disabled.png"/>   
+						<Button name="macro_btn_down" textcolor="#FF000000" textpadding="6,0,6,0" width="30" padding="5,0,0,0"
+								height="30"
+								resourcetext="true"
+								tooltip="macro_btn_down_text"
+								normalimage="macro/down_normal.png"
+								hotimage="macro/down_over.png"
+								pushedimage="macro/down_pushed.png"
+								disabledimage="macro/down_disabled.png"/>
+						<Button name="macro_btn_downbottom" textcolor="#FF000000" textpadding="6,0,6,0" padding="5,0,0,0"
+								width="30" height="30"
+								resourcetext="true"
+								tooltip="macro_btn_downbottom_text"
+								normalimage="macro/down_bottom_normal.png"
+								hotimage="macro/down_bottom_over.png"
+								pushedimage="macro/down_bottom_pushed.png"
+								disabledimage="macro/down_bottom_disabled.png"/>
+						<Button name="macro_btn_delete" textcolor="#FF000000" textpadding="6,0,6,0" padding="5,0,0,0"
+								width="30" height="30"
+								resourcetext="true"
+								tooltip="profile_delete_text"
+								normalimage="macro/delete_normal.png"
+								hotimage="macro/delete_over.png"
+								pushedimage="macro/delete_pushed.png"
+								disabledimage="macro/delete_disabled.png"/>
+						<Button name="macro_btn_deleteall" textcolor="#FF000000" textpadding="6,0,6,0" padding="5,0,0,0"
+								width="30" height="30"
+								resourcetext="true"
+								tooltip="macro_btn_deleteall_text"
+								normalimage="macro/clear_normal.png"
+								hotimage="macro/clear_over.png"
+								pushedimage="macro/clear_pushed.png"
+								disabledimage="macro/clear_disabled.png"/>
+									
+						<Button name="macro_btn_save" resourcetext="true" visible="false" padding="5,0,0,0"
+								tooltip="macro_btn_save_text"
+								normalimage="common/profile_save_normal.png"
+								hotimage="common/profile_save_hot.png"
+								pushedimage="common/profile_save_down.png"
+								disabledimage="common/profile_save_disable.png"
+								width="30" height="30"/>
+						<Button name="macro_btn_cancel" resourcetext="true" visible="false" padding="6,0,0,0"
+								resourcetext="true"
+								tooltip="macro_btn_no_save_text"
+								normalimage="common/profile_cancel_normal.png"
+								hotimage="common/profile_cancel_hot.png"
+								pushedimage="common/profile_cancel_down.png"
+								disabledimage="common/profile_cancel_disable.png"
+							    width="30" height="30"/>
+						<Control whith="20" />
+							<!--鼠标事件-->						
+					</HorizontalLayout>
+					
+				</HorizontalLayout>																			
+            </VerticalLayout>            
+        </HorizontalLayout>
+    </VerticalLayout>
+</MacroControl>
+</Window>

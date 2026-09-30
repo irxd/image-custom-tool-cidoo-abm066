@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+   
+	<HorizontalLayout height="50" padding="0,0,0,0" childpadding="5" visible="true" > 
+		<Label name="text1" text="Cycle" cursor="hand" font="6" textcolor="#FF0099ff"/>
+	    <Edit  name="delay_edit" align="center" enabled="true" textcolor="#FF0099ff" nativebkcolor="#FF000000" numberonly="true" width="60" height="20" maxchar="3" bordersize="1" borderround="3,3" bkcolor="#ff000000" padding="0,1,0,0"/>
+		<Label name="text2" text="times"  height="23"  font="6" textcolor="#FF0099ff"/>
+	</HorizontalLayout>   
+
+</Window>

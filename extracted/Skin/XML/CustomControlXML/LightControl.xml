@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<LightControl name="LightControlItem" width="770" height="190" padding="0,0,0,0" bkcolor="#FF285155">
+		<!--布局左侧-->
+		<VerticalLayout width="301" padding="7,11,0,0" >
+			<!--灯光模式-->
+			<Label height="30" text="led_mode_text" style="label_style" resourcetext="true" visible="false" />
+			<HorizontalLayout name="lighteffect_layout" height="30" padding="0,0,0,0">
+				<Combo name="light_combo_modeSelect" style="combo_style" width="251" height="30" itemtextpadding="0,6,0,0" itemalign="center" keyboard="false"
+					   dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;" scrollselect="false" itemtextpadding="5,5,0,0" itemalign="left">
+				</Combo>
+				<!--同步按钮-->
+				<Button name="deng_same_mode" tooltip="sync_mode_text" textcolor="#FFFFFFFF" textpadding="6,0,6,0" style="colortab_style" width="30" height="30"
+					normalimage="file='common/same_mode_normal.png'"
+					hotimage="file='common/same_mode_hot.png'"
+					pushedimage="file='common/same_mode_down.png'" 
+					disabledimage="file='common/same_mode_disable.png'"
+				    autocalcwidth="false" padding="5,0,0,0" visible="false" resourcetext="true"/>
+			</HorizontalLayout>
+			<!--亮度-->
+			<VerticalLayout name="deng_light_layout" width="251" height="41" padding="0,18,0,0">
+				<Label text="light_brightness_text" style="label_style" glowsize="0" height="14" resourcetext="true"/>
+				<Slider name="deng_light_slider" enabled="true" padding="3,13,0,0" width="250" height="14" value="3" min="0" max="4" style="slider_style"/>
+			</VerticalLayout>
+			<!--速度-->
+			<VerticalLayout name="deng_speed_layout" width="251" height="41" padding="0,18,0,0">
+				<Label text="light_speed_text" style="label_style" glowsize="0" height="14" resourcetext="true"/>
+				<Slider name="deng_speed_slider" width="250" height="14" style="slider_style" enabled="true" padding="3,13,0,0" value="3" min="0" max="4"/>
+			</VerticalLayout>
+			<!--自定义-->
+			<VerticalLayout name="lightcustom_layout" height="65" padding="0,5,0,0" visible="false">
+				
+				<Combo name="light_combo_custommodeSelect" style="combo_style" width="251" height="30" padding="0,0,0,0" itemtextpadding="0,6,0,0" itemalign="center" keyboard="false"
+					dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;" scrollselect="false" itemtextpadding="3,5,0,0" itemalign="left">
+					<ListLabelElement text="light_custom_1_text" userdata="0" height="35" resourcetext="true"/>  
+					<ListLabelElement text="light_custom_2_text" userdata="1" height="35" resourcetext="true"/>  
+					<ListLabelElement text="light_custom_3_text" userdata="2" height="35" resourcetext="true"/> 
+					<ListLabelElement text="light_custom_4_text" userdata="3" height="35" resourcetext="true"/> 
+					<ListLabelElement text="light_custom_5_text" userdata="4" height="35" resourcetext="true"/>
+					
+				</Combo>
+				<HorizontalLayout  height="30" childpadding="2" padding="0,5,0,0" >
+					<Button name="custom_bright_color_btn" style="button_style"  align="center" width="120" height="30" text="light_custom_bright_text" resourcetext="true" padding="0,0,0,0" />
+					<Button name="custom_off_color_btn" style="button_style"  align="center" width="120" height="30" padding="10,0,0,0" text="light_custom_off_text" resourcetext="true" font="8"/>
+				</HorizontalLayout>
+			</VerticalLayout>
+			
+			<!--众志成城灯效combo-->
+			<VerticalLayout name="light_combo_ZZCCmodeSelectLayout" width="251" height="41" padding="0,20,0,0" visible="false">
+				<Combo name="light_combo_ZZCCmodeSelect" style="combo_style" width="180" height="30" padding="0,0,0,0" itemtextpadding="0,6,0,0" itemalign="center" keyboard="false"
+					dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;" scrollselect="false" itemtextpadding="3,5,0,0" itemalign="left">
+					<ListLabelElement text="light_custom_1_text" userdata="0" height="35" resourcetext="true" selected="true"/>  
+					<ListLabelElement text="light_custom_2_text" userdata="1" height="35" resourcetext="true"/>  
+					<ListLabelElement text="light_custom_3_text" userdata="2" height="35" resourcetext="true"/> 
+					<ListLabelElement text="light_custom_4_text" userdata="3" height="35" resourcetext="true"/> 
+				</Combo>				
+			</VerticalLayout>
+			
+			<VerticalLayout name="light_combo_AudiomodeSelectLayout" width="251" height="61" padding="0,20,0,0" visible="false">
+				<Combo name="light_combo_audiomodeSelect" style="combo_style" width="180" height="30" padding="0,0,0,0" itemtextpadding="0,6,0,0" itemalign="center" keyboard="false"
+					dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;" scrollselect="false" itemtextpadding="3,5,0,0" itemalign="left">
+					<ListLabelElement text="light_custom_1_text" userdata="0" height="35" resourcetext="true" selected="true"/>  
+					<ListLabelElement text="light_custom_2_text" userdata="1" height="35" resourcetext="true"/>  
+					<ListLabelElement text="light_custom_3_text" visible="false"userdata="2" height="35" resourcetext="true"/> 
+					<ListLabelElement text="light_custom_3_text" userdata="3" height="35" resourcetext="true"/> 
+					<ListLabelElement text="light_custom_5_text"  visible="false" userdata="4" height="35" resourcetext="true"/> 
+					<ListLabelElement text="light_custom_4_text" userdata="4" height="35" resourcetext="true"/> 
+
+				</Combo>
+				<HorizontalLayout width="180"  padding="0,5,0,0" >
+					<Label text="music_setting_text" style="label_style" glowsize="0" height="14" width="80" padding="0,3,0,0" resourcetext="true"/>
+					<Button name="music_setting_btn"  width="19" height="19"  padding="10,0,0,0"
+					normalimage="file='common/music style_normal.png'"
+					hotimage="file='common/music style_hot.png'"
+					pushedimage="file='common/music style_down.png'" 
+					disabledimage="file='common/music style_disable.png'" />
+				</HorizontalLayout >									
+			</VerticalLayout>
+		</VerticalLayout>
+		
+		<TabLayout name="light_color_tablayout" width="430" >
+			<HorizontalLayout >
+				<!--布局中间-->
+				<VerticalLayout  name="light_color_layout" width="228" padding="1,11,0,0"  >
+					<!--预设值-->
+					<VerticalLayout width="228" height="55" padding="0,0,0,0" name="deng_color_layout">
+						<HorizontalLayout height="24" padding="0,0" childpadding="0">
+							<Button name="color_option_0" style="color_option_style" bkcolor="#FFFF0000" selectedbkcolor="#FFFF0000" width="24" height="24" />
+							<Button name="color_option_1" style="color_option_style" padding="10,0,0,0" bkcolor="#FFFF7200" selectedbkcolor="#FFFF7200" width="24" height="24"/>
+							<Button name="color_option_2" style="color_option_style" padding="10,0,0,0" bkcolor="#FFFFF005" selectedbkcolor="#FFFFF005" width="24" height="24"/>
+							<Button name="color_option_3" style="color_option_style" padding="10,0,0,0" bkcolor="#FF00d70F" selectedbkcolor="#FF00d70F" width="24" height="24"/>
+							<Button name="color_option_4" style="color_option_style" padding="10,0,0,0" bkcolor="#FF0099FF" selectedbkcolor="#FF0099FF" width="24" height="24"/>
+							<Button name="color_option_5" style="color_option_style" padding="10,0,0,0" bkcolor="#FF3153FF" selectedbkcolor="#FF3153FF" width="24" height="24"/>
+							<Button name="color_option_6" style="color_option_style" padding="10,0,0,0" bkcolor="#FF5e01d2" selectedbkcolor="#FF5e01d2" width="24" height="24"/>
+						</HorizontalLayout>	
+						<HorizontalLayout height="24" padding="0,7"  childpadding="0">
+							<Button name="color_option_7" style="color_option_style" bkcolor="#FFee00f1" selectedbkcolor="#FFee00f1" width="24" height="24"/>
+							<Button name="color_option_8" style="color_option_style" padding="10,0,0,0" bkcolor="#FFff008a" selectedbkcolor="#FFff008a" width="24" height="24"/>
+							<Button name="color_option_9" style="color_option_style" padding="10,0,0,0" bkcolor="#FFffa800" selectedbkcolor="#FFffa800" width="24" height="24"/>
+							<Button name="color_option_10" style="color_option_style" padding="10,0,0,0" bkcolor="#FF8dff8d" selectedbkcolor="#FF8dff8d" width="24" height="24"/>
+							<Button name="color_option_11" style="color_option_style" padding="10,0,0,0" bkcolor="#FF3defff" selectedbkcolor="#FF3defff" width="24" height="24"/>
+							<Button name="color_option_12" style="color_option_style" padding="10,0,0,0" bkcolor="#FF004891" selectedbkcolor="#FF004891" width="24" height="24" />							
+							<!-- 基础/混色 -->
+							<HorizontalLayout name="deng_7colorselect_layout" height="24" width="24" childpadding="2" padding="10,0,0,0">
+								<CheckBox name="deng_7color_check" style="color_option_style" bkimage="common/base.png" height="24" width="24"/>
+							</HorizontalLayout>
+						</HorizontalLayout>
+					</VerticalLayout>
+					<!--R G B输入框-->
+			<HorizontalLayout name="deng_rgb_layout" height="25" width="228" padding="0,21,0,0" bkimage="file='control/colorground.png'" >
+						
+							<Label name="deng_label_R" text="R" style="label_style" width="20" align="center" glowsize="0" visible="false" />	
+							<Edit name="deng_edit_R" style="rgb_edit_style"  align="center" numberonly="true" width="30" height="30" maxchar="3" font="7"  padding="38,0,0,0"  />
+						
+						
+							<Label name="deng_label_G" text="G" style="label_style" width="20" align="center" glowsize="0" visible="false" />	
+							<Edit name="deng_edit_G" style="rgb_edit_style" align="center" numberonly="true" width="30" height="30" maxchar="3" font="7"	padding="36,0,0,0"  />
+						
+						
+							<Label name="deng_label_B" text="B" style="label_style" width="20" align="center" glowsize="0" visible="false" />	
+							<Edit name="deng_edit_B" style="rgb_edit_style" align="center" numberonly="true" width="30" height="30" maxchar="3" font="7"  padding="44,0,0,0" />
+						
+					</HorizontalLayout>
+					<!--方向-->
+					<VerticalLayout name="deng_fx_layout" height="60" width="228" padding="0,2,0,0" >
+						<VerticalLayout  height="60" childpadding="2" width="228" >
+
+							<CheckBox name="deng_FXL_check" style="checkbox_style" style="label_style" align="left" width="145" height="25" text="light_set_right_to_left_text" resourcetext="true" padding="0,1,0,0" textpadding="15,0,0,0"/>
+
+					 
+							<CheckBox name="deng_FXR_check" style="checkbox_style" style="label_style" align="left" width="145" height="25" padding="0,1,0,0" text="light_set_left_to_right_text" resourcetext="true"  textpadding="15,0,0,0"/>
+
+						</VerticalLayout>
+					</VerticalLayout>	
+				</VerticalLayout>
+				<!--布局右侧-->
+			
+				<VerticalLayout width="180" padding="21,11,0,0" >
+				<!-- 调色板 -->
+					<VerticalLayout name="colorpallet_layout">
+						<HorizontalLayout width="180" height="128" >
+							<ColorPalette name="deng_Color_Pallet" width="180" height="128" palletheight="111" barheight="15" padding="0,0,0,0" thumbimage="common/cursor.png" />
+						
+						</HorizontalLayout>	
+						<VerticalLayout height="40" >
+							<HorizontalLayout height="30" width="180" padding="0,5,0,0">
+								<Button name="deng_colordp_btn" height="24" width="24" bkcolor="#FFff0600" />
+								<Label name="deng_label_Color_dp" text="color_lump_text" style="label_style" glowsize="0" padding="5,0,0,0" resourcetext="true"/>
+							</HorizontalLayout>
+							<!--数值-->
+						</VerticalLayout>
+					</VerticalLayout>	
+				</VerticalLayout>
+			</HorizontalLayout>
+			
+			<HorizontalLayout >    <!--音乐律动模式 效果设定-->
+				<VerticalLayout  name="light_audiocolor_layout" width="228" padding="1,11,0,0"  >
+					
+					<!--预设值-->
+					<VerticalLayout width="228" height="86" padding="0,0,0,0" name="audio_color_layout">
+						<HorizontalLayout height="24" padding="0,0" childpadding="0">
+							<Button name="audiocolor_option_0" style="color_option_style" bkcolor="#FFFF0000" selectedbkcolor="#FFFF0000" width="24" height="24" />
+							<Button name="audiocolor_option_1" style="color_option_style" padding="10,0,0,0" bkcolor="#FFFF7200" selectedbkcolor="#FFFF7200" width="24" height="24"/>
+							<Button name="audiocolor_option_2" style="color_option_style" padding="10,0,0,0" bkcolor="#FFFFF005" selectedbkcolor="#FFFFF005" width="24" height="24"/>
+							<Button name="audiocolor_option_3" style="color_option_style" padding="10,0,0,0" bkcolor="#FF00d70F" selectedbkcolor="#FF00d70F" width="24" height="24"/>
+							<Button name="audiocolor_option_4" style="color_option_style" padding="10,0,0,0" bkcolor="#FF0099FF" selectedbkcolor="#FF0099FF" width="24" height="24"/>
+							<Button name="audiocolor_option_5" style="color_option_style" padding="10,0,0,0" bkcolor="#FF3153FF" selectedbkcolor="#FF3153FF" width="24" height="24"/>
+							<Button name="audiocolor_option_6" style="color_option_style" padding="10,0,0,0" bkcolor="#FF5e01d2" selectedbkcolor="#FF5e01d2" width="24" height="24"/>
+						</HorizontalLayout>	
+						<HorizontalLayout height="24" padding="0,7"  childpadding="0">
+							<Button name="audiocolor_option_7" style="color_option_style" bkcolor="#FFee00f1" selectedbkcolor="#FFee00f1" width="24" height="24"/>
+							<Button name="audiocolor_option_8" style="color_option_style" padding="10,0,0,0" bkcolor="#FFff008a" selectedbkcolor="#FFff008a" width="24" height="24"/>
+							<Button name="audiocolor_option_9" style="color_option_style" padding="10,0,0,0" bkcolor="#FFffa800" selectedbkcolor="#FFffa800" width="24" height="24"/>
+							<Button name="audiocolor_option_10" style="color_option_style" padding="10,0,0,0" bkcolor="#FF8dff8d" selectedbkcolor="#FF8dff8d" width="24" height="24"/>
+							<Button name="audiocolor_option_11" style="color_option_style" padding="10,0,0,0" bkcolor="#FF3defff" selectedbkcolor="#FF3defff" width="24" height="24"/>
+							<Button name="audiocolor_option_12" style="color_option_style" padding="10,0,0,0" bkcolor="#FF004891" selectedbkcolor="#FF004891" width="24" height="24" />							
+							<!-- 基础/混色 -->
+							<HorizontalLayout name="deng_7audiocolorselect_layout" height="24" width="24" childpadding="2" padding="10,0,0,0">
+								<CheckBox name="deng_7audiocolor_check" style="color_option_style" bkimage="common/base.png" height="24" width="24"/>
+							</HorizontalLayout>
+						</HorizontalLayout>
+						<Button name="Close_bkColor_btn" width="200" height="24"  padding="0,7,0,0"	bkcolor="#FF000000" hotbkcolor="#FF0099FF" pushedbkcolor="#FF0099FF" textcolor="#FFFFFFFF" disabledbkcolor="#FF303030" disabledtextcolor="#FF444444" text="light_set_audio_close_bkcolor_text" resourcetext="true"/>
+					</VerticalLayout>
+					<!--R G B输入框-->
+					<HorizontalLayout height="25" width="228" padding="0,7,0,0" bkimage="file='control/colorground.png'" >
+						
+							<Label name="deng_label_R" text="R" style="label_style" width="20" align="center" glowsize="0" visible="false" />	
+							<Edit name="deng_audioedit_R" style="rgb_edit_style"  align="center" numberonly="true" width="30" height="30" maxchar="3" font="7"  padding="38,0,0,0"  />
+						
+						
+							<Label name="deng_label_G" text="G" style="label_style" width="20" align="center" glowsize="0" visible="false" />	
+							<Edit name="deng_audioedit_G" style="rgb_edit_style" align="center" numberonly="true" width="30" height="30" maxchar="3" font="7"	padding="36,0,0,0"  />
+						
+						
+							<Label name="deng_label_B" text="B" style="label_style" width="20" align="center" glowsize="0" visible="false" />	
+							<Edit name="deng_audioedit_B" style="rgb_edit_style" align="center" numberonly="true" width="30" height="30" maxchar="3" font="7"  padding="44,0,0,0" />
+						
+					</HorizontalLayout>
+					<!--方向-->
+					<VerticalLayout name="deng_fx_layout" height="60" width="228" padding="0,2,0,0" >
+						<VerticalLayout  height="60" childpadding="2" width="228" >
+							<CheckBox name="audio_BkColor_check" style="checkbox_style" style="label_style" align="left" width="145" height="25" text="light_set_audio_Bk_text" resourcetext="true" padding="0,1,0,0" textpadding="15,0,0,0"/>
+							<CheckBox name="audio_FgColor_check" style="checkbox_style" style="label_style" align="left" width="145" height="25" padding="0,1,0,0" text="light_set_audio_Fg_text" resourcetext="true"  textpadding="15,0,0,0"/>
+						</VerticalLayout>
+					
+					</VerticalLayout>	
+				</VerticalLayout>
+				
+				<VerticalLayout width="180" padding="21,11,0,0" >
+				<!-- 调色板 -->
+					<VerticalLayout name="audiocolorpallet_layout">
+						<HorizontalLayout width="180" height="128" >
+							<ColorPalette name="deng_audioColor_Pallet" width="180" height="128" palletheight="111" barheight="15" padding="0,0,0,0" thumbimage="common/cursor.png" />
+						
+						</HorizontalLayout>	
+						<VerticalLayout height="40" >
+							<HorizontalLayout height="30" width="180" padding="0,5,0,0">
+								<Button name="deng_audiocolordp_btn" height="24" width="24" bkcolor="#FFff0600" />
+								<Label name="deng_label_Color_dp" text="color_lump_text" style="label_style" glowsize="0" padding="5,0,0,0" resourcetext="true"/>
+							</HorizontalLayout>
+							<!--数值-->
+						</VerticalLayout>
+					</VerticalLayout>	
+				</VerticalLayout>
+			</HorizontalLayout>
+		</TabLayout>
+		
+		<Control />	
+	</LightControl>
+</Window>

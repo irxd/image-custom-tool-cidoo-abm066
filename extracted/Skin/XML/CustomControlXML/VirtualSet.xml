@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<VerticalLayout width="770" height="490" bkcolor="#FF285155">
+		<!--开关-->
+		<HorizontalLayout width="770" height="288" padding="0,11,0,0" >
+			<VerticalLayout width="165"  padding="0,0,0,0">
+				<!--开关-->
+				<HorizontalLayout height="14" bkcolor="#00ffffff" padding="18,0,0,0">
+					<Label name="MessageTitle" text="Virtual7.1" width="70" height="14" font="7" textcolor="#FFFFFFFF"/>
+					<CheckBox name="VirtualCheck" width="27" height="12" normalimage="file='hs/off.png'" selectedimage="file='hs/on.png'" selected="true" padding="24,0,0,0"/>
+				</HorizontalLayout>
+				<HorizontalLayout height="14" padding="22,83,0,0">
+					<CheckBox name="virtual_model_0" group="virtual_group" width="12" height="12" normalimage="file='Control/checked_disable.png'" selectedimage="file='Control/checked.png'" padding="0,1,0,0"  selected="true"/>
+					<Label width="200" height="14" padding="10,0,0,0" text="音乐模式" resourcetext="false" font="7" textcolor="#ffffffff"/>
+				</HorizontalLayout>
+				<HorizontalLayout height="14" padding="22,42,0,0">
+					<CheckBox name="virtual_model_1" group="virtual_group" width="12" height="12" normalimage="file='Control/checked_disable.png'" selectedimage="file='Control/checked.png'" padding="0,1,0,0"   selected="true"/>
+					<Label width="200" height="14" padding="10,0,0,0" text="游戏模式" resourcetext="false" font="7" textcolor="#ffffffff"/>
+				</HorizontalLayout>
+			</VerticalLayout>
+			<Label width="441" height="288" bkimage="file='HS/roomBK.png'" padding="0,0,0,0"/>
+		</HorizontalLayout>
+		<Label text="room size" height="14" textcolor="#ffffffff" padding="21,0,0,0"/>
+		<HorizontalLayout width="770" height="170" bkcolor="#00ffffff" padding="66,22,0,0">
+			<CheckBox name="room_size_2" group="room_group" selected="true" width="174" height="109" padding="0,0,0,0" normalimage="file='HS/small_room_normal.png'" selectedimage="file='HS/small_room_hot.png'" tooltip="small_room_text" resourcetext="true"/>
+			<CheckBox name="room_size_1" group="room_group" width="174" height="109" padding="48,0,0,0" normalimage="file='HS/middle_room_normal.png'" selectedimage="file='HS/middle_room_hot.png'" tooltip="middle_room_text" resourcetext="true"/>
+			<CheckBox name="room_size_0" group="room_group" width="174" height="109" padding="48,0,0,0" normalimage="file='HS/big_room_normal.png'" selectedimage="file='HS/big_room_hot.png'" tooltip="big_room_text" resourcetext="true"/>
+		</HorizontalLayout>
+	</VerticalLayout>   
+</Window>

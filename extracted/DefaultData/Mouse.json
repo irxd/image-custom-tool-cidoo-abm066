@@ -1,0 +1,378 @@
+{
+   "AppLink" : false,
+   "AppName" : "",
+   "AppPath" : "",
+   "Device" : [
+      {
+         "CorrectInfo" : null,
+         "DPIStages" : {
+            "StageActive" : 1,
+            "StageCount" : 0,
+            "StageDPIs" : [
+               {
+                  "StageActive" : 1,
+                  "StageColorB" : 0,
+                  "StageColorG" : 0,
+                  "StageColorR" : 255,
+                  "StageDPIX" : 6,
+                  "StageDPIY" : 1600,
+                  "StageIndex" : 2,
+                  "StageXY" : 0
+               },
+               {
+                  "StageActive" : 1,
+                  "StageColorB" : 0,
+                  "StageColorG" : 255,
+                  "StageColorR" : 0,
+                  "StageDPIX" : 10,
+                  "StageDPIY" : 3200,
+                  "StageIndex" : 2,
+                  "StageXY" : 0
+               },
+               {
+                  "StageActive" : 1,
+                  "StageColorB" : 255,
+                  "StageColorG" : 0,
+                  "StageColorR" : 0,
+                  "StageDPIX" : 14,
+                  "StageDPIY" : 5000,
+                  "StageIndex" : 2,
+                  "StageXY" : 0
+               },
+               {
+                  "StageActive" : 1,
+                  "StageColorB" : 255,
+                  "StageColorG" : 0,
+                  "StageColorR" : 255,
+                  "StageDPIX" : 22,
+                  "StageDPIY" : 6500,
+                  "StageIndex" : 2,
+                  "StageXY" : 0
+               },
+               {
+                  "StageActive" : 1,
+                  "StageColorB" : 0,
+                  "StageColorG" : 255,
+                  "StageColorR" : 255,
+                  "StageDPIX" : 38,
+                  "StageDPIY" : 400,
+                  "StageXY" : 0
+               }
+            ]
+         },
+         "DeviceBasicInfo" : {
+            "DevciesChipmodel" : "VS11M17A",
+            "DeviceNUMInfo" : "eevision_A_ms_001_20180108_ak60",
+            "DeviceName" : "mouse",
+            "DeviceType" : "mouse",
+            "PID" : 4103,
+            "SensorModel" : 0,
+            "VID" : 3141
+         },
+         "KeyList" : [
+            {
+               "Assignment" : 1048832,
+               "DefaultAssignment" : 1048832
+            },
+            {
+               "Assignment" : 1049088,
+               "DefaultAssignment" : 1049088
+            },
+            {
+               "Assignment" : 1049600,
+               "DefaultAssignment" : 1049600
+            },
+            {
+               "Assignment" : 1052672,
+               "DefaultAssignment" : 1052672
+            },
+            {
+               "Assignment" : 1050624,
+               "DefaultAssignment" : 1050624
+            },
+            {
+               "Assignment" : 1245440,
+               "DefaultAssignment" : 1245440
+            },
+            {
+               "Assignment" : 1245696,
+               "DefaultAssignment" : 1245696
+            },
+            {
+               "Assignment" : 1245952,
+               "DefaultAssignment" : 1245952
+            },
+            {
+               "Assignment" : 10492672,
+               "DefaultAssignment" : 10492672
+            },
+            {
+               "Assignment" : 1478657,
+               "DefaultAssignment" : 1478657
+            },
+            {
+               "Assignment" : 1341442,
+               "DefaultAssignment" : 1341442
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            },
+            {
+               "Assignment" : 10485760,
+               "DefaultAssignment" : 10485760
+            }
+         ],
+         "LightInfo" : {
+            "Blue" : 255,
+            "CustomGroup" : 0,
+            "Fx" : 0,
+            "Green" : 255,
+            "Light" : 4,
+            "MultiColor" : true,
+            "OldLedmode" : 0,
+            "Red" : 255,
+            "SelectItem" : 0,
+            "Speed" : 2,
+            "ZZCCLedMode" : 0
+         },
+         "LightList" : null,
+         "MacroInfo" : null,
+         "ReportStages" : {
+            "StageActive" : 3
+         },
+		 "AudioLightInfo" : {
+            "7ColorFlags" : 1,
+            "AudioMode" : 0,
+            "BkColorB" : 0,
+            "BkColorG" : 0,
+            "BkColorR" : 0,
+            "ColorTypeFlags" : 0,
+            "FgColorB" : 255,
+            "FgColorG" : 255,
+            "FgColorR" : 255
+				
+         },
+         "SystemStages" : {
+            "DoubleClickTime" : 5,
+            "MouseSpeed" : 6,
+            "PointerPrecision" : 6,
+            "ScorllPage" : 0,
+            "WheelScorlllinse" : 6
+         }
+      }
+   ],
+   "GameImagePath" : "",
+   "SynchroLight" : {
+      "LightInfo" : {
+         "Blue" : 0,
+         "Green" : 0,
+         "Light" : 3,
+         "MultiColor" : false,
+         "Red" : 255,
+         "SelectItem" : 0,
+         "Speed" : 2
+      },
+      "deviceinfo" : [
+         {
+            "SynchroFlags" : false
+         },
+         {
+            "SynchroFlags" : false
+         },
+         {
+            "SynchroFlags" : false
+         },
+         {
+            "SynchroFlags" : false
+         },
+         {
+            "SynchroFlags" : false
+         },
+         {
+            "SynchroFlags" : false
+         }
+      ]
+   },
+   "game_mode" : "",
+   "game_uuid" : "",
+   "profileUUID" : "2021_08_13_14_19_39_219",
+   "profilename" : "123123"
+}
+

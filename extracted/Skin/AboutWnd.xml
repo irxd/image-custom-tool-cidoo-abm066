@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Window size="472,292" caption="0,0,0,40" gdiplustext="false" textrenderinghint="1">
+	<HorizontalLayout name="root" width="472" height="292" bkcolor="#FF032d2b" bordersize="1" bordercolor="#FF38757B">
+		<Label width="1" height="290" bkcolor="#FF3a3a3a" padding="1,1,0,0" />	
+		<Label name="text_test" style="label_style" glowsize="0" height="0" visible="false" resourcetext="true"/>		
+		<VerticalLayout width="468" height="290" padding="0,1,0,0" >
+			<Label width="468" height="1" bkcolor="#FF3a3a3a"  />
+			
+			<Label bkimage="file='main/logo.png'" width="268" height="80" padding="95,64,0,0"/>
+			<Label name="software_ver_label" text="软件版本1.0" width="468" textcolor="#FFbbbbbb" padding="0,24,0,0" align="center"/>
+			<Label text="company_copyright_text" resourcetext="true" width="468" textcolor="#FFbbbbbb" padding="0,24,0,0" align="center"/>
+			<Label text="company_name_text" resourcetext="true" width="468" textcolor="#FFbbbbbb" padding="0,10,0,0" align="center"/>	
+			<Control />
+			<Label width="468" height="1" bkcolor="#FF3a3a3a"  />
+		</VerticalLayout>
+		<Label width="1" height="290" bkcolor="#FF3a3a3a" padding="0,1,0,0" />
+		
+		<Label text="about_text" textcolor="#FFbbbbbb" resourcetext="true" float="true" pos="12,15,0,0" width="400" height="30"/>		
+		<Button name="closebtn" float="true" pos="435,15,30,30" width="20" height="20" 
+			normalimage="file='sysbtn/btn_close_normal.png'"
+			hotimage="file='sysbtn/btn_close_hot.png'" 
+			pushedimage="file='sysbtn/btn_close_down.png'"  />				
+	</HorizontalLayout>	
+
+</Window>

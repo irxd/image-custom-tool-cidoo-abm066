@@ -1,0 +1,70 @@
+{
+   "AppLink" : false,
+   "AppName" : "",
+   "AppPath" : "",
+   "Device" : [
+      {
+         "CorrectInfo" : [
+            {
+               "CorrectName" : "13424",
+               "CorrectSelect" : true
+            }
+         ],
+         "DPIStages" : null,
+         "DeviceBasicInfo" : {
+            "DevciesChipmodel" : "VS11M06A",
+            "DeviceNUMInfo" : "eevision_A_mp_001_20180108_ak60",
+            "DeviceName" : "mousepad",
+            "DeviceType" : "mousepad",
+            "PID" : 4103,
+            "SensorModel" : 0,
+            "VID" : 3141
+         },
+         "KeyList" : null,
+		 "LightInfo" : {
+            "Blue" : 0,
+            "Green" : 0,
+            "Light" : 3,
+            "MultiColor" : false,
+            "Red" : 255,
+            "SelectItem" : 0,
+            "Speed" : 2
+         }         
+      }
+   ],
+   "GameImagePath" : "",
+   "SynchroLight" : {
+      "LightInfo" : {
+         "Blue" : 0,
+         "Green" : 0,
+         "Light" : 3,
+         "MultiColor" : false,
+         "Red" : 255,
+         "SelectItem" : 0,
+         "Speed" : 2
+      },
+      "deviceinfo" : [
+		{
+            "SynchroFlags" : false
+        },
+		{
+            "SynchroFlags" : false
+        },
+		{
+            "SynchroFlags" : false
+        },
+		{
+            "SynchroFlags" : false
+        },
+		{
+            "SynchroFlags" : false
+        },
+		{
+            "SynchroFlags" : false
+        }
+      ]
+   },
+   "game_mode" : "",
+   "game_uuid" : ""
+}
+

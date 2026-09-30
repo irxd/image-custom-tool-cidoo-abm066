@@ -1,0 +1,24 @@
+{
+   "Device" : {
+      "AudioLightInfo" : {
+	     "nAudioStyle" : 0,
+         "nStyleB0" : 0,
+         "nStyleB1" : 0,
+         "nStyleB2" : 5,
+         "nStyleB3" : 5,
+         "nStyleG0" : 5,
+         "nStyleG1" : 5,
+         "nStyleG2" : 0,
+         "nStyleG3" : 0,
+         "nStyleName1" : "The First group",
+         "nStyleName2" : "Second Group",
+         "nStyleName3" : "Third Group",
+         "nStyleName4" : "Fourth Group",
+         "nStyleR0" : 5,
+         "nStyleR1" : 0,
+         "nStyleR2" : 0,
+         "nStyleR3" : 5
+      }
+   }
+}
+

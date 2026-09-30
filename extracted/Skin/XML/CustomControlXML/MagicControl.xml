@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<MagicControl name="MagicControlItem" width="770" height="190" bkcolor="#FF285155">
+		<!--布局左侧-->
+		<VerticalLayout width="770" height="190" padding="0,16,0,0">
+			<HorizontalLayout width="770" height="16" padding="22,0,0,0" >
+				<Option name="magic_enable_option1" width="36" height="36" bkimage="file='hs/magic_voice_normal.png'" selectedimage="file='hs/magic_voice_select.png'" visible="false"/>
+				<Option name="magic_enable_option" style="treenode_kogei_style" width="15" height="15" padding="0,0,0,0" visible="true"/>
+				<Label text="Open Magic" width="600" height="16" vlign="center" style="label_style" padding="8,0,0,0" font="4"/>
+			</HorizontalLayout>
+			<VerticalLayout name="magic_option_layout" padding="100,13,0,0">
+				<HorizontalLayout height="96" padding="0,0,0,0">
+					<Option name="magic_option_1" width="114" height="96"  bkimage="file='hs/magic_monster_normal.png'" selectedimage="file='hs/magic_monster_select.png'"/>
+					<Option name="magic_option_2" width="114" padding="50,0,0,0" height="96" bkimage="file='hs/magic_carton_normal.png'" selectedimage="file='hs/magic_carton_select.png'"/>
+					<Option name="magic_option_3" width="114" height="96" bkimage="file='hs/magic_men_normal.png'" selectedimage="file='hs/magic_men_select.png'" padding="50,0,0,0"/>
+					<Option name="magic_option_4" width="114" height="96" padding="50,0,0,0" bkimage="file='hs/magic_women_normal.png'" selectedimage="file='hs/magic_women_select.png'"/>
+				</HorizontalLayout>	
+				<HorizontalLayout height="30" padding="0,0,0,0">
+					<Label text="Monster" style="label_style" align="center" width="114" font="4"  />
+					<Label text="Cartoon" style="label_style" align="center" width="114" font="4" padding="50,0,0,0"  />
+					<Label text="Men" style="label_style" align="center" width="114" font="4" padding="50,0,0,0" />
+					<Label text="Women" style="label_style" align="center" width="114" font="4" padding="50,0,0,0" />
+				</HorizontalLayout>
+			</VerticalLayout>
+		</VerticalLayout>
+		
+	</MagicControl>
+</Window>

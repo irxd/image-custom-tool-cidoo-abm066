@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window>
+
+
+  <VerticalLayout  name="ScreenView" bkcolor="#FF000000">
+	
+    <!--<HorizontalLayout name="appbar" height="50" inset="25,25"  >
+        <Label name="MessageTitle" valign="vcenter" text="tips_text" style="label_style" font="5" resourcetext="true"/>		
+    </HorizontalLayout>
+    <VerticalLayout inset="0,15,0,10" height="175">
+      <Text name="MessageText" bkcolor="#0000FF00" text= "OK to delete LOOcvdsads game files, delete can not reply to the information sure to delete?" height="150" valign="vcenter" align="center" wordbreak="true" textpadding="25,0,25,0" font="2" textcolor="#FF04FFF3"/>
+    </VerticalLayout>
+    <HorizontalLayout  width="500" height="70" bkcolor="#00FF0000" inset="0,5,0,10">
+      <Control />
+	   <Button name="confirm_btn" width="110" height="35" resourcetext="true" text="ok_text" textcolor="#FFFFFFFF" font="7" 
+			  bkimage="common/ok_btn_normal.png" 
+			  normalimage="common/ok_btn_normal.png"
+			  hotimage="common/ok_btn_hot.png"
+			  pushedimage="common/ok_btn_down.png"
+			  disabledimage="common/ok_btn_disable.png"   padding="10,20,0,0"/>	
+      <Button name="cancel_btn" width="110" height="35"   resourcetext="true"  font="7"  textcolor="#FFFFFFFF" text="cancel_text" 
+			  bkimage="common/cancel_btn_normal.png" 
+			  normalimage="common/cancel_btn_normal.png"
+			  hotimage="common/cancel_btn_hot.png"
+			  pushedimage="common/cancel_btn_down.png"
+			  disabledimage="common/cancel_btn_disable.png"   padding="10,20,0,0"/>
+     
+      <Control width="30"/>
+    </HorizontalLayout>
+	
+	<Button name="closebtn" tooltip="close_text" float="true"  pos="465,10,0,0" width="20" height="20" resourcetext="true" visible="false"
+		  normalimage="file='sysbtn/btn_close_normal.png'"
+		  hotimage="file='sysbtn/btn_close_hot.png'" 
+		  pushedimage="file='sysbtn/btn_close_down.png'"  />-->
+  </VerticalLayout>
+</Window>

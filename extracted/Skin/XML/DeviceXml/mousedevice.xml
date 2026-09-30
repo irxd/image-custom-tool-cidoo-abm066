@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window >
+<EevisionMouseDevice >
+	<Label name="text_test" float="true" pos="0,0" width="0" height="0" resourcetext="true" visible="false"/>
+	<HorizontalLayout name="ms_device" width="1000" height="580">
+		<!--配置文件控件-->
+		<DeviceProfileUI width="190" bkcolor="#00ffffff" padding="18,0,0,0"/> 
+		<!--设备功能切换区域-->
+		<TabLayout name="device_function_switch" vscrollbar="false" width="766" height="510" bkcolor="#00ffffff" padding="8,74,0,0">
+			<VerticalLayout width="766" height="488" >
+				<!--鼠标图的显示-->
+				<HorizontalLayout height="306" bkcolor="#00ffffff" padding="0,0,0,0" >
+					<!-- 鼠标图 -->
+					<VerticalLayout width="766" height="306">
+						<TabLayout name="mouse_device_seting_layout"  visible="true">
+							<SelectPanel name="mouse_device_key_light" width="766" height="300" bkimage="res='ms/mouse.png' dest='293,0,472,300'" padding="0,0,0,0" bkcolor="#00ffffff" SetSepHeight="0">
+								<!-- 第一行 -->
+								<!-- <HorizontalLayout float="true" pos="0,0,1450,490" > -->
+									<!-- 第一列 左-->
+										<DeviceKeyButton name="light_0" style="k_btn_style" float="true"  pos="319,87,0,0" width="7" height="27" visible="true"
+											lightimage="file=&apos;ms/light/mouse2_00.png&apos;" />
+										<DeviceKeyButton name="light_1" style="k_btn_style" float="true"  pos="319,100,0,0" width="8" height="33" visible="true"
+											lightimage="file=&apos;ms/light/mouse2_01.png&apos;" />
+										<DeviceKeyButton name="light_2" style="k_btn_style" float="true"  pos="321,121,0,0" width="10" height="33" visible="true"
+											lightimage="file=&apos;ms/light/mouse2_02.png&apos;" />
+										<DeviceKeyButton name="light_3" style="k_btn_style" float="true"  pos="323,146,0,0" width="11" height="34" visible="true"
+											lightimage="file=&apos;ms/light/mouse2_03.png&apos;" />
+										<DeviceKeyButton name="light_4" style="k_btn_style" float="true"  pos="327,168,0,0" width="9" height="35" visible="true"
+											lightimage="file=&apos;ms/light/mouse2_04.png&apos;" />
+										<DeviceKeyButton name="light_5" style="k_btn_style" float="true"  pos="332,195,0,0" width="5" height="35" visible="true"
+											lightimage="file=&apos;ms/light/mouse2_05.png&apos;" />
+										<DeviceKeyButton name="light_6" style="k_btn_style" float="true"  pos="302,218,0,0" width="35" height="26" visible="true"
+											lightimage="file=&apos;ms/light/mouse2_06.png&apos;" />
+										
+										<DeviceKeyButton name="light_13" style="k_btn_style" float="true"  pos="457,89,0,0" width="6" height="26" visible="true"
+											lightimage="file=&apos;ms/light/mouse2_07.png&apos;" />
+										<DeviceKeyButton name="light_12" style="k_btn_style" float="true"  pos="453,107,0,0" width="8" height="33" visible="true"
+											lightimage="file=&apos;ms/light/mouse2_08.png&apos;" />	
+										<DeviceKeyButton name="light_11" style="k_btn_style" float="true"  pos="447,128,0,0" width="12" height="35" visible="true"
+											lightimage="file=&apos;ms/light/mouse2_09.png&apos;" />
+										<DeviceKeyButton name="light_10" style="k_btn_style" float="true"  pos="442,155,0,0" width="13" height="36" visible="true"
+											lightimage="file=&apos;ms/light/mouse2_10.png&apos;" />	
+										<DeviceKeyButton name="light_9" style="k_btn_style" float="true"  pos="437,180,0,0" width="12" height="33" visible="true"
+											lightimage="file=&apos;ms/light/mouse2_11.png&apos;" />
+										<DeviceKeyButton name="light_8" style="k_btn_style" float="true"  pos="436,195,0,0" width="8" height="34" visible="true"
+											lightimage="file=&apos;ms/light/mouse2_12.png&apos;" />
+										<DeviceKeyButton name="light_7" style="k_btn_style" float="true"  pos="436,218,0,0" width="24" height="30" visible="true"
+											lightimage="file=&apos;ms/light/mouse2_13.png&apos;" />
+										
+									
+									<!-- 第二列 中-->
+																	
+										<DeviceKeyButton name="light_25" style="k_btn_style" float="false" width="79" height="48" visible="false"
+											lightimage="file=&apos;ms/light/25.png&apos;"  visible="false"/>
+										<DeviceKeyButton name="light_24" style="k_btn_style" float="false" width="79" height="48" visible="false"
+											lightimage="file=&apos;ms/light/24.png&apos;"  visible="false"/>
+										<DeviceKeyButton name="light_23" style="k_btn_style" float="false" width="79" height="48" visible="false"
+											lightimage="file=&apos;ms/light/23.png&apos;" visible="false"/>
+										<DeviceKeyButton name="light_22" style="k_btn_style" float="false" width="79" height="48" visible="false"
+											lightimage="file=&apos;ms/light/22.png&apos;" visible="false"/>
+										<DeviceKeyButton name="light_21" style="k_btn_style" float="false" width="79" height="48" visible="false"
+											lightimage="file=&apos;ms/light/21.png&apos;" visible="false"/>
+										<!-- 滚轮 灯 -->
+										<DeviceKeyButton name="light_15" style="k_btn_style" float="true"  pos="380,40,22,50" width="22" height="50" visible="true"
+											lightimage="file=&apos;ms/light/1.png&apos;" />
+										<!-- Logo 灯 -->
+										<DeviceKeyButton name="light_14" style="k_btn_style" float="true"  pos="362,227,0,0" width="50" height="28" visible="true"
+											lightimage="file=&apos;ms/light/logo.png&apos;" />
+											
+										<DeviceKeyButton name="light_18" style="k_btn_style" float="true"  tooltip="logo" usertooltip="DeviceSetInfoDialog.xml"  pos="503,286,64,77" width="64" height="77" visible="false"
+											lightimage="file=&apos;ms/light/18.png&apos;" />
+											
+								
+											
+									<!-- 第3列右-->
+										<DeviceKeyButton name="light_17" style="k_btn_style" float="true"  pos="435,60,30,50" width="30" height="50"
+											lightimage="file=&apos;ms/light/17.png&apos;" visible="false"/>
+										<DeviceKeyButton name="light_16" style="k_btn_style" float="true"  pos="442,75,31,96" width="31" height="96"
+											lightimage="file=&apos;ms/light/16.png&apos;"  visible="false"/>
+										<DeviceKeyButton name="light_20" style="k_btn_style" float="true"  pos="444,135,36,96" width="36" height="96"
+											lightimage="file=&apos;ms/light/15.png&apos;" visible="false"/>
+										<DeviceKeyButton name="light_19" style="k_btn_style" float="true"  pos="444,180,39,96" width="39" height="96"
+											lightimage="file=&apos;ms/light/14.png&apos;" visible="false"/>
+									
+									
+									
+								<DeviceKeyButton name="key_0" width="62" height="130" float="true"  pos="313,0,62,130"  tooltip="left key" usertooltip="DeviceSetInfoDialog.xml" visible="true"
+										bkimage="ms/key_left_normal.png"
+										normalimage="ms/key_left_normal.png"
+										hotimage="ms/key_left_down.png"
+										pushedimage="ms/key_left_down.png"
+										selectedimage="ms/key_left_down.png"
+										disabledimage="ms/key_left_down.png" />
+								<DeviceKeyButton name="key_1" width="58" height="129" float="true"  pos="408,1,58,129"  tooltip="right Key" usertooltip="DeviceSetInfoDialog.xml" visible="true"
+										bkimage="ms/key_right_normal.png"
+										normalimage="ms/key_right_normal.png"
+										hotimage="ms/key_right_down.png"
+										pushedimage="ms/key_right_down.png"
+										selectedimage="ms/key_right_down.png"                                
+										disabledimage="ms/key_right_down.png" />
+								<DeviceKeyButton name="key_2" float="true" pos="377,31,0,0" width="29" height="63" tooltip="mouse wheel" usertooltip="DeviceSetInfoDialog.xml" 
+										bkimage="ms/key_wheel_normal.png" visible="true"
+										normalimage="ms/key_wheel_normal.png"
+										hotimage="ms/key_wheel_down.png"
+										pushedimage="ms/key_wheel_down.png"
+										selectedimage="ms/key_wheel_down.png"
+										disabledimage="ms/key_wheel_down.png"  />
+								<DeviceKeyButton name="key_10" width="12" height="34"  float="true"  pos="317,40,12,34"  tooltip="M key" usertooltip="DeviceSetInfoDialog.xml" visible="true"
+										bkimage="ms/key_m_normal.png"
+										normalimage="ms/key_m_normal.png"
+										hotimage="ms/key_m_down.png"
+										pushedimage="ms/key_m_down.png"
+										selectedimage="ms/key_m_down.png"
+										disabledimage="ms/key_m_down.png" />
+								<DeviceKeyButton name="key_5" width="17" height="21"  float="true"  pos="383,101,12,21"  tooltip="dpi+ key" usertooltip="DeviceSetInfoDialog.xml"
+										bkimage="ms/key_dpi+_normal.png"
+										normalimage="ms/key_dpi+_normal.png"
+										hotimage="ms/key_dpi+_down.png"
+										pushedimage="ms/key_dpi+_down.png"
+										selectedimage="ms/key_dpi+_down.png"
+										disabledimage="ms/key_dpi+_down.png" />
+								<DeviceKeyButton name="key_7" width="17" height="21"  float="true"  pos="383,128,17,21" tooltip="L dpi" usertooltip="DeviceSetInfoDialog.xml"
+										bkimage="ms/key_dpi_L_normal.png"
+										normalimage="ms/key_dpi_L_down.png;"
+										hotimage="ms/key_dpi_L_down.png"
+										pushedimage="ms/key_dpi_L_down.png"
+										selectedimage="ms/key_dpi_L_down.png"
+										disabledimage="ms/key_dpi_L_down.png"/>
+								<DeviceKeyButton name="key_6" width="17" height="21"   float="true"  pos="383,155,17,21"  tooltip="dpi-" usertooltip="DeviceSetInfoDialog.xml"
+										bkimage="ms/key_dpi-_normal.png" 
+										normalimage="ms/key_dpi-_down.png;"
+										hotimage="ms/key_dpi-_down.png"
+										pushedimage="ms/key_dpi-_down.png"
+										selectedimage="ms/key_dpi-_down.png"
+										disabledimage="ms/key_dpi-_down.png" />
+								
+								<DeviceKeyButton name="key_3" width="10" height="39" float="true"  pos="309,97,10,39" tooltip="forward key" usertooltip="DeviceSetInfoDialog.xml"
+										bkimage="ms/key_forward_normal.png"
+										normalimage="ms/key_forward_normal.png"
+										hotimage="ms/key_forward_down.png"
+										pushedimage="ms/key_forward_down.png"
+										selectedimage="ms/key_forward_down.png"
+										disabledimage="ms/key_forward_down.png"/>
+								<DeviceKeyButton name="key_4" width="12" height="41" float="true"  pos="313,134,12,41"  tooltip="back key" usertooltip="DeviceSetInfoDialog.xml"
+										bkimage="ms/key_back_normal.png" 
+										normalimage="ms/key_back_normal.png"
+										hotimage="ms/key_back_down.png"
+										pushedimage="ms/key_back_down.png"
+										selectedimage="ms/key_back_down.png"
+										disabledimage="ms/key_back_down.png" />
+										
+								<DeviceKeyButton name="key_8" width="30" height="31" float="true"  pos="52,230,0,0"  tooltip="back key" usertooltip="DeviceSetInfoDialog.xml" visible="false"
+										bkimage="ms/key_back_normal1.png" 
+										normalimage="ms/key_back_down.png"
+										hotimage="ms/key_back_down.png"
+										pushedimage="ms/key_back_down.png"
+										selectedimage="ms/key_back_down.png"
+										disabledimage="ms/key_back_down.png" />
+																		
+							</SelectPanel>
+						
+							<SelectPanel name="ms_seting_layout_2" width="1000" height="380" bkimage="res='ms/mouse.png' dest='0,25,550,355'" padding="0,0,0,0" SetSepHeight="0">
+														
+									<!--  侧面鼠标灯效-->
+								<DeviceKeyButton name="light_0_0" style="k_btn_style" float="true"  pos="315,25,92,330" width="92" height="330"
+									lightimage="file=&apos;ms/light/mouse2_00.png&apos;" />
+								<DeviceKeyButton name="light_0_1" style="k_btn_style" float="true"  pos="360,25,92,330" width="92" height="330"
+									lightimage="file=&apos;ms/light/mouse2_01.png&apos;" />
+								<DeviceKeyButton name="light_0_2" style="k_btn_style" float="true"  pos="410,24,92,330" width="92" height="330"
+									lightimage="file=&apos;ms/light/mouse2_02.png&apos;" />
+								<DeviceKeyButton name="light_0_3" style="k_btn_style" float="true"  pos="452,26,92,330" width="92" height="330"
+									lightimage="file=&apos;ms/light/mouse2_03.png&apos;" />
+								<DeviceKeyButton name="light_0_4" style="k_btn_style" float="true"  pos="520,0,92,330" width="92" height="330"
+									lightimage="file=&apos;ms/light/mouse2_04.png&apos;" visible="false" />
+								<DeviceKeyButton name="light_0_5" style="k_btn_style" float="true"  pos="575,272,100,44" width="100" height="44"
+									lightimage="file=&apos;ms/light/mouse2_05.png&apos;" visible="false"/>
+								<DeviceKeyButton name="light_0_6" style="k_btn_style" float="true"  pos="625,268,100,44" width="100" height="44"
+									lightimage="file=&apos;ms/light/mouse2_06.png&apos;" visible="false"/>
+								<DeviceKeyButton name="light_0_7" style="k_btn_style" float="true"  pos="675,265,100,40" width="100" height="40"
+									lightimage="file=&apos;ms/light/mouse2_07.png&apos;" visible="false"/>
+								 <!-- 第一行 -->
+								<DeviceKeyButton name="key_9" width="36" height="65" padding="446,18,0,0" tooltip="M8 key" usertooltip="DeviceSetInfoDialog.xml"
+										bkimage="ms/key_m8_normal.png"
+										normalimage="ms/key_m8_normal.png;"
+										hotimage="ms/key_m8_down.png"
+										pushedimage="ms/key_m8_down.png"
+										selectedimage="ms/key_m8_down.png"
+										disabledimage="ms/key_m8_down.png" visible="false"/>
+								
+							</SelectPanel>
+						
+							<VerticalLayout name="ms_seting_layout_3" width="1000" height="480" bkimage="res='mouse2.png' dest='230,79,1220,401'" padding="0,0,0,0" SetSepHeight="0">
+								
+								
+							</VerticalLayout>
+						
+							<VerticalLayout name="ms_seting_layout_4" width="1000" height="480" bkimage="file=&apos;mouse3.png&apos;" padding="0,0,0,0" SetSepHeight="0">
+								
+								
+							</VerticalLayout>
+						
+						</TabLayout>
+						<HorizontalLayout name="mouse_option_layout" width="1000" height="40" padding="0,0,0,0" visible="false">
+							<Control />
+							<Option height="8" width="80" padding="0,5,0,0" name="mouse_device_seting_option_0" selected="false"
+									bkimage="common/huakuai.png"
+									normalimage="common/huakuai.png" 
+									hotimage="common/huakuai1.png"
+									pushedimage="common/huakuai1.png"
+									selectedimage="common/huakuai1.png" />
+							<Option height="8" width="80" padding="10,5,0,0" name="mouse_device_seting_option_1" 
+									bkimage="common/huakuai.png"
+									normalimage="common/huakuai.png" 
+									hotimage="common/huakuai1.png"
+									pushedimage="common/huakuai1.png"
+									selectedimage="common/huakuai1.png" />
+							<Option height="8" width="80" padding="0,5,0,0" name="mouse_device_seting_option_2" visible="false"
+									bkimage="common/huakuai.png"
+									normalimage="common/huakuai.png" 
+									hotimage="common/huakuai1.png"
+									pushedimage="common/huakuai1.png"
+									selectedimage="common/huakuai1.png" />
+							<Option height="8" width="80" padding="0,5,0,0" name="mouse_device_seting_option_3" visible="false"
+									bkimage="common/huakuai.png"
+									normalimage="common/huakuai.png" 
+									hotimage="common/huakuai1.png"
+									pushedimage="common/huakuai1.png"
+									selectedimage="common/huakuai1.png" />
+							<Control />
+						</HorizontalLayout>
+					</VerticalLayout>
+					<Control/>
+				</HorizontalLayout>
+				<Control/>
+				<!-- 下 -->
+				<Label bkimage="file='common/tiap12.png'"  text="anzsz_text" textcolor="#FFf49136" resourcetext="true" width="957" height="38" textpadding="10,0,0,0" visible="false"/>	
+				<!--布局鼠标下侧-->
+				<TabLayout name="device_key_function_switch" height="182" vscrollbar="false" bkcolor="#ff408185">		
+					<VerticalLayout width="766"  height="182" padding="0,0,0,0" inset="0,0,0,0">
+						<LightSetControlUI />
+					</VerticalLayout>
+					
+					<VerticalLayout width="766"  height="182" padding="0,0,0,0" inset="0,0,0,0">
+						<KeySetControlUI />
+					</VerticalLayout>
+					
+				</TabLayout>
+			</VerticalLayout>
+			
+			<VerticalLayout width="766" height="488">
+				<MacroSetControlUI />
+			</VerticalLayout>
+			
+			<VerticalLayout width="766" height="488">
+				<ShootKeySetControlUI />
+			</VerticalLayout>
+			
+			<VerticalLayout width="766" height="488" bkcolor="#FF285155">
+				<!--鼠标其它设定 DPI调节 报告率-->
+				<VerticalLayout width="766" height="488" padding="0,0,0,0">
+					<Button width="1" height="1" visible="true"/><!-- 此项不可删除，获得焦点的作用 -->
+					<!-- 布局上侧 -->
+					<VerticalLayout width="766" height="250" padding="0,13,0,0" >			
+						<!-- DPI -->
+						<Label text="tab_dpi_setting" height="16" style="label_style" glowsize="0" font="4" resourcetext="true" padding="16,0,0,0" />									   
+						<VerticalLayout height="194" width="550" visible="true"  padding="37,16,0,0" >
+							<HorizontalLayout width="550" height="30" padding="0,0,0,0" >
+								<Label name="DPI_rank_0" style="label_style" width="9" height="9" padding="0,10,0,0" visible="false"/>
+								<Label bkimage="ms/DPI/blue.png" width="15" height="15" padding="0,0,0,0" visible="false" padding="0,7,0,0"/>
+								<CheckBox name="DPI_enable_check_0" style="checkbox_style" width="24" height="24" visible="true" padding="0,4,0,0"/>
+								<HorizontalLayout name="DPI_layout_0" width="520" height="30" padding="0,0,0,0" >
+									<Label text="Dpi1" width="50" height="20" style="label_style" font="4" padding="7,5,0,0"/>
+									<Label width="1" height="16" bkcolor="#FF032d2b" padding="10,7,0,0" />
+									<CheckBox name="DPI_select_check_0" style="treenode_kogei_style" width="14" height="14" visible="true" padding="10,7,0,0"/>
+									<Slider name="DPI_slider_0" style="slider_style" enabled="true" padding="10,8" sendmove="true" height="14" value="3" min="0" max="14"/>
+									<Edit name="DPI_edit_0" align="center" style="edit_style" numberonly="true" width="60" height="30" maxchar="5" bordersize="1" borderround="3,3" padding="10,0,0,0"/>	
+									<Button name="DPI_color_option_0" style="color_option_style" bkcolor="#FFFF0000" selectedbkcolor="#FFFF0000" width="30" height="30" padding="10,0,0,0"/>
+								</HorizontalLayout>
+							</HorizontalLayout>					
+							<HorizontalLayout width="550" height="30" padding="0,11,0,0" >
+								<CheckBox name="DPI_enable_check_1" style="checkbox_style" width="24" height="24" visible="true" padding="0,4,0,0"/>
+								<Label bkimage="ms/DPI/green.png" width="15" height="15" padding="0,0,0,0" visible="false" padding="0,7,0,0"/>
+								<HorizontalLayout name="DPI_layout_1" width="520" height="30" padding="0,0,0,0" >
+									<Label text="Dpi2" width="50" height="20" style="label_style" font="4" padding="7,5,0,0"/>
+									<Label width="1" height="16" bkcolor="#FF032d2b" padding="10,7,0,0" />
+									<CheckBox name="DPI_select_check_1" style="treenode_kogei_style" width="14" height="14" visible="true" padding="10,7,0,0"/>
+									<Slider name="DPI_slider_1" style="slider_style" enabled="true" sendmove="true" padding="10,8" height="14" value="3" min="0" max="14"/>
+									<Edit name="DPI_edit_1" align="center" style="edit_style" numberonly="true" width="60" height="30" maxchar="5" bordersize="1" borderround="3,3" padding="10,0,0,0"/>
+								    <Button name="DPI_color_option_1" style="color_option_style" bkcolor="#FFFF0000" selectedbkcolor="#FFFF0000" width="30" height="30" padding="10,0,0,0"/>
+								</HorizontalLayout>
+							</HorizontalLayout>
+							<HorizontalLayout width="550" height="30" padding="0,11,0,0" >
+								<Label bkimage="ms/DPI/white.png" width="15" height="15" padding="0,0,0,0" visible="false" padding="0,7,0,0"/>
+								<CheckBox name="DPI_enable_check_2" style="checkbox_style" width="24" height="24" visible="true" padding="0,4,0,0"/>
+								<HorizontalLayout name="DPI_layout_2" width="520" height="30" padding="0,0,0,0" >
+									<Label text="Dpi3" width="50" height="20" style="label_style" font="4" padding="7,5,0,0"/>
+									<Label width="1" height="16" bkcolor="#FF032d2b" padding="10,7,0,0" />
+									<CheckBox name="DPI_select_check_2" style="treenode_kogei_style" width="14" height="14" visible="true" padding="10,7,0,0"/>
+									<Slider name="DPI_slider_2" style="slider_style" enabled="true" sendmove="true" padding="10,8" height="14" value="3" min="0" max="14"/>
+									<Edit name="DPI_edit_2" style="edit_style" align="center" numberonly="true" width="60" height="30" maxchar="5" bordersize="1" borderround="3,3" padding="10,0,0,0"/>
+									<Button name="DPI_color_option_2" style="color_option_style" bkcolor="#FFFF0000" selectedbkcolor="#FFFF0000" width="30" height="30" padding="10,0,0,0"/>
+								</HorizontalLayout>
+							</HorizontalLayout>
+							<HorizontalLayout width="550" height="30" padding="0,11,0,0" >
+								<Label bkimage="ms/DPI/red.png" width="15" height="15" padding="0,0,0,0" visible="false" padding="0,7,0,0"/>
+								<CheckBox name="DPI_enable_check_3" style="checkbox_style" width="24" visible="true" height="24" padding="0,4,0,0"/>
+								<HorizontalLayout name="DPI_layout_3" width="520" height="30" padding="0,0,0,0" >
+									<Label text="Dpi4" width="50" height="20" style="label_style" font="4" padding="7,5,0,0"/>
+									<Label width="1" height="16" bkcolor="#FF032d2b" padding="10,7,0,0" />
+									<CheckBox name="DPI_select_check_3" style="treenode_kogei_style" width="14" height="14" visible="true" padding="10,7,0,0"/>
+									<Slider name="DPI_slider_3" style="slider_style" enabled="true" sendmove="true" padding="10,8" height="14" value="3" min="0" max="14"/>
+									<Edit name="DPI_edit_3" style="edit_style" align="center" numberonly="true" width="60" height="30" maxchar="5" bordersize="1" borderround="3,3" padding="10,0,0,0"/>
+									<Button name="DPI_color_option_3" style="color_option_style" bkcolor="#FFFF0000" selectedbkcolor="#FFFF0000" width="30" height="30" padding="10,0,0,0"/>
+								</HorizontalLayout>
+							</HorizontalLayout>
+							<HorizontalLayout width="550" height="30" padding="0,11,0,0" >
+								<Label bkimage="ms/DPI/red.png" width="15" height="15" padding="0,0,0,0" visible="false" padding="0,7,0,0"/>
+								<CheckBox name="DPI_enable_check_4" style="checkbox_style" width="24" visible="true" height="24" padding="0,4,0,0"/>
+								<HorizontalLayout name="DPI_layout_4" width="520" height="30" padding="0,0,0,0" >
+									<Label text="Dpi5" width="50" height="20" style="label_style" font="4" padding="7,5,0,0"/>
+									<Label width="1" height="16" bkcolor="#FF032d2b" padding="10,7,0,0" />
+									<CheckBox name="DPI_select_check_4" style="treenode_kogei_style" width="14" height="14" visible="true" padding="10,7,0,0"/>
+									<Slider name="DPI_slider_4" style="slider_style" enabled="true" sendmove="true" padding="10,8" height="14" value="3" min="0" max="14"/>
+									<Edit name="DPI_edit_4" style="edit_style" align="center" numberonly="true" width="60" height="30" maxchar="5" bordersize="1" borderround="3,3" padding="10,0,0,0"/>
+									<Button name="DPI_color_option_4" style="color_option_style" bkcolor="#FFFF0000" selectedbkcolor="#FFFF0000" width="30" height="30" padding="10,0,0,0"/>
+								</HorizontalLayout>
+							</HorizontalLayout>
+							<HorizontalLayout width="510" height="30" visible="false" padding="0,11,0,0">
+								<CheckBox name="DPI_enable_check_5" style="checkbox_style"  width="15" height="15" padding="0,4,0,0"/>
+								<HorizontalLayout name="DPI_layout_5" width="480" height="30" padding="0,0,0,0" >
+									<Label text="Smart" width="50" height="20" style="label_style" font="4" padding="7,0,0,0"/>
+									<Label width="1" height="16" bkcolor="#FF285155" padding="10,7,0,0" />
+									
+									<Slider name="DPI_slider_5" enabled="true" style="slider_style" sendmove="true" padding="20,5" height="14" value="3" min="0" max="14"/>
+									<GifAnim name="smart_dpi" bkimage="smart_dpi.gif" width="320" height="10" padding="5,5,0,0" autoplay="true" foreimage="res='common/SliderBar_BK.png' mask='#ffffffff'"/>	
+									<Edit name="DPI_edit_5" style="edit_style" align="center"  numberonly="true" width="60" height="30" maxchar="5" visible="false" bordersize="1" borderround="3,3" padding="10,0,0,0"/>
+								</HorizontalLayout>
+							</HorizontalLayout>
+							
+						</VerticalLayout>
+						
+					</VerticalLayout>
+					
+					<!--华丽的分割线-->
+					<Label width="720" height="1" padding="23,0,0,0" bkcolor="#FF032d2b" />
+					
+					<VerticalLayout width="500" height="100" padding="27,30,0,0" >
+							<Text text="window_mouse_set_tiptext" height="16" style="label_style" glowsize="0" font="4" visible="true" resourcetext="true" align="left" padding="0,0,0,0"/>
+							<HorizontalLayout height="42" padding="10,20,0,0">
+								<Button	name="windowdeviceset_1" width="43" height="42" visible="true"  
+									bkimage="common/window_mouse_normal.png"	
+									normalimage="common/window_mouse_normal.png"	
+									hotimage="common/window_mouse_down.png"	
+									pushedimage="common/window_mouse_down.png"	
+									selectedimage="common/window_mouse_down.png"  />
+								<Text text="window_mouse_set_text" height="42" style="label_style" glowsize="0" font="4" visible="true" resourcetext="true" align="left" padding="14,0,0,0"/>
+							</HorizontalLayout>
+					</VerticalLayout>
+					
+					<VerticalLayout height="80" padding="27,0,0,0">
+						<Label text="Polling_Rate" style="label_style" glowsize="0" font="4" resourcetext="true" padding="0,14,0,0" width="250" height="14"/>
+						<HorizontalLayout width="550" height="30"  padding="0,15,0,0">
+							<Option name="polling_rate_option_3" width="80" height="27" padding="0,0,0,0"
+								bkimage="file='common/1000HZ_normal.png'"
+								normalimage="file='common/1000HZ_normal.png'" 
+								hotimage="file='common/1000HZ_hot.png'"
+								pushedimage="file='common/1000HZ_down.png'"
+								selectedimage="file='common/1000HZ_down.png'" />
+							<Option name="polling_rate_option_2" width="80" height="27" padding="21,0,0,0" 
+								bkimage="file='common/500HZ1.png'"
+								normalimage="file='common/500HZ1.png'" 
+								hotimage="file='common/500HZ.png'"
+								pushedimage="file='common/500HZ.png'"
+								selectedimage="file='common/500HZ.png'" />
+							<Option name="polling_rate_option_1" width="80" height="27" padding="21,0,0,0" 
+								bkimage="file='common/250HZ.png'"
+								normalimage="file='common/250HZ.png'" 
+								hotimage="file='common/250HZ1.png'"
+								pushedimage="file='common/250HZ1.png'"
+								selectedimage="file='common/250HZ1.png'" />
+							<Option name="polling_rate_option_0" width="80" height="27" padding="21,0,0,0" 
+								bkimage="file='common/125HZ1.png'"
+								normalimage="file='common/125HZ1.png'" 
+								hotimage="file='common/125HZ.png'"
+								pushedimage="file='common/125HZ.png'"
+								selectedimage="file='common/125HZ.png'" />
+						</HorizontalLayout>
+					</VerticalLayout>
+								
+					<!-- 布局下侧 -->
+					<VerticalLayout width="766" height="223" visible="false" padding="37,0,0,0">
+						<Label text="Win_Pointer_Speed" height="14" style="label_style" glowsize="0" font="7" resourcetext="true" padding="0,14,0,0" />					
+						<HorizontalLayout width="650" height="15" padding="0,8,0,0">
+							<Slider name="pointer_speed_slider" style="slider_style" enabled="true" padding="25,0,0,0" width="345" height="14" value="3" min="0" max="9"/>
+							<CheckBox name="pointer_precision_check" style="treenode_kogei_style" width="15" height="15" padding="20,0,0,0" visible="true"/>
+							<Label text="Enhance_Pointer_Precision" style="label_style" glowsize="0" font="7" resourcetext="true" padding="5,0,0,0" height="15"/>	
+						</HorizontalLayout>
+						
+						<Label text="Scroll_Speed" height="14" style="label_style" glowsize="0" font="7" resourcetext="true" padding="0,8,0,0" />				
+						<HorizontalLayout width="650" height="15" padding="0,8,0,0">
+							<Slider name="scroll_speed_slider" style="slider_style" enabled="true" padding="25,0,0,0" width="345" height="14" value="3" min="0" max="9" />
+							<CheckBox name="scrolls_page_check" style="treenode_kogei_style" width="15" height="15" padding="20,0,0,0"/>
+							<Label text="Scrolls_A_Full_Page" style="label_style" glowsize="0" font="7" resourcetext="true" padding="5,0,0,0" height="15" />					
+						</HorizontalLayout>
+						
+						
+						<Label text="Double_Click"  style="label_style" glowsize="0" font="7" resourcetext="true" padding="0,8,0,0" width="250" height="14"/>
+						<Slider name="double_click_slider" style="slider_style" enabled="true" padding="25,8,0,0" width="345" height="14" value="3" min="0" max="9" />
+						
+
+						
+						
+					</VerticalLayout>		
+				
+				</VerticalLayout>
+				
+			</VerticalLayout>
+			
+		</TabLayout>
+		<TabLayout name="device_tishi_info" float="true" pos="700,70,0,0" width="400" height="250" bkcolor="#00ffffff" visible="false">
+			<VerticalLayout name="device_tishi_info_1" width="265" height="240" bkimage="ms/SetKeyinfoTitle_list_bkimage.png">					
+				<Label name="device_setkeyinfotitle" height="20" text="Button Assignment" padding="18,13,0,0"  style="label_style" />				
+				<List name="device_setkeyinfo_list" width="400" height="270" vscrollbar="true" header="hidden" enabled="false" padding="18,5,0,0"
+							itemvalign="vcenter" scrollstepsize="100"
+							itemselectedbkcolor="#f23b3b3b" itemdisabledbkcolor="#00000000"
+							itemhotbkcolor="#f23b3b3b" bordercolor="#f2242424" bordersize="0"  >
+							<!-- 列表头 -->
+							<ListHeader width="400" height="30" menu="true" mouse="false" bordercolor="#FF2a2b2a" bordersize="1">
+								<ListHeaderItem text="" width="200" textcolor="#FFFFFFFF" bkcolor="#FF171616" bordercolor="#FF2a2b2a" bordersize="1" sepwidth="1" resourcetext="true"/>
+								<ListHeaderItem text="" width="200" textcolor="#FFFFFFFF" bkcolor="#FF171616" bordercolor="#FF2a2b2a" bordersize="1" sepwidth="1" resourcetext="true"/>
+							</ListHeader>
+				</List>
+			</VerticalLayout>
+			<VerticalLayout name="device_tishi_info_0" width="400" height="480" visible="false">
+				<VerticalLayout name="device_setinfotitle_layout" height="25" padding="0,0,0,0" bkcolor="#F2272828" >				    				
+					<Label name="device_setinfotitle" height="25" text="Mouse key cover" textpadding="15,0,0,0" style="label_style" />				
+				</VerticalLayout>	
+				<VerticalLayout name="device_setinfotext_layout" height="300" bkcolor="#BB272828">		             											
+					<!-- 中 -->			
+					<Label name="device_setinfotext" style="label_style" align="left" valign="top" wordbreak="true" autocalcwidth="false" textpadding="5,0,0,0"  width="400" height="300" padding="10,5,0,0" visible="true"/>					
+				</VerticalLayout>				
+			</VerticalLayout>
+		</TabLayout>
+			 
+	</HorizontalLayout>
+</EevisionMouseDevice>
+</Window>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+<Style  />   
+<CloudShareListItem name="CloudShareItem" menu="true" height="75" padding="15,0,0,0" >
+    <VerticalLayout >  <!-- normal  hover  down时的列表项 -->
+
+		<HorizontalLayout name="shareNamelayout" height="25">
+			<CheckBox name="check_name_select"  textcolor="#ffffffff" width="180" selectedtextcolor="#FF0099FF" text="LOL_Aatox" height="25" normalimage="file='common/kogei.png' dest='3,8,18,23'" cursor="hand" selectedimage="file='common/kogei1.png' dest='3,8,18,23'" disabledimage="file='common/kogei.png' dest='3,8,18,23'" textpadding="25,0,0,0" align="left" resourcetext="false" padding="5,0,0,0" />
+			
+			<Slider name="grade_slider" enabled="true" width="69" height="14" value="3" min="1" max="5" isstretchfore="false"  visible="false"
+					bkimage="res='common/abc_ic_star_black_36dp.png'" foreimage="common/abc_ic_star_black_37dp.png"  padding="5,5,0,0" />
+			 <Option name="grade_option_1" normalimage="file='sysbtn/btn_score_light.png'" hotimage="file='sysbtn/btn_score_light.png'" focusedimage="file='sysbtn/btn_score_light.png'" selectedimage="file='sysbtn/btn_score_light.png'" width="14" height="14"  padding="5,5,0,0" />		
+			 <Option name="grade_option_2" normalimage="file='sysbtn/btn_score_black.png'" hotimage="file='sysbtn/btn_score_light.png'" focusedimage="file='sysbtn/btn_score_light.png'" selectedimage="file='sysbtn/btn_score_light.png'" width="14" height="14"  padding="0,5,0,0"  />		
+			 <Option name="grade_option_3" normalimage="file='sysbtn/btn_score_black.png'" hotimage="file='sysbtn/btn_score_light.png'" focusedimage="file='sysbtn/btn_score_light.png'" selectedimage="file='sysbtn/btn_score_light.png'" width="14" height="14"  padding="0,5,0,0"  />		
+			 <Option name="grade_option_4" normalimage="file='sysbtn/btn_score_black.png'" hotimage="file='sysbtn/btn_score_light.png'" focusedimage="file='sysbtn/btn_score_light.png'" selectedimage="file='sysbtn/btn_score_light.png'" width="14" height="14"  padding="0,5,0,0"  />		
+			 <Option name="grade_option_5" normalimage="file='sysbtn/btn_score_black.png'" hotimage="file='sysbtn/btn_score_light.png'" focusedimage="file='sysbtn/btn_score_light.png'" selectedimage="file='sysbtn/btn_score_light.png'" width="14" height="14"  padding="0,5,0,0"  />		
+					
+					
+		</HorizontalLayout >
+
+		<HorizontalLayout name="shareIDlayout" height="25">
+			<Label name="shareID" padding="30,0,0,0" text="ID:123241234" bordersize="0" width="70" textcolor="#FF505050"/>
+			<Label name="shareName" padding="50,0,0,0" text="ID:123241234" bordersize="0" width="120" textcolor="#FF505050"/>
+		</HorizontalLayout>           
+		<HorizontalLayout name="sharelanguagelayout" height="25" padding="0,0,0,0">
+			<Label name="sharelanguage" padding="30,0,0,0"  text="CN" bordersize="0" width="70" textcolor="#FF505050"/>
+			<Label name="sharetime" padding="50,0,0,0"  text="2018-11-10 11:27:15" bordersize="0" width="120" textcolor="#FF505050"/>
+		</HorizontalLayout>
+               
+    </VerticalLayout> 
+            
+       
+</CloudShareListItem>
+</Window>

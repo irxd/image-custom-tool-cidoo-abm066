@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="400,400" bktrans="false" showshadow="false" shadowcolor="0x000000" caption="0,0,0,100" shadowsize="7"  shadowdarkness="50">
+	<VerticalLayout height="200" name="root" bkcolor="#00272828">			
+					
+		<VerticalLayout height="40" padding="0,0,0,0" bkcolor="#F2272828" >				    				
+			<Label name="tooltitle" height="40" text="12312124" textpadding="10,3,10,3" font="4" textcolor="#FFFFFFFF" />				
+		</VerticalLayout>	
+	
+		<VerticalLayout height="0">		             											
+			<!-- 中 -->				    									              					        
+			<Control height="10"/>
+			<Label name="tooltext" width="100" height="100" wordbreak="true"  autocalcwidth="true" textpadding="10,3,10,3" text="停止SMRT EYE的功能，會連帶取消一些智慧型校正，確定要停止嗎?" font="7" textcolor="#FF7e7e7e" />	
+		</VerticalLayout>	
+		
+	</VerticalLayout>
+	
+</Window>

@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<window size="900,500" bktrans="false" showshadow="false"  caption="0,0,0,50" shadowcolor="0x000000" shadowsize="7" gdiplustext="false" shadowdarkness="50">
+
+	<Style name="edit_style"
+           value="textpadding=&quot;6,0,6,0&quot; align=&quot;left&quot; textcolor=&quot;#FFFFFFFF&quot; bkcolor=&quot;#e02c2c2b&quot; nativebkcolor=&quot;#e02c2c2b&quot; bordercolor=&quot;#ff000000&quot; bordersize=&quot;1&quot;"/>
+	<Style name="combo_style"
+           value="dropboxsize=&quot;0,300&quot; itemtextcolor=&quot;#ff999999&quot; itemhottextcolor=&quot;#FF0099FF&quot; itemselectedtextcolor=&quot;#FF0099FF&quot; height=&quot;28&quot; textcolor=&quot;#FF0fa6f9&quot; textpadding=&quot;4,1,28,1&quot; normalimage=&quot;res='common/Button_list_item_normal.png'&quot; hotimage=&quot;res='common/Button_list_item_hot.png'&quot; pushedimage=&quot;res='common/Button_list_item_hot.png'&quot; "/>
+	<Style name="GameModeSelectAllBtn_style" value="normalimage=&quot;file='sysbtn/gm_selectall_btn_normal.png' &quot;  bkimage=&quot;file='sysbtn/gm_selectall_btn_normal.png' &quot; hotimage=&quot;file='sysbtn/gm_selectall_btn_hot.png'&quot;  pushedimage=&quot;file='sysbtn/gm_selectall_btn_hot.png'&quot;"/>
+	<Style name="GameModedeletBtn_style" value="normalimage=&quot;file='sysbtn/gm_delet_btn_normal.png' &quot;  bkimage=&quot;file='sysbtn/gm_delet_btn_normal.png' &quot; hotimage=&quot;file='sysbtn/gm_delet_btn_hot.png'&quot;  pushedimage=&quot;file='sysbtn/gm_delet_btn_hot.png'&quot;"/>
+	<Style name="GameModeuploadBtn_style" value="normalimage=&quot;file='sysbtn/gm_upload_btn_normal.png' &quot;  bkimage=&quot;file='sysbtn/gm_upload_btn_normal.png' &quot; hotimage=&quot;file='sysbtn/gm_upload_btn_hot.png'&quot;  pushedimage=&quot;file='sysbtn/gm_upload_btn_hot.png'&quot;"/>
+	<Style name="GameModeloadBtn_style" value="normalimage=&quot;file='sysbtn/gm_load_btn_normal.png' &quot;  bkimage=&quot;file='sysbtn/gm_load_btn_normal.png' &quot; hotimage=&quot;file='sysbtn/gm_load_btn_hot.png'&quot;  pushedimage=&quot;file='sysbtn/gm_load_btn_hot.png'&quot;"/>	
+	<Style name="GameModeBackupBtn_style" value="normalimage=&quot;file='sysbtn/gm_backup_btn_normal.png' &quot;  bkimage=&quot;file='sysbtn/gm_backup_btn_normal.png' &quot; hotimage=&quot;file='sysbtn/gm_backup_btn_hot.png'&quot;  pushedimage=&quot;file='sysbtn/gm_backup_btn_hot.png'&quot;"/>
+    <Style name="cloud_gm_name_style" shared="true" value="height=&quot;30&quot; width=&quot;200&quot; normalimage=&quot;file='common/kogei.png' dest='3,8,18,23'&quot; selectedtextcolor=&quot;#FF0099FF&quot; textcolor=&quot;#FFFFFFFF&quot; selectedimage=&quot;file='common/kogei1.png' dest='3,8,18,23'&quot; disabledimage=&quot;file='common/kogei.png' dest='3,8,18,23'&quot; textpadding=&quot;25,0,0,0&quot; align=&quot;left&quot; EnableAutoCheck=&quot;true&quot; endellipsis=&quot;true&quot;"/>
+	
+	
+	
+	<HorizontalLayout width="900" height="500" name="root" bkcolor="#FF454545">				
+		<VerticalLayout width="900" height="500" >
+			<HorizontalLayout name="cloud_game_list_layout" visible="true" width="900" height="500" padding="0,0,0,0">
+				<!-- 左 -->
+				<VerticalLayout width="297">
+					<Combo style="combo_style" name="Game_mode_share"  width="260" height="30" padding="20,20,0,0" textcolor="#FFFFFFFF" itemtextpadding="0,6,0,0" itemalign="center"
+						dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;" scrollselect="false" itemtextpadding="3,5,0,0" itemalign="left"
+						itemselectedimage="file='common/Button_list_item_down.png'" 
+						itemhotimage="file='common/Button_list_item_hot.png'"
+						itembkimage="file='common/Button_list_item_normal.png'" >	
+	                	<ListLabelElement text="Game Mode" width="260" selected="true"  height="30"   textcolor="#FFFFFFFF" />						
+                        <ListLabelElement text="Macro"  width="260" height="30"   textcolor="#FFFFFFFF" />																
+						<ListLabelElement text="Lighting" width="260" height="30"   textcolor="#FFFFFFFF" />
+					</Combo>
+			        <List vscrollbar="true" name="gamemode_list"  height="360"  vscrollbar="true" header="hidden" itemvalign="vcenter" scrollstepsize="100" childpadding="4"	itemselectedbkcolor="#ff222528"	itemhotbkcolor="#ff222528">
+								
+						
+					</List>
+					<VerticalLayout  >
+					<Control />		
+					 <Label name="down_time" visible="false" textcolor="#FFFF3333" valign="vcenter" height="20"  bkcolor="#FF000000" />
+					<Button  name="upload_cloud" bkcolor="#FF000000" hotbkcolor="#FF0099FF" pushedbkcolor="#FF0099FF" textcolor="#FFFFFFFF"  visible="false" align="left" text="Upload to the cloud" height="20" />
+					<Button  name="upload_personal_cloud"  bkcolor="#FF000000" hotbkcolor="#FF0099FF" pushedbkcolor="#FF0099FF"  textcolor="#FFFFFFFF"  visible="false" align="left"  text="Upload to the personal cloud" height="20" />
+                   		
+				</VerticalLayout>
+					<HorizontalLayout width="300" height="28" padding="0,0,0,0" >
+						<Control />	
+						<Button style="GameModeSelectAllBtn_style" width="50"  name="select_all"/>
+						<Button style="GameModedeletBtn_style" width="50"  name="delete_slecte"/>
+						<Button style="GameModeuploadBtn_style" width="50"  name="gamemodeupload"  visible="true"/>
+						<Label  width="100" height="28" visible="true" bkcolor="FF000000" />
+						<Button style="GameModeBackupBtn_style" width="50"  name="backup_aoto"/>
+						<Control />
+					</HorizontalLayout>								
+				</VerticalLayout>
+				
+				<!-- 分割线 -->
+				<Label width="3" height="500" bkimage="common/xtio.png" padding="0,0,0,0" />
+
+				<!-- 中 -->
+				<TabLayout name="cloud_funtion_tab_layout" selectedid="0">
+					<!-- 登陆账号界面  0-->
+					<VerticalLayout  width="600" height="500" padding="0,0,0,0"  visible="true" >
+						<HorizontalLayout  width="600" height="50" >
+							<Label width="24" height="20" bkimage="common/brightness.png" padding="10,22,0,0" />
+							<Label height="50" text="Cloud" textcolor="#FFFFFFFF" padding="10,15,0,0"   />
+						</HorizontalLayout>
+						<Label text="User account information" width="600" height="20" textpadding="0,0,0,0" padding="50,20,0,0"    textcolor="#FF999999"/>
+						<Label text="Login" width="600" height="20" textpadding="0,0,0,0" padding="50,40,0,0"    textcolor="#FF999999"/>	
+						
+						<!-- ID -->
+						<VerticalLayout  width="580" height="310" padding="50,0,0,0" childpadding="0">
+					
+							<HorizontalLayout width="500" height="40" > 
+								<Edit align="left" name="cloud_id_edit" textcolor="#FFFFFFFF" nativebkcolor="#FF000000" width="245" height="40" tipvalue="ID"
+									   bkimage="file='common/banner_bg_sixest.png'"
+									   disabledimage="file='common/banner1_bg_sixest.png'"/> 
+								<Button width="150" height="40" name="cloud_register_btn" text="Register"   textcolor="#FFFFFFFF"  bkcolor="#FF000000" hotbkcolor="#FF0099FF" pushedbkcolor="#FF0099FF" padding="10,0,0,0" />
+							</HorizontalLayout>		
+
+							<HorizontalLayout width="500" height="40" padding="0,20,0,0" > 							
+								<Edit align="left" name="cloud_pw_edit"  textcolor="#FFFFFFFF" nativebkcolor="#FF000000" width="245" height="40" password="true" tipvalue="Password"
+									   bkimage="file='common/banner_bg_sixest.png'"
+									   disabledimage="file='common/banner1_bg_sixest.png'"/> 
+								<Button width="150" height="40" name="cloud_load_btn" text="Submit"  textcolor="#FFFFFFFF"  bkcolor="#FF000000" hotbkcolor="#FF0099FF" pushedbkcolor="#FF0099FF" padding="10,0,0,0" />
+							</HorizontalLayout>	
+							<HorizontalLayout width="500" height="25" padding="0,0,0,0" > 
+								<CheckBox name="save_cloud_information" width="15" height="15"  selected="true" padding="0,5,0,0" bkimage="common/xzk.png"normalimage="common/xzk.png" hotimage="common/xzk1.png" pushedimage="common/xzk1.png" selectedimage="common/xzk1.png" />
+								<Label width="500" height="25" textpadding="5,0,0,0" text="Keep logged in"  textcolor="#FF999999"/>
+							</HorizontalLayout>		   
+							<Label width="300" height="30"  name="us_id"     textcolor="#FF0099FF"/>
+							
+							
+						
+							<!-- 硬件/软件 -->	
+							<Label width="250" height="30" textpadding="0,0,0,0" padding="0,20,0,0" text="Forget password"   textcolor="#FFFFFFFF"  />
+							<!-- ID -->						
+							<HorizontalLayout width="500" height="40"  > 							
+								<Edit align="left"  name="cloud_email_forget" textcolor="#FFFFFFFF" nativebkcolor="#FF000000" width="245" height="40" password="false" tipvalue="Email"
+									   bkimage="file='common/banner_bg_sixest.png'"
+									   disabledimage="file='common/banner1_bg_sixest.png'"/> 
+								<Button width="150" height="40" name="cloud_forget_password_btn" text="Submit"   textcolor="#FFFFFFFF"  bkcolor="#FF000000" hotbkcolor="#FF0099FF" pushedbkcolor="#FF0099FF" padding="10,0,0,0" />
+							</HorizontalLayout>	
+							<Label width="200" height="30" name="email_err" text="找回密码需要网络服务"    textcolor="#FF0099FF"/>
+							
+						</VerticalLayout>
+					</VerticalLayout>
+								
+					<!-- 注册账号界面 1-->
+					<VerticalLayout  width="600" height="500" padding="0,0,0,0"  visible="true" >
+						<HorizontalLayout  width="600" height="50" >
+							<Label width="24" height="20" bkimage="common/brightness.png" padding="10,22,0,0" />
+							<Label height="50" text="Cloud" textcolor="#FFFFFFFF" padding="10,15,0,0"   />
+						</HorizontalLayout>
+						<Label text="Not yet applied for sharing cloudShare cloud, backup our profile is not afraid of missing." width="600" height="20" textpadding="10,0,0,0"  textcolor="#FF999999"/>
+						<Label text="Share your profile with me." width="600" height="20" textpadding="10,0,0,0"  textcolor="#FF999999"/>	
+						<HorizontalLayout padding="10,20,0,0" width="600" height="310" >
+							<RichEdit width="300" height="310"   readonly="true" mutiline="true" bkcolor="#FF000000" textcolor="#FF999999" 
+							autovscroll="true" rich="false" resourcetext="true" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis disparturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."  vscrollbar="true" hscrollbar="false" autohscroll="false" />
+							<!-- ID -->
+							<VerticalLayout  width="280" height="310" padding="20,0,0,0" childpadding="5">
+								<Label width="200" height="30" text="Fill in the following information"     textcolor="#FFFFFFFF"/>
+								<Edit align="left" name="id_edit" textcolor="#FFFFFFFF" nativebkcolor="#FF000000" width="245" height="30" tipvalue="ID"
+										   bkimage="file='common/banner_bg_sixest.png'"
+										   disabledimage="file='common/banner1_bg_sixest.png'"/>  					
+						
+								<Edit align="left" name="email_edit" textcolor="#FFFFFFFF" nativebkcolor="#FF000000" width="245" height="30" tipvalue="Email"
+										   bkimage="file='common/banner_bg_sixest.png'"
+										   disabledimage="file='common/banner1_bg_sixest.png'"/> 
+								<Label width="200" name="error_text" height="30" text="Id有誤(訊息錯誤時使用)"    textcolor="#FF0099FF"/>
+								<Edit align="left" name="password_edit"  textcolor="#FFFFFFFF" nativebkcolor="#FF000000" width="245" height="30" password="true" tipvalue="Password"
+										   bkimage="file='common/banner_bg_sixest.png'"
+										   disabledimage="file='common/banner1_bg_sixest.png'"/> 
+								
+								<Edit align="left"  name="password_config_edit" textcolor="#FFFFFFFF" nativebkcolor="#FF000000" width="245" height="30" password="true" tipvalue="Password confirmation"
+										   bkimage="file='common/banner_bg_sixest.png'"
+										   disabledimage="file='common/banner1_bg_sixest.png'"/> 
+							
+								<!-- 硬件/软件 -->	
+								<Label width="250" name="pass_err" height="30" textpadding="0,0,0,0" text="Forget "   textcolor="#FFFFFFFF"  />
+								<!-- ID -->						
+								<Combo   name="country_combo" style="combo_style" width="245" height="30" padding="0,0,0,0" textcolor="#FFFFFFFF" itemtextpadding="0,6,0,0" itemalign="center"
+									dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;" scrollselect="false" itemtextpadding="3,5,0,0" itemalign="left"
+									itemselectedimage="file='common/Button_list_item_down.png'" 
+									itemhotimage="file='common/Button_list_item_hot.png'"
+									itembkimage="file='common/Button_list_item_normal.png'" >								
+
+								</Combo>
+								<Combo   name="language_combo" style="combo_style" width="245" height="30" padding="0,0,0,0" textcolor="#FFFFFFFF" itemtextpadding="0,6,0,0" itemalign="center"
+									dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;" scrollselect="false" itemtextpadding="3,5,0,0" itemalign="left"
+									itemselectedimage="file='common/Button_list_item_down.png'" 
+									itemhotimage="file='common/Button_list_item_hot.png'"
+									itembkimage="file='common/Button_list_item_normal.png'" >								
+
+								</Combo>
+								
+							</VerticalLayout>
+						</HorizontalLayout>
+						<HorizontalLayout width="500" height="25" padding="10,0,0,0" > 
+							<CheckBox width="15" height="15"  name="term_check" padding="5,10,0,0" bkimage="common/xzk.png"normalimage="common/xzk.png" hotimage="common/xzk1.png" pushedimage="common/xzk1.png" selectedimage="common/xzk1.png" />
+							<Label width="500" height="25" textpadding="5,3,0,0" text="Agree with the terms"   textcolor="#FF999999"/>
+						</HorizontalLayout>
+						<Button name="cloud_ask_of_apply_btn" width="100"  height="40" text="APPLY" textcolor="#FFFFFFFF" textpadding="30,0,0,0" normalimage="file='sysbtn/gm_cloud_askof_apply_btn_ico.png' dest='15,12,30,27'"  bkimage="file='sysbtn/gm_cloud_askof_apply_btn_ico.png' dest='15,12,30,27'" bkcolor="#FF000000" hotbkcolor="#FF0099FF" pushedbkcolor="#FF0099FF" padding="250,0,0,0" visible="true"/>					
+						<Control height="35" />
+					</VerticalLayout>
+				
+					<!-- 注册账号邮箱验证界面 2-->
+					<VerticalLayout  width="600" height="500" padding="0,0,0,0"  visible="true" >
+						<HorizontalLayout  width="600" height="50" >
+							<Label width="24" height="20" bkimage="common/brightness.png" padding="10,22,0,0" />
+							<Label height="50" text="Cloud" textcolor="#FFFFFFFF" padding="10,15,0,0"   />
+						</HorizontalLayout>
+						<HorizontalLayout padding="10,20,0,0" width="600" height="30" childpadding="0">
+							<Label text="Please go to" width="600" height="20" textpadding="20,0,0,0"   textcolor="#FFFFFFFF" autocalcwidth="true"/>
+							<Button name="cloud_email_" text="your email" width="600" height="20" textpadding="10,0,0,0" textcolor="#FFFFFFFF" autocalcwidth="true"/>
+							<Label text="email confirmation," width="600" height="20" textpadding="10,0,0,0"   textcolor="#FFFFFFFF" autocalcwidth="true"/>							
+						</HorizontalLayout>
+						<Label text="certification letter" width="600" height="20" textpadding="30,0,0,0"   textcolor="#FFFFFFFF" autocalcwidth="true"/>	
+						<Label height="30" padding="30,100,0,0" text="如未收到审核邮件，请回上页确认邮箱是否正确或重新发送"   textcolor="#FF0099FF" autocalcwidth="true"/>
+						<Control  height="180" />
+						<HorizontalLayout width="560" height="40" padding="20,0,0,0" > 
+							<Button name="cloud_ask_of_back_btn" width="150" height="40" text="<Back" textcolor="#FFFFFFFF"    bkcolor="#FF000000" hotbkcolor="#FF0099FF" pushedbkcolor="#FF0099FF" padding="0,0,0,0" visible="true"/>					
+							<Control  />
+							<Button name="cloud_ask_of_resend_btn" width="150" height="40" text="Resend" textcolor="#FFFFFFFF"   bkcolor="#FF000000" hotbkcolor="#FF0099FF" pushedbkcolor="#FF0099FF" padding="0,0,0,0" visible="true"/>					
+						</HorizontalLayout>
+						
+					</VerticalLayout>
+				
+					<!-- 修改账号信息界面 3-->
+					<VerticalLayout  width="600" height="500" padding="0,0,0,0"  visible="true" >
+						<HorizontalLayout  width="600" height="50" >
+							<Label width="24" height="20" bkimage="common/brightness.png" padding="10,22,0,0" />
+							<Label height="50" text="ID:" textcolor="#FFFFFFFF" padding="10,15,0,0"   autocalcwidth="true"/>
+							<Label name="edit_id_name" height="50" text="YouNameCloud" textcolor="#FF0099FF" padding="10,15,0,0"  autocalcwidth="true"/>
+						</HorizontalLayout>
+
+						<VerticalLayout  width="600" height="310" padding="35,40,0,0" childpadding="5">
+							<HorizontalLayout  width="580" height="30" padding="20,0,0,0" childpadding="5">
+								<Label width="180" height="30" text="Identification"     textcolor="#FF999999"/>
+								<Label height="30" name="NameCloud" text="YouNameCloud(不可修改)"     textcolor="#FF999999"/> 					
+							</HorizontalLayout>
+							
+							<HorizontalLayout  width="580" height="30" padding="20,0,0,0" childpadding="5">
+								<Label width="180" height="30" text="Email"     textcolor="#FF999999"/>
+								<Label height="30"  name="EmailCloud" text="YouEmailCloud(不可修改)"     textcolor="#FF999999"/> 	
+							</HorizontalLayout>
+							
+							<HorizontalLayout  width="580" height="30" padding="20,0,0,0" childpadding="5">
+								<Control width="180"/>
+								<Label height="30"  name="tipe_worng" text="Identification"     textcolor="#FF0099FF"/>			
+							</HorizontalLayout>
+							
+								
+							<HorizontalLayout  width="580" height="30" padding="20,5,0,0" childpadding="5">
+								<Label width="180" height="30" text="Password"     textcolor="#FF999999"/>
+								<Edit align="left"  name="revise_password" textcolor="#FFFFFFFF" nativebkcolor="#FF000000" width="245" height="30" password="true" tipvalue="Password"
+										   bkimage="file='common/banner_bg_sixest.png'"
+										   disabledimage="file='common/banner1_bg_sixest.png'"/> 
+							</HorizontalLayout>	
+							
+							<HorizontalLayout  width="580" height="30" padding="20,0,0,0" childpadding="5">
+								<Label width="180" height="30" text="Confirmation"     textcolor="#FF999999"/>
+								<Edit align="left"  name="revise_password_re" textcolor="#FFFFFFFF" nativebkcolor="#FF000000" width="245" height="30" password="true"
+										   bkimage="file='common/banner_bg_sixest.png'"
+										   disabledimage="file='common/banner1_bg_sixest.png'"/>  					
+							</HorizontalLayout>
+	
+							<HorizontalLayout  width="580" height="30" padding="20,30,0,0" childpadding="5">
+								<Label width="180" height="30" text="Country"     textcolor="#FF999999"/>				
+								<Combo style="combo_style" width="245" height="30" padding="0,0,0,0" textcolor="#FFFFFFFF" itemtextpadding="0,6,0,0" itemalign="center"
+									dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;" scrollselect="false" itemtextpadding="3,5,0,0" itemalign="left"
+									itemselectedimage="file='common/Button_list_item_down.png'" 
+									itemhotimage="file='common/Button_list_item_hot.png'"
+									itembkimage="file='common/Button_list_item_normal.png'" >								
+									<ListLabelElement text="country" selected="true" width="245" height="30"   textcolor="#FFFFFFFF" />
+								</Combo>
+							</HorizontalLayout>	
+							<HorizontalLayout  width="580" height="30" padding="20,0,0,0" childpadding="5">
+								<Label width="180" height="30" text="Language"     textcolor="#FF999999"/>
+								<Combo style="combo_style" width="245" height="30" padding="0,0,0,0" textcolor="#FFFFFFFF" itemtextpadding="0,6,0,0" itemalign="center"
+									dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;" scrollselect="false" itemtextpadding="3,5,0,0" itemalign="left"
+									itemselectedimage="file='common/Button_list_item_down.png'" 
+									itemhotimage="file='common/Button_list_item_hot.png'"
+									itembkimage="file='common/Button_list_item_normal.png'" >								
+									<ListLabelElement text="language" selected="true" width="245" height="30"   textcolor="#FFFFFFFF" />
+								</Combo>
+							</HorizontalLayout>	
+								
+						</VerticalLayout>
+						
+						<HorizontalLayout width="580" height="40" padding="0,30,0,0" > 
+							<Control />
+							<Button name="cloud_edit_cancel_btn" width="150"  height="40" text="Cancel"   textcolor="#FFFFFFFF" bkcolor="#FF000000" hotbkcolor="#FF0099FF" pushedbkcolor="#FF0099FF" padding="0,0,0,0" visible="true"/>					
+							<Button name="cloud_edit_save_btn" width="150"  height="40" text="Save"   textcolor="#FFFFFFFF" bkcolor="#FF000000" hotbkcolor="#FF0099FF" pushedbkcolor="#FF0099FF" padding="10,0,0,0" visible="true"/>					
+						</HorizontalLayout>
+						
+					</VerticalLayout>
+				
+					<!--云端信息显示界面 4-->
+					<HorizontalLayout  width="600" height="500" padding="0,0,0,0"  visible="true" >
+						<!-- 个人云-->
+						<VerticalLayout>
+							<HorizontalLayout  width="300" height="50" >
+								<Label width="24" height="20" bkimage="common/brightness.png" padding="10,22,0,0" />
+								<Label height="50" text="ID:" textcolor="#FFFFFFFF" padding="10,15,0,0"   autocalcwidth="true"/>
+								<Button name="cloud_personal_share_id_name" height="50" text="YouNameCloud" textcolor="#FF0099FF" padding="10,15,0,0"  autocalcwidth="true"/>
+							</HorizontalLayout>
+							<List vscrollbar="true"name="personal_cloud_list"   height="420"  vscrollbar="true" header="hidden" itemvalign="vcenter" scrollstepsize="100" childpadding="4"	itemselectedbkcolor="#ff222528"	itemhotbkcolor="#ff222528">
+				
+							</List>
+							<Label height="50" align="center" text="Login successfuliy" textcolor="#FF999999" padding="0,0,0,0"  visible="false"/>
+							<HorizontalLayout width="300" height="28"  padding="0,0,0,0" visible="true">
+								<Control />
+								<Button width="50" name="cloud_personal_allselect"  style="GameModeSelectAllBtn_style"/>
+                                <Button width="50" name="cloud_personal_delete"  style="GameModedeletBtn_style"  />
+								<Button width="50" name="cloud_personal_download"  style="GameModeloadBtn_style"  />
+								 <Button width="50" name="cloud_personal_upload"  style="GameModeuploadBtn_style"  />                  
+								<Button width="50" name="cloud_personal_refresh"  normalimage="file='sysbtn/gm_refresh_btn_normal.png'" bkimage="file='sysbtn/gm_refresh_btn_normal.png'" hotimage="file='sysbtn/gm_refresh_btn_hot.png'" pushedimage="file='sysbtn/gm_refresh_btn_hot.png'" visible="false"/>
+								<Button width="50" name="cloud_personal_rank" normalimage="file='sysbtn/gm_rank_btn_normal.png'" bkimage="file='sysbtn/gm_rank_btn_normal.png'" hotimage="file='sysbtn/gm_rank_btn_hot.png'" pushedimage="file='sysbtn/gm_rank_btn_hot.png'" visible="true"  />
+								<Button width="50"  name="cloud_personal_search" normalimage="file='sysbtn/gm_search_btn_normal.png'" bkimage="file='sysbtn/gm_search_btn_normal.png'" hotimage="file='sysbtn/gm_search_btn_hot.png'" pushedimage="file='sysbtn/gm_search_btn_hot.png'" padding="0,0,0,0" visible="false"/>	
+								<Label  width="200" height="28" bkcolor="FF000000" />
+								<Control />
+							</HorizontalLayout>	
+						</VerticalLayout>
+						<!-- 分割线 -->
+						<Label width="3" height="500" bkimage="common/xtio.png" padding="0,0,0,0" />
+						<!-- 共享云-->
+						<VerticalLayout width="300" >
+							<HorizontalLayout  width="300" height="50" >
+								<Label width="24" height="20" bkimage="common/brightness.png" padding="10,22,0,0" />
+								<Label height="50" text="Share Cloud" textcolor="#FFFFFFFF" padding="10,15,0,0"   />
+							</HorizontalLayout>
+							<List vscrollbar="true"   name="share_cloud_list" height="400" visible="true"  vscrollbar="true" header="hidden" itemvalign="vcenter" scrollstepsize="100" childpadding="4"	itemselectedbkcolor="#ff222528"	itemhotbkcolor="#ff222528">							
+                          	
+							</List>
+							<RichEdit  name="seach_list"  height="20"    mutiline="true" bkcolor="#FF222222" visible="false" textcolor="#FF0099FF" padding="0,0,0,0" />								
+						    <Control />
+							<VerticalLayout width="300" height="420" padding="10,0,0,0" visible="false">
+								<Control height="40" />
+								<Label width="240" height="40" textpadding="0,0,0,0" text="Notice!!!!"   textcolor="#FF0099FF" />
+							
+								<RichEdit width="280" height="300"   readonly="true" mutiline="true"  textcolor="#FF0099FF" padding="0,0,0,0"
+									autovscroll="true" rich="false" resourcetext="true" text="    由於違犯規定無法再使用共享雲端，但仍可使用個人雲端備份"  vscrollbar="true" hscrollbar="false" autohscroll="false" />
+								<Control />
+							</VerticalLayout>
+							
+					 <VerticalLayout width="300" height="28">
+					 	<Control />
+					       <Edit width="300" height="20" textcolor="#FF0099FF"  bkcolor="#FF000000"  visible="false"  hotbkcolor="#FF0099FF" pushedbkcolor="#FF0099FF"/>
+							<HorizontalLayout width="300" height="28"  padding="0,0,0,0" >
+								<Button width="50" name="cloud_public_allselect"  style="GameModeSelectAllBtn_style"/>
+								<Button width="50" name="cloud_public_download" style="GameModeloadBtn_style" />
+								<Button width="50" name="cloud_public_refresh" normalimage="file='sysbtn/gm_refresh_btn_normal.png'" bkimage="file='sysbtn/gm_refresh_btn_normal.png'" hotimage="file='sysbtn/gm_refresh_btn_hot.png'" pushedimage="file='sysbtn/gm_refresh_btn_hot.png'"/>
+								<Button width="50" name="cloud_public_rank" normalimage="file='sysbtn/gm_rank_btn_normal.png'" bkimage="file='sysbtn/gm_rank_btn_normal.png'" hotimage="file='sysbtn/gm_rank_btn_hot.png'" pushedimage="file='sysbtn/gm_rank_btn_hot.png'" visible="true"/>
+								<Label width="50" height="28"  bkcolor="#FF000000" />
+								<Button width="50" name="cloud_public_search" normalimage="file='sysbtn/gm_search_btn_normal.png'" bkimage="file='sysbtn/gm_search_btn_normal.png'" hotimage="file='sysbtn/gm_search_btn_hot.png'" pushedimage="file='sysbtn/gm_search_btn_hot.png'"/>									
+							</HorizontalLayout>						
+						</VerticalLayout>	
+						</VerticalLayout>
+					</HorizontalLayout>
+									
+					<!-- 右 -->
+					<VerticalLayout height="500" visible="false">
+						<HorizontalLayout  width="300" height="50" visible="true">
+							<Label width="24" height="20" bkimage="common/brightness.png" padding="20,22,0,0" />
+							<Label height="50" text="Share Cloud" textcolor="#FFFFFFFF" padding="10,15,0,0" />
+						</HorizontalLayout>
+						
+						<Label width="300" height="30" textpadding="25,10,0,0" text="由於違犯規定無法再使用共享雲端，但"   textcolor="#FF0099FF" />
+						<Label width="300" height="30" textpadding="25,5,0,0" text="仍可使用個人雲端備份‧"   textcolor="#FF0099FF" />
+						<Label width="300" height="30" textpadding="25,10,0,0" text="Personal cloud backup is still available due to"  textcolor="#FF0099FF" />
+						<Label width="300" height="30" textpadding="25,-10,0,0" text="non-compliance with the shared cloud"  textcolor="#FF0099FF" />
+											
+						<Label height="50" text="No Data" textcolor="#FFFFFFFF" padding="50,0,0,0" visible="true"/>
+						<HorizontalLayout width="300" height="28"  padding="0,0,0,0" visible="true">
+							<Control />
+							<Button style="GameModeloadBtn_style" width="50" />
+							<Button width="50" normalimage="file='sysbtn/gm_refresh_btn_normal.png'" bkimage="file='sysbtn/gm_refresh_btn_normal.png'" hotimage="file='sysbtn/gm_refresh_btn_hot.png'" pushedimage="file='sysbtn/gm_refresh_btn_hot.png'"/>
+							<Button width="50" normalimage="file='sysbtn/gm_rank_btn_normal.png'" bkimage="file='sysbtn/gm_rank_btn_normal.png'" hotimage="file='sysbtn/gm_rank_btn_hot.png'" pushedimage="file='sysbtn/gm_rank_btn_hot.png'" visible="false"/>
+							<Label  width="100" height="28" bkcolor="FF000000"/>
+							<Button width="50" normalimage="file='sysbtn/gm_search_btn_normal.png'" bkimage="file='sysbtn/gm_search_btn_normal.png'" hotimage="file='sysbtn/gm_search_btn_hot.png'" pushedimage="file='sysbtn/gm_search_btn_hot.png'"/>					
+							<Control />
+						</HorizontalLayout>						 
+					</VerticalLayout>
+				</TabLayout>
+			</HorizontalLayout>
+			
+
+			<VerticalLayout name="cloud_ask_of_layout" width="900" height="500" padding="0,10,0,0">
+				<Label text="Cloud"width="900" height="30" textpadding="30,0,0,0"   textcolor="#FFFFFFFF"/>				
+
+				<VerticalLayout width="900" height="100" padding="0,10,0,0">
+					<Label text="Not yet applied for sharing cloudShare cloud, backup our profile is not afraid of missing.Share your profile with me," width="900" height="20" textpadding="30,0,0,0"   textcolor="#FF999999"/>
+					<Label text="Powerful comrades together Whether to apply" width="600" height="20" textpadding="30,0,0,0"   textcolor="#FF999999"/>				
+				</VerticalLayout>
+				<VerticalLayout width="900" height="180" padding="0,-40,0,0" bkimage="common/bj11.png" vscrollbar="true" >
+					<Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum " width="600" height="20" textpadding="30,10,0,0"  textcolor="#FF999999"/>
+					<Label text="laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. " width="600" height="20" textpadding="30,0,0,0"  textcolor="#FF999999"/>
+					<Label text="Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis " width="600" height="20" textpadding="30,20,0,0"  textcolor="#FF999999"/>
+					<Label text="parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra " width="600" height="20" textpadding="30,20,0,0"  textcolor="#FF999999"/>	
+					<Label text="vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget." width="600" height="20" textpadding="30,20,0,0"  textcolor="#FF999999"/>		
+				</VerticalLayout>
+				
+				<VerticalLayout width="900" height="200">
+					<Label width="900" height="40" textpadding="30,40,0,0" text="Fill in the following information"   textcolor="#FFFFFFFF"/>
+					<HorizontalLayout width="900" height="100" padding="30,30,0,0">
+						<VerticalLayout width="200" height="100"  >
+							<Edit style="edit_style" width="200" height="30" text="ID"   textcolor="#FF999999"  textpadding="5,-2,0,0"/>
+							<Edit style="edit_style" width="200" height="30"  text="Email"   textcolor="#FF999999"  textpadding="5,-2,0,0" padding="0,10,0,0"/>
+							<Label width="200" height="30" text="Limit symbol" textcolor="#FF0099FF" fon="6"/>
+						</VerticalLayout>
+						<VerticalLayout width="200" padding="30,0,0,0">
+							<Edit style="edit_style" width="200" height="30" text="Password"   textcolor="#FF999999"  textpadding="5,-2,0,0"/>
+							<Edit style="edit_style" width="200" height="30"  text="Password Confirmation"   textcolor="#FF999999"  textpadding="5,-2,0,0" padding="0,10,0,0"/>
+						</VerticalLayout>
+						<VerticalLayout width="200" padding="30,0,0,0">
+							<Combo style="combo_style" width="200" height="30" padding="0,0,0,0" textcolor="#FF999999" itemtextpadding="0,6,0,0" itemalign="center"
+								dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;" scrollselect="false" itemtextpadding="3,5,0,0" itemalign="left"
+								itemselectedimage="file='common/Button_list_item_down.png'" 
+								itemhotimage="file='common/Button_list_item_hot.png'"
+								itembkimage="file='common/Button_list_item_normal.png'">								
+								<ListLabelElement text="country" selected="true" width="200" height="30"    />
+							</Combo>							
+							<Combo style="combo_style" width="200" height="30" padding="0,10,0,0" textcolor="#FF999999" itemtextpadding="0,6,0,0" itemalign="center"
+								dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;" scrollselect="false" itemtextpadding="3,5,0,0" itemalign="left"
+								itemselectedimage="file='common/Button_list_item_down.png'" 
+								itemhotimage="file='common/Button_list_item_hot.png'"
+								itembkimage="file='common/Button_list_item_normal.png'">
+								<ListLabelElement text="Language" selected="true"  width="200" height="30"   />
+							</Combo>
+						</VerticalLayout>
+						<Button width="150" height="40" bkimage="common/Submit.png"  normalimage="common/Submit.png"  hotimage="common/Submit1.png"  pushedimage="common/Submit1.png"  padding="30,15,0,0" />
+					</HorizontalLayout>
+				</VerticalLayout>
+	
+
+				<HorizontalLayout  width="550" height="100" padding="0,50,0,0" visible="false">						
+					<Button width="150" height="27" 
+						bkimage="common/on.png" 
+						normalimage="common/on.png"
+						hotimage="common/off.png"
+						pushedimage="common/off.png"
+						selectedimage="common/off.png"  padding="220,0,0,0" />
+					 <Button width="100" height="40" 
+						bkimage="common/yes.png" 
+						normalimage="common/yes.png"
+						hotimage="common/yes1.png"
+						pushedimage="common/yes1.png"
+						selectedimage="common/yes1.png"  padding="300,0,0,0" visible="false"/>							
+				</HorizontalLayout>							
+			</VerticalLayout>	
+				<Button name="closebtn" float="true" pos="875,0,0,0" width="25" height="25" 
+					normalimage="file='sysbtn/btn_close_normal.png'"
+					hotimage="file='sysbtn/btn_close_hot.png'" 
+					pushedimage="file='sysbtn/btn_close_down.png'"  />		
+					
+				<Button name="okbtn" float="true" pos="840,0,0,0" width="25" height="25" 
+					bkimage="sysbtn/btn_dxz_normal.png"
+					normalimage="sysbtn/btn_dxz_normal.png"
+					hotimage="sysbtn/btn_dxz_highlight.png" 
+					pushedimage="sysbtn/btn_dxz_down.png" visible="false" />
+		</VerticalLayout>	    		
+		
+	</HorizontalLayout>
+	
+</window>

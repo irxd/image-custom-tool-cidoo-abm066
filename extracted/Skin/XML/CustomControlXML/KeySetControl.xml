@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<KeySetControl name="KeySetControlItem" width="766" height="182" padding="0,0,0,0" bkcolor="#FF285155">
+		<Label name="text_test" style="label_style" glowsize="0" height="0" visible="false" resourcetext="true"/>
+		<Button  width="0" height="0" visible="true" resourcetext="true"/>
+		<VerticalLayout name="keyset_layout" width="766" height="182" padding="7,11,0,0" >
+			<!-- 按键类型 -->
+			<HorizontalLayout width="766" height="35">
+				<Combo name="keyset_function_combo" width="300" height="30" style="combo_style"
+					   itemtextpadding="0,6,0,0" itemalign="center" scrollselect="false"
+					   dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;">
+						
+					<ListLabelElement text="key_set_defaule_text" userdata="0" height="30" resourcetext="true"/>  <!--默认功能-->
+					<ListLabelElement text="key_set_mouse_base_text" userdata="1" height="30" resourcetext="true"/>  <!--鼠标基本按键-->
+					<ListLabelElement text="key_set_mouse_swing_text" userdata="2" height="30" resourcetext="true" visible="false"/><!--鼠标摆动按键-->
+					<ListLabelElement text="key_set_mouse_wheel_text" userdata="3" height="30" resourcetext="true" visible="false"/><!--鼠标滚轮按键-->
+					<ListLabelElement text="key_set_mouse_dpi_text" userdata="4" height="30" resourcetext="true"/><!--DPI按键-->
+					<ListLabelElement text="mouse_key_fire_key" userdata="5" height="30" resourcetext="true"/><!--火力键-->
+					<ListLabelElement text="key_set_standard_text" userdata="6" height="30" resourcetext="true"/><!--键盘按键-->
+					<ListLabelElement text="key_set_multimedia_text" userdata="7" height="30" resourcetext="true"/><!--多媒体-->
+					<ListLabelElement text="key_set_system_text" userdata="8" height="30" resourcetext="true"/><!--系统功能-->
+					<ListLabelElement text="key_set_macro_text" userdata="9" height="30" resourcetext="true"/><!--宏功能-->
+					<ListLabelElement text="tab_cursor_setting_text" userdata="10" height="30" resourcetext="true" visible="true"/><!--机械师-->
+					<ListLabelElement text="key_set_office_text" userdata="11" height="30" resourcetext="true" visible="true"/><!--组合键-->
+				</Combo>
+				
+				<Control />
+				<Button name="key_butt_keydefalut" padding="5,0" tooltip="default_set_text" text="default_set_text"
+						textpadding="6,0,6,0" style="button_style" width="100" autocalcwidth="false" visible="false" resourcetext="true"/>
+				<Button name="key_butt_keysave" padding="5,0" tooltip="macro_btn_save_text" text="macro_btn_save_text" resourcetext="true"
+						textpadding="6,0,6,0" style="button_style" width="100" autocalcwidth="false"
+						visible="false"/>
+				<Button name="key_butt_keycancel"  width="100" height="50"  padding="5,0" tooltip="macro_btn_no_save_text" text="macro_btn_no_save_text" resourcetext="true"
+						textpadding="6,0,6,0" style="button_style"  autocalcwidth="false"
+						visible="false"/>
+				<Button name="key_butt_prosave" width="30" height="30" tooltip="key_set_apply_text" resourcetext="true" enabled="false"
+						normalimage="file='common/profile_save_normal.png'"
+						hotimage="file='common/profile_save_hot.png'"
+						pushedimage="file='common/profile_save_down.png'" 
+						disabledimage="file='common/profile_save_disable.png'"
+						textpadding="6,0,6,0" autocalcwidth="false"/>
+				<Control width="30"/>
+			</HorizontalLayout>
+
+			<TabLayout name="function_switch_tablayout" padding="10,5,0,0">
+				<!-- 默认状态 -->
+				<HorizontalLayout >
+
+				</HorizontalLayout>
+
+				<!-- 鼠标按键 -->
+				<VerticalLayout  >
+					<Label text="key_set_function_select_label_text" style="label_style" glowsize="0" height="30" resourcetext="true"/>
+					<Combo name="keyset_mousekey_combo" width="300" style="combo_style" height="28"
+						   itemtextpadding="0,6,0,0" itemalign="center" scrollselect="false"
+						   dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;">
+						<ListLabelElement text="mouse_key_left" selected="true" height="35" resourcetext="true"/>
+						<ListLabelElement text="mouse_key_middle" height="35" resourcetext="true"/>
+						<ListLabelElement text="mouse_key_right" height="35" resourcetext="true"/>
+						<ListLabelElement text="mouse_key_forward" height="35" resourcetext="true"/>
+						<ListLabelElement text="mouse_key_back" height="35" resourcetext="true"/>
+					</Combo>
+				</VerticalLayout>
+
+				<!-- 鼠标摆动按键 -->
+				<VerticalLayout >
+					<VerticalLayout >
+						<Label text="key_set_function_select_label_text" style="label_style" glowsize="0" height="30" resourcetext="true"/>
+						<Combo name="keyset_mouseswing_combo" width="300" style="combo_style" height="28"
+							   itemtextpadding="0,6,0,0" itemalign="center" scrollselect="false"
+							   dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;">
+							<ListLabelElement text="mouse_key_left_Swing" selected="true" height="35" resourcetext="true"/>
+							<ListLabelElement text="mouse_key_right_Swing" height="35" resourcetext="true"/>
+						</Combo>
+						<Label text="key_setting_mouse_swing_label_num" style="label_style" glowsize="0" height="30" resourcetext="true"/>
+						<Edit name="keyset_mouseswing_num_edit" style="edit_style" width="200" align="center" numberonly="true" maxchar="5" />
+					</VerticalLayout>
+					<Label text="key_setting_mouse_label_play_delay" style="label_style" glowsize="0" height="30" resourcetext="true"/>
+					<HorizontalLayout height="30" padding="0,8,0,0">
+						<Edit name="keyset_mouseswing_delay_edit" style="edit_style" width="140" align="center" numberonly="true" maxchar="5" />
+						<Label text="x 50ms" style="label_style" glowsize="0" width="40" padding="7,0,0,0"/>
+					</HorizontalLayout>
+					<Label text="key_setting_mouse_label_speed" style="label_style" glowsize="0" height="30" resourcetext="true"/>
+					<HorizontalLayout height="30" padding="0,8,0,0">
+						<Edit name="keyset_mouseswing_speed_edit" style="edit_style" width="140" align="center" numberonly="true" maxchar="5" />
+						<Label text="x 10ms" style="label_style" glowsize="0" width="40" padding="7,0,0,0"/>
+					</HorizontalLayout>
+				</VerticalLayout>
+
+				<!-- 鼠标滚动按键 -->
+				<VerticalLayout >
+					<VerticalLayout >
+						<Label text="key_set_function_select_label_text" style="label_style" glowsize="0" resourcetext="true"/>
+						<Combo name="keyset_mousewheel_combo" width="300" height="28" style="combo_style"
+							   itemtextpadding="0,6,0,0" itemalign="center" scrollselect="false"
+							   dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;">
+							<ListLabelElement text="mouse_key_up_Swing" selected="true" height="35" resourcetext="true"/>
+							<ListLabelElement text="mouse_key_down_Swing" height="35" resourcetext="true"/>
+						</Combo>
+						<Label text="key_setting_mouse_wheel_label_num" style="label_style" glowsize="0" width="100" padding="130,0,0,0" resourcetext="true"/>
+						<Edit  name="keyset_mousewheel_num_edit" style="edit_style" width="140" align="center" numberonly="true" maxchar="5"/>
+					</VerticalLayout>
+					<Label text="key_setting_mouse_edit_play_delay" style="label_style" glowsize="0" resourcetext="true"/>
+					<HorizontalLayout height="30" padding="0,8,0,0">
+						<Edit name="keyset_mousewheel_delay_edit" style="edit_style" width="140" align="center" numberonly="true" maxchar="5"/>
+						<Label text="x 50ms" style="label_style" glowsize="0" width="40" padding="7,0,0,0"/>
+					</HorizontalLayout>
+					<Label text="key_setting_mouse_label_speed" style="label_style" glowsize="0" width="100" resourcetext="true"/>
+					<HorizontalLayout height="30" padding="0,8,0,0">
+						<Edit name="keyset_mousewheel_speed_edit" style="edit_style" width="140" align="center" numberonly="true" maxchar="5"/>
+						<Label text="x 10ms" style="label_style" glowsize="0" width="40" padding="7,0,0,0"/>
+					</HorizontalLayout>
+				</VerticalLayout>
+
+				<!-- DPI -->
+				<VerticalLayout >
+					<Label text="key_set_function_select_label_text" style="label_style" glowsize="0" height="30" resourcetext="true"/>
+					<Combo name="keyset_mousedpi_combo" width="300" height="28" style="combo_style" 
+						   itemtextpadding="0,6,0,0" itemalign="center" scrollselect="false"
+						   dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;">
+						<ListLabelElement text="mouse_key_DPI_add" selected="true" height="30" resourcetext="true"/>
+						<ListLabelElement text="mouse_key_DPI_sub" height="30" resourcetext="true"/>
+						<ListLabelElement text="mouse_key_DPI_loop" height="30" resourcetext="true"/>
+					</Combo>
+				</VerticalLayout>
+
+				<!-- 火力键 -->
+				<VerticalLayout >
+					<HorizontalLayout height="30" bkcolor="#00ffffff">
+						<Label text="key_set_label_interval_text" style="label_style" glowsize="0" width="250" resourcetext="true"/>
+						<Edit name="keyset_mousefire_interval_edit" style="edit_style" width="140" align="center" text="50" numberonly="true" mouse="true" maxchar="3" min="1" max="255"/>
+					</HorizontalLayout>
+					<HorizontalLayout height="30" padding="0,8,0,0">
+						<Label text="key_set_label_key_num_text" style="label_style" glowsize="0" width="250" resourcetext="true"/>
+						<Edit name="keyset_mousefire_num_edit" style="edit_style" width="140" align="center"  text="2" numberonly="true" maxchar="3" min="1" max="255"/>
+					</HorizontalLayout>
+				</VerticalLayout>
+
+				<!-- 键盘基本按键 -->
+				<VerticalLayout height="140" bkcolor="#00ffffff">
+					<HorizontalLayout height="15" visible="false">
+						<Label text="key_set_keyboard_combox_text" style="label_style" glowsize="0" height="20" width="350" resourcetext="true"/>	
+					</HorizontalLayout>
+					<HorizontalLayout height="130">
+						<VerticalLayout width="230" height="130">
+							<CheckBox name="key_ComBox_check_0" style="checkbox_style" style="label_style" align="left" width="130" height="25" text="com_key_nothing" resourcetext="true" padding="0,0,0,0" textpadding="30,0,0,0"/>
+							<CheckBox name="key_ComBox_check_2" style="checkbox_style" style="label_style" align="left" width="130" height="25" text="com_key_Shift" resourcetext="true" padding="0,0,0,0" textpadding="30,0,0,0"/>
+							<CheckBox name="key_ComBox_check_1" style="checkbox_style" style="label_style" align="left" width="130" height="25" text="com_key_Ctrl" resourcetext="true" padding="0,0,0,0" textpadding="30,0,0,0"/>
+							<CheckBox name="key_ComBox_check_3" style="checkbox_style" style="label_style" align="left" width="130" height="25" text="com_key_Alt" resourcetext="true" padding="0,0,0,0" textpadding="30,0,0,0"/>
+							<CheckBox name="key_ComBox_check_4" style="checkbox_style" style="label_style" align="left" width="130" height="25" text="com_key_Win" resourcetext="true" padding="0,0,0,0" textpadding="30,0,0,0"/>								   
+						</VerticalLayout>
+						<VerticalLayout width="30" height="130">
+							<Control />
+							<Label text="+" style="label_style" glowsize="0" font="5" height="40" padding="10,10,0,0"/>
+							<Control />
+						</VerticalLayout>
+						
+						<VerticalLayout  padding="20,0,0,0" height="130">
+							<Control />
+							<Label text="key_set_keyboard_label_text" style="label_style" glowsize="0" height="30" padding="0,0,0,0" resourcetext="true"/>
+							<Edit name="keyset_keyboard_text_edit" style="label_style" padding="0,0,0,0" enabled="true" style="edit_style" disabledtextcolor="#FFF97b03" align="center" mouse="true" readonly="true" width="230" height="30" resourcetext="false"/>
+							<Control />
+						</VerticalLayout>										
+					</HorizontalLayout >
+				</VerticalLayout>
+
+				<!-- 消费类 -->
+				<VerticalLayout >
+					<Label text="key_set_function_select_label_text" style="label_style" glowsize="0" height="30" resourcetext="true"/>
+					<!-- <Control width="30"/> -->
+					<Combo name="keyset_media_combo" width="300" height="28" style="combo_style"
+						   itemtextpadding="0,6,0,0" itemalign="center" scrollselect="false"
+						   dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;">
+						<ListLabelElement text="media_text" selected="true" height="35" resourcetext="true"/>
+						<ListLabelElement text="media_play" height="35" resourcetext="true"/>
+						<ListLabelElement text="media_stop" height="35" resourcetext="true"/>
+						<ListLabelElement text="media_prev" height="35" resourcetext="true"/>
+						<ListLabelElement text="media_next" height="35" resourcetext="true"/>
+						<ListLabelElement text="media_vol_sub" height="35" resourcetext="true"/>
+						<ListLabelElement text="media_vol_add" height="35" resourcetext="true"/>
+						<ListLabelElement text="media_mute" height="35" resourcetext="true"/>
+						<ListLabelElement text="web_text" height="35" resourcetext="true"/>
+						<ListLabelElement text="web_refresh" height="35" resourcetext="true"/>
+						<ListLabelElement text="wed_stop" height="35" resourcetext="true"/>
+						<ListLabelElement text="wed_back" height="35" resourcetext="true"/>
+						<ListLabelElement text="wed_forward" height="35" resourcetext="true"/>
+						<ListLabelElement text="wed_favorite" height="35" resourcetext="true"/>
+						<ListLabelElement text="web_search" height="35" resourcetext="true"/>
+						<ListLabelElement text="media_mypc" height="35" resourcetext="true"/>
+						<ListLabelElement text="media_calc" height="35" resourcetext="true"/>
+						<ListLabelElement text="media_mail" height="35" resourcetext="true"/>
+					</Combo>
+				</VerticalLayout>
+
+				<!-- 系统功能 -->
+				<VerticalLayout >
+					<Label text="key_set_function_select_label_text" style="label_style" glowsize="0" height="30" resourcetext="true"/>
+					<Combo name="keyset_system_combo" width="300" height="28" style="combo_style"
+						   itemtextpadding="0,6,0,0" itemalign="center" scrollselect="false"
+						   dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;">
+						<ListLabelElement text="system_power" selected="true" height="35" resourcetext="true"/>
+						<ListLabelElement text="system_sleep" height="35" resourcetext="true"/>
+						<ListLabelElement text="system_wake_up" height="35" resourcetext="true"/>
+					</Combo>
+				</VerticalLayout>
+
+				<!-- 宏 -->
+				<VerticalLayout >
+					<HorizontalLayout height="40">
+						<Label text="Assign_Macro_text" style="label_style" glowsize="0" width="300" height="30" resourcetext="true"/>
+						<Combo name="keyset_macro_combo" width="350" height="28" style="combo_style" height="35"
+							   itemtextpadding="0,6,0,0" itemalign="center" scrollselect="false" resourcetext="false"
+							   dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;">
+						</Combo>
+					</HorizontalLayout>
+					<HorizontalLayout height="35" padding="0,8,0,0">
+						<Label text="key_set_macro_over_status_text" style="label_style" glowsize="0" height="30" width="300" resourcetext="true"/>
+						<Combo name="keyset_macro_over_combo" width="350" height="28" style="combo_style" height="35"
+							   itemtextpadding="0,6,0,0" itemalign="center" scrollselect="false"
+							   dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;">
+							<ListLabelElement text="key_set_macro_over_normal" selected="true" height="35" resourcetext="true"/>
+							<ListLabelElement text="key_set_macro_over_release" height="35" resourcetext="true"/>
+							<ListLabelElement text="key_set_macro_over_press" height="35" resourcetext="true"/>
+							<ListLabelElement text="key_set_macro_over_release_stop" height="35" resourcetext="true"/>
+							<ListLabelElement text="key_set_macro_over_play" height="35" resourcetext="true"/>
+							
+						</Combo>
+					</HorizontalLayout>
+					<HorizontalLayout name="keyset_macro_cycle_layout" height="30" visible="false" padding="0,5,0,0" >
+						<Label text="macro_set_repeat_macro_text" style="label_style" height="30" glowsize="0" width="300" resourcetext="true"/>
+						<Edit name="keyset_macro_cycle_edit" text="1" tipvalue="1" style="edit_style" width="140" height="30" numberonly="true" maxchar="3" min="1" max="255"/>
+						<Label text="macro_set_times_text" style="label_style" height="30" glowsize="0" padding="5,0,0,0" resourcetext="true"/>
+					</HorizontalLayout>
+				</VerticalLayout>
+
+				<!--枪键-->
+				<VerticalLayout >
+					<VerticalLayout padding="0,8,0,0">
+						<Label text="key_set_function_select_label_text" style="label_style" glowsize="0" height="30" resourcetext="true"/>
+						<Combo name="keyset_gunkey_combo" width="300" height="28" style="combo_style" 
+							   itemtextpadding="0,6,0,0" itemalign="center" scrollselect="false"
+							   dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;">
+							<ListLabelElement text="gun_1_txt" selected="true" height="35" resourcetext="true"/>
+							<ListLabelElement text="gun_2_txt" height="35" resourcetext="true"/>
+							<ListLabelElement text="gun_3_txt" height="35" resourcetext="true"/>
+							<ListLabelElement text="gun_4_txt" height="35" resourcetext="true"/>									
+						</Combo>
+					</VerticalLayout>
+				</VerticalLayout>
+
+				<!--组合键-->
+				<VerticalLayout>
+					<Label text="key_set_function_select_label_text" style="label_style" glowsize="0" height="30" resourcetext="true"/>
+						<Combo name="keyset_combokey_combo" width="300" height="28" style="combo_style"
+						   itemtextpadding="0,6,0,0" itemalign="center" scrollselect="false"
+						   dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;">
+							<ListLabelElement text="custem_open" selected="true" height="35" resourcetext="true"/> 
+							<ListLabelElement text="custem_new" height="35" resourcetext="true"/>
+							<ListLabelElement text="custem_undo" height="35" resourcetext="true"/>
+							<ListLabelElement text="custem_save" height="35" resourcetext="true"/>
+							<ListLabelElement text="custem_copy" height="35" resourcetext="true"/>
+							<ListLabelElement text="custem_cut" height="35" resourcetext="true"/>
+							<ListLabelElement text="custem_paste" height="35" resourcetext="true"/>
+							<ListLabelElement text="custem_find" height="35" resourcetext="true"/>
+							<ListLabelElement text="custem_select_all" height="35" resourcetext="true"/>
+							<ListLabelElement text="custem_narrow" height="35" resourcetext="true"/>
+							<ListLabelElement text="custem_magnify" height="35" resourcetext="true"/>
+					</Combo>
+				</VerticalLayout>
+				
+			</TabLayout>
+		</VerticalLayout>
+
+	</KeySetControl>
+</Window>

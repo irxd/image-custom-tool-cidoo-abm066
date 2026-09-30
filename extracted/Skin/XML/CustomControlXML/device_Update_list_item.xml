@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window> 
+<UpdateInfoListItem name="DeviceUpdateItem" menu="true" height="50" padding="5,0,0,0" >
+	<HorizontalLayout name="UpdateNamelayout" height="50">
+		<CheckBox name="check_name_select"  textcolor="#ffffffff" align="left" valign="vcenter" width="160" selectedtextcolor="#FF0099FF" text="Keyboard" height="25" normalimage="file='common/kogei.png' dest='3,8,18,23'" cursor="hand" selectedimage="file='common/kogei1.png' dest='3,8,18,23'" disabledimage="file='common/touming.png' dest='3,8,18,23'" textpadding="25,5,0,0" resourcetext="false" padding="5,10,0,0" />
+	</HorizontalLayout>
+	<VerticalLayout name="UpdateRevlayout" height="50">
+		<Control />
+		<Label name="updateRev" padding="5,0,5,0" text="FW:V0100/FW:V0101" height="25" align="center" visible="false" valign="vcenter" bordersize="0" width="160" textcolor="#FFFFFFFF"/>
+		<Label name="OldRev" padding="5,0,5,0" text="FW:V0100" align="center" height="25"  valign="vcenter" bordersize="0" width="160" textcolor="#FF999999"/>
+		<Control />
+	</VerticalLayout>           
+	<HorizontalLayout name="UpdateStatuslayout" height="50" padding="0,0,0,0">
+		<Label name="update_status_text" padding="5,0,5,0" text="LessUpdateText" align="center" valign="vcenter" resourcetext="true" bordersize="0" autocalcwidth="false" textcolor="#FF999999"/>
+		<Ring name="update_status_ing" padding="0,10,10,0" textcolor="#FF333333" align="center" valign="vcenter" height="28" width="28" visible="false" bkimage="common/account_noble_yuchi_tips_icon.png"/>
+		<Label name="update_status_ok" padding="0,10,10,0" textcolor="#FF333333" align="center" valign="vcenter" height="28" width="28" visible="false" bkimage="common/update_status_ok_icon.png"/>
+		<Label name="update_progress_value" padding="5,0,5,0" resourcetext="false" bordersize="0" align="center" valign="vcenter" autocalcwidth="true" textcolor="#FF999999"/>
+	</HorizontalLayout>   
+</UpdateInfoListItem>
+</Window>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Window size="900,650" caption="0,0,0,100" bktrans="false" alpha="255" gdiplustext="false" >
+	<Font shared="true" id="0" name="Verdana" size="13" default="true"/>
+    <Font shared="true" id="1" name="Verdana" size="12" bold="false" underline="true"/>
+    <Font shared="true" id="2" name="Verdana" size="16" bold="false"/>
+    <Font shared="true" id="3" name="Verdana" size="28" bold="false"/>
+	<Font shared="true" id="4" name="Verdana" size="14" bold="false" />
+	<Font shared="true" id="5" name="Verdana" size="18" bold="false" />
+	<Font shared="true" id="6" name="Verdana" size="20" bold="false" />
+	<Font shared="true" id="7" name="Verdana" size="12" bold="false" />
+	<Font shared="true" id="8" name="Verdana" size="10" bold="false" />
+	<Font shared="true" id="9" name="Verdana" size="9" bold="false" />
+	<Font shared="true" id="10" name="Verdana" size="10" bold="false" />
+	<Font shared="true" id="50" name="Verdana" size="16" bold="true" />
+		
+   <!--  <Default name="VScrollBar" shared="true" value="button1normalimage=&quot;file='control/scrollbar.bmp' source='0,90,16,106' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='control/scrollbar.bmp' source='18,90,34,106' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='control/scrollbar.bmp' source='36,90,52,106' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='control/scrollbar.bmp' source='54,90,70,106' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='control/scrollbar.bmp' source='0,108,16,124' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='control/scrollbar.bmp' source='18,108,34,124' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='control/scrollbar.bmp' source='36,108,52,124' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='control/scrollbar.bmp' source='54,108,70,124' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='control/scrollbar.bmp' source='0,126,16,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='control/scrollbar.bmp' source='18,126,34,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='control/scrollbar.bmp' source='36,126,52,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='control/scrollbar.bmp' source='54,126,70,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='control/scrollbar.bmp' source='0,144,16,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='control/scrollbar.bmp' source='18,144,34,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='control/scrollbar.bmp' source='36,144,52,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='control/scrollbar.bmp' source='54,144,70,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='control/scrollbar.bmp' source='0,162,16,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='control/scrollbar.bmp' source='18,162,34,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='control/scrollbar.bmp' source='36,162,52,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='control/scrollbar.bmp' source='54,162,70,178' corner='2,2,2,2' mask='#FFFF00FF'&quot;"/>
+    <Default name="HScrollBar" shared="true" value="button1normalimage=&quot;file='control/scrollbar.bmp' source='0,0,16,16' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='control/scrollbar.bmp' source='18,0,34,16' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='control/scrollbar.bmp' source='36,0,52,16' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='control/scrollbar.bmp' source='54,0,70,16' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='control/scrollbar.bmp' source='0,18,16,34' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='control/scrollbar.bmp' source='18,18,34,34' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='control/scrollbar.bmp' source='36,18,52,34' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='control/scrollbar.bmp' source='54,18,70,34' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='control/scrollbar.bmp' source='0,36,16,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='control/scrollbar.bmp' source='18,36,34,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='control/scrollbar.bmp' source='36,36,52,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='control/scrollbar.bmp' source='54,36,70,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='control/scrollbar.bmp' source='0,54,16,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='control/scrollbar.bmp' source='18,54,34,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='control/scrollbar.bmp' source='36,54,52,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='control/scrollbar.bmp' source='54,54,70,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='control/scrollbar.bmp' source='0,72,16,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='control/scrollbar.bmp' source='18,72,34,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='control/scrollbar.bmp' source='36,72,52,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='control/scrollbar.bmp' source='54,72,70,88' corner='2,2,2,2' mask='#FFFF00FF'&quot;"/>
+   --> 
+    <Default name="VScrollBar" shared="true" value="width=&quot;10&quot; showbutton1=&quot;false&quot; showbutton2=&quot;false&quot; thumbnormalimage=&quot;res='control/vscrollbar.png' source='30,60,40,100' corner='0,4,0,4'&quot; thumbhotimage=&quot;file='control/vscrollbar.png' source='10,60,20,100' corner='0,4,0,4'&quot; thumbpushedimage=&quot;file='control/vscrollbar.png' source='20,60,30,100' corner='0,4,0,4'&quot; railnormalimage=&quot;&quot; railhotimage=&quot;&quot; railpushedimage=&quot;&quot; raildisabledimage=&quot;&quot; bknormalimage=&quot;file='control/vscrollbar.png' source='0,60,10,100' corner='0,4,0,4'&quot; bkhotimage=&quot;&quot; bkpushedimage=&quot;&quot; bkdisabledimage=&quot;&quot;"/>
+	<Default name="HScrollBar" shared="true" value="height=&quot;10&quot; showbutton1=&quot;false&quot; showbutton2=&quot;false&quot; thumbnormalimage=&quot;res='control/hscrollbar.png' source='32,30,64,40' corner='4,0,4,0'&quot; thumbhotimage=&quot;file='control/hscrollbar.png' source='32,10,64,20' corner='4,0,4,0'&quot; thumbpushedimage=&quot;file='control/hscrollbar.png' source='32,20,64,30' corner='4,0,4,0'&quot; railnormalimage=&quot;&quot; railhotimage=&quot;&quot; railpushedimage=&quot;&quot; raildisabledimage=&quot;&quot; bknormalimage=&quot;file='control/hscrollbar.png' source='32,0,64,10' corner='4,0,4,0'&quot; bkhotimage=&quot;&quot; bkpushedimage=&quot;&quot; bkdisabledimage=&quot;&quot;"/>
+   
+    <Style name="list_style" value="headerbkimage=&quot;res='control/list_header_bg.png'&quot; itemalign=&quot;center&quot; itemlinecolor=&quot;#FF333333&quot; itembkcolor=&quot;#FF0c1819&quot; itemselectedbkcolor=&quot;#FF009089&quot; itemhotbkcolor=&quot;#FF38757b&quot; itemdisabledbkcolor=&quot;#FF000000&quot; itemselectedtextcolor=&quot;#FF434343&quot; itemshowrowline=&quot;true&quot; itemshowcolumnline=&quot;true&quot; itemtextcolor=&quot;#FFdadada&quot; itemselectedtextcolor=&quot;#FF2f2f2f&quot; itemhottextcolor=&quot;#FFFFFFFF&quot;" />
+	<Style name="macronamelist_style" value="headerbkimage=&quot;res='control/list_header_bg.png'&quot; itemalign=&quot;center&quot; itembkcolor=&quot;#FFffffff&quot; itemselectedbkcolor=&quot;#FF04fff3&quot; itemhotbkcolor=&quot;#FF04fff3&quot; itemdisabledbkcolor=&quot;#FFffffff&quot; itemtextcolor=&quot;#FF2f2f2f&quot; itemhottextcolor=&quot;#FFffffff&quot; itemselectedtextcolor=&quot;#FFffffff&quot;" />
+    <Style name="edit_style" shared="true" value="textpadding=&quot;6,0,6,0&quot; align=&quot;center&quot; textcolor=&quot;#FFFDADADA&quot; bkcolor=&quot;#FF2a2727&quot; nativebkcolor=&quot;#FF2a2727&quot; bordercolor=&quot;#FFa8a8a8&quot; bordersize=&quot;1&quot;"/>
+	<Style name="rgb_edit_style" value="align=&quot;center&quot; textcolor=&quot;#FFFDADADA&quot; nativetextcolor=&quot;#FFdadada&quot; bkcolor=&quot;#FF17393c&quot; nativebkcolor=&quot;#FF17393c&quot;" />
+	<Style name="checkbox_style" shared="true" value="height=&quot;30&quot; normalimage=&quot;file='control/unchecked.png' dest='0,7,12,19'&quot; selectedimage=&quot;file='control/checked.png' dest='0,7,12,19'&quot; disabledimage=&quot;file='control/checked_disable.png' dest='0,7,12,19'&quot;"/>
+	<Style name="k_btn_style" value="float=&quot;true&quot; keyboard=&quot;false&quot; height=&quot;30&quot; width=&quot;30&quot;"/>
+	<Style name="macro_label_text_style" shared="true" value="align=&quot;center&quot; valign=&quot;center&quot; height=&quot;30&quot; width=&quot;175&quot; textcolor=&quot;#FFFFFFFF&quot; bkimage=&quot;res=''&quot;"/>
+	<Style name="macro_label_down_style" shared="true" value="align=&quot;center&quot; valign=&quot;center&quot; height=&quot;30&quot; width=&quot;175&quot; textcolor=&quot;#FFFFFFFF&quot; bkimage=&quot;res='control/macro_key_down.png' dest='79,6,95,24'&quot; text=&quot; &quot;"/>
+	<Style name="macro_label_up_style" shared="true" value="align=&quot;center&quot; valign=&quot;center&quot; height=&quot;30&quot; width=&quot;175&quot; textcolor=&quot;#FFFFFFFF&quot; bkimage=&quot;res='control/macro_key_up.png' dest='79,6,95,24'&quot; text=&quot; &quot;"/>
+	<Style name="macro_label_mouse_style" shared="true" value="align=&quot;center&quot; valign=&quot;center&quot; resourcetext=&quot;true&quot; height=&quot;30&quot; width=&quot;230&quot; textcolor=&quot;#FFFFFFFF&quot; bkimage=&quot;res='control/mouse_key_action.png' dest='16,3,34,28'&quot; textpadding=&quot;50,0,0,0&quot; "/>
+	<Style name="macro_label_keyboard_style" shared="true" value="align=&quot;center&quot; valign=&quot;center&quot; resourcetext=&quot;true&quot; height=&quot;30&quot; width=&quot;230&quot; textcolor=&quot;#FFFFFFFF&quot; bkimage=&quot;res='control/keyboard_key_action.png' dest='10,4,40,26'&quot; textpadding=&quot;50,0,0,0&quot;"/>
+	<Style name="treenode_kogei_style" value="width=&quot;16&quot; height=&quot;16&quot; normalimage=&quot;file='control/kogei.png' &quot; selectedimage=&quot;file='control/kogei1.png'&quot; disabledimage=&quot;file='control/kogei.png'&quot;"/>
+	<Style name="combo_style" value="dropboxsize=&quot;0,240&quot; itemtextcolor=&quot;#FFFDADADA&quot; itemhottextcolor=&quot;#FF000000&quot; itemselectedtextcolor=&quot;#FF000000&quot; textcolor=&quot;#FFFDADADA&quot; textpadding=&quot;5,1,28,1&quot; bkcolor=&quot;#FF202020&quot; itembkcolor=&quot;#FF202020&quot; itemselectedbkcolor=&quot;#FFba0731&quot; itemhotbkcolor=&quot;#FFba0731&quot; itemlinecolor=&quot;#FF000000&quot; normalimage=&quot;res='control/combox_normal.png'&quot; hotimage=&quot;res='control/combox_hot.png'&quot; pushedimage=&quot;res='control/combox_hot.png'&quot;"/>
+	<Style name="combo161_style" value="dropboxsize=&quot;0,135&quot; itemtextcolor=&quot;#FFFDADADA&quot; itemhottextcolor=&quot;#FF000000&quot; itemselectedtextcolor=&quot;#FF000000&quot; textcolor=&quot;#FFFDADADA&quot; textpadding=&quot;5,1,28,1&quot; bkcolor=&quot;#FF17393c&quot; itembkcolor=&quot;#FF17393c&quot; itemselectedbkcolor=&quot;#FF04fff3&quot; itemhotbkcolor=&quot;#FF38757b&quot; itemlinecolor=&quot;#FF000000&quot; normalimage=&quot;res='control/combox161_normal.png'&quot; hotimage=&quot;res='control/combox161_hot.png'&quot; pushedimage=&quot;res='control/combox161_hot.png'&quot;"/>
+	<Style name="colortab_style" shared="true" value="textcolor=&quot;#FFF97b03&quot; hottextcolor=&quot;#FF000000&quot; selectedtextcolor=&quot;#FF000000&quot; textpadding=&quot;0,0,0,0&quot; normalimage=&quot;res='control/tab_normal.png'&quot; hotimage=&quot;res='control/tab_over.png'&quot; focusedimage=&quot;res='control/tab_mask.png'&quot; selectedimage=&quot;res='control/tab_mask.png'&quot; disabledimage=&quot;control/tab_disable.png&quot;"/>
+    <Style name="tab_deng_style" shared="true" value="textcolor=&quot;#FFdadada&quot; hottextcolor=&quot;#FFffffff&quot; selectedtextcolor=&quot;#FFffffff&quot; textpadding=&quot;0,0,0,0&quot; normalimage=&quot;res='control/deng_normal.png'&quot; hotimage=&quot;res='control/deng_hot.png'&quot; focusedimage=&quot;res='control/deng_down.png'&quot; selectedimage=&quot;res='control/deng_down.png'&quot; disabledimage=&quot;control/deng_disable.png&quot;"/>
+    <Style name="tab_key_style" shared="true" value="textcolor=&quot;#FFCACACA&&quot; hottextcolor=&quot;#FFffffff&quot; selectedtextcolor=&quot;#FFffffff&quot; textpadding=&quot;0,0,0,0&quot; normalimage=&quot;res='control/key_normal.png'&quot; hotimage=&quot;res='control/key_hot.png'&quot; focusedimage=&quot;res='control/key_down.png'&quot; selectedimage=&quot;res='control/key_down.png'&quot;disabledimage=&quot;control/key_disable.png&quot;"/>
+	<Style name="tab_6533_voice_style" shared="true" value="textcolor=&quot;#FFCACACA&quot; hottextcolor=&quot;#FFffffff&quot; selectedtextcolor=&quot;#FFffffff&quot; textpadding=&quot;0,0,0,0&quot; normalimage=&quot;res='control/HS_normal.png'&quot; hotimage=&quot;res='control/HS_hot.png'&quot; focusedimage=&quot;res='control/HS_down.png'&quot; selectedimage=&quot;res='control/HS_down.png'&quot; disabledimage=&quot;control/marco_disable.png&quot;"/>
+	<Style name="tab_magic_style" shared="true" value="textcolor=&quot;#FFCACACA&quot; hottextcolor=&quot;#FFffffff&quot; selectedtextcolor=&quot;#FFffffff&quot; textpadding=&quot;0,0,0,0&quot; normalimage=&quot;res='control/cursor_normal.png'&quot; hotimage=&quot;res='control/cursor_hot.png'&quot; focusedimage=&quot;res='control/cursor_down.png'&quot; selectedimage=&quot;res='control/cursor_down.png'&quot; disabledimage=&quot;control/marco_disable.png&quot;"/>
+	<Style name="tab_virtual_style" shared="true" value="textcolor=&quot;#FFCACACA&quot; hottextcolor=&quot;#FFffffff&quot; selectedtextcolor=&quot;#FFffffff&quot; textpadding=&quot;0,0,0,0&quot; normalimage=&quot;res='control/surround_normal.png'&quot; hotimage=&quot;res='control/surround_hot.png'&quot; focusedimage=&quot;res='control/surround_down.png'&quot; selectedimage=&quot;res='control/surround_down.png'&quot; disabledimage=&quot;control/marco_disable.png&quot;"/>
+    <Style name="tab_macro_style" shared="true" value="textcolor=&quot;#FFCACACA&quot; hottextcolor=&quot;#FFffffff&quot; selectedtextcolor=&quot;#FFffffff&quot; textpadding=&quot;0,0,0,0&quot; normalimage=&quot;res='control/marco_normal.png'&quot; hotimage=&quot;res='control/marco_hot.png'&quot; focusedimage=&quot;res='control/marco_down.png'&quot; selectedimage=&quot;res='control/marco_down.png'&quot; disabledimage=&quot;control/marco_disable.png&quot;"/>
+    <Style name="tab_dpi_style" shared="true" value="textcolor=&quot;#FFCACACA&quot; hottextcolor=&quot;#FFffffff&quot; selectedtextcolor=&quot;#FFffffff&quot; textpadding=&quot;0,0,0,0&quot; normalimage=&quot;res='control/dpi_normal.png'&quot; hotimage=&quot;res='control/dpi_hot.png'&quot; focusedimage=&quot;res='control/dpi_down.png'&quot; selectedimage=&quot;res='control/dpi_down.png'&quot; disabledimage=&quot;control/dpi_disable.png&quot;"/>
+    <Style name="tab_cursor_style" shared="true" value="textcolor=&quot;#FFCACACA&quot; hottextcolor=&quot;#FFffffff&quot; selectedtextcolor=&quot;#FFffffff&quot; textpadding=&quot;0,0,0,0&quot; normalimage=&quot;res='control/machinist_normal.png'&quot; hotimage=&quot;res='control/machinist_hot.png'&quot; focusedimage=&quot;res='control/machinist_down.png'&quot; selectedimage=&quot;res='control/machinist_down.png'&quot; disabledimage=&quot;control/cursor_disable.png&quot;"/>
+    <Style name="button_style" shared="true" value="textcolor=&quot;#FFdadada&quot; hottextcolor=&quot;#FFffffff&quot; selectedtextcolor=&quot;#FFffffff&quot; pushedtextcolor=&quot;#FF000000&quot; textpadding=&quot;0,0,0,0&quot; bkcolor=&quot;#FF17393c&quot; hotbkcolor=&quot;#FF38757b&quot; selectedbkcolor=&quot;#FF009089&quot; pushedbkcolor=&quot;#FF009089&quot;"/>
+	<Style name="label_style" shared="true" value="textcolor=&quot;#FFFDADADA&quot; bkcolor=&quot;#00000000&quot;"/>
+	<Style name="slider_style" shared="true" value="isstretchfore=&quot;false&quot; bkimage=&quot;res='control/SliderBar_BK.png' mask='#ffffffff'&quot; disabledimage=&quot;res='control/SliderBar_BK.png' mask='#ffffffff'&quot; foreimage=&quot;control/SliderBar_BK1.png&quot; thumbimage=&quot;file='control/SliderBar1_Thumb.png' mask='0xffffffff'&quot; thumbhotimage=&quot;file='control/SliderBar1_Thumb.png' mask='0xffffffff'&quot; thumbpushedimage=&quot;file='control/SliderBar1_Thumb.png' mask='0xffffffff'&quot; thumbsize=&quot;7,14&quot;"/>
+	<Style name="vslider_style" shared="true" value="isstretchfore=&quot;false&quot; bkimage=&quot;res='control/SliderBar_VBK.png' mask='#ffffffff'&quot; disabledimage=&quot;res='control/SliderBar_VBK.png' mask='#ffffffff'&quot; foreimage=&quot;control/SliderBar_VBK1.png&quot; thumbimage=&quot;file='control/SliderBar1_VThumb.png' mask='0xffffffff'&quot; thumbhotimage=&quot;file='control/SliderBar1_VThumb.png' mask='0xffffffff'&quot; thumbpushedimage=&quot;file='control/SliderBar1_VThumb.png' mask='0xffffffff'&quot; thumbsize=&quot;14,7&quot;"/>
+	<Style name="gun_check_style" shared="true" value="width=&quot;12&quot; height=&quot;51&quot; bkimage=&quot;file='Shootkey/abc_scrubber_control_to_pressed_mtrl_000.png'&quot; padding=&quot;5,5,0,0&quot; selectedimage=&quot;file='Shootkey/abc_scrubber_control_to_pressed_mtrl1_000.png'&quot; hotimage=&quot;file='Shootkey/abc_scrubber_control_to_pressed_mtrl1_000.png'&quot;" />    
+	<Style name="color_option_style" shared="true" value="selectedimage=&quot;file='common/color_option.png' source='0,0,20,20'&quot; hotimage=&quot;file='common/color_option.png' source='44,0,64,20'&quot; disabledimage=&quot;file='common/color_option.png' source='66,0,86,20'&quot;"/>
+	<Style name="audiovslider_style" shared="true" value="isstretchfore=&quot;false&quot; bkimage=&quot;res='control/AudioSliderBar_VBK.png' mask='#ffffffff'&quot; disabledimage=&quot;res='control/AudioSliderBar_VBK.png' mask='#ffffffff'&quot; foreimage=&quot;control/AudioSliderBar_VBK1.png&quot; thumbimage=&quot;file='control/SliderBar1_VThumb.png' mask='0xffffffff'&quot; thumbhotimage=&quot;file='control/SliderBar1_VThumb.png' mask='0xffffffff'&quot; thumbpushedimage=&quot;file='control/SliderBar1_VThumb.png' mask='0xffffffff'&quot; thumbsize=&quot;14,7&quot;"/>
+	
+	<Style name="button_style1" shared="true" value="textcolor=&quot;#FFFFFFFF&quot; hottextcolor=&quot;#FFffffff&quot; selectedtextcolor=&quot;#FFffffff&quot; pushedtextcolor=&quot;#FF000000&quot; textpadding=&quot;0,0,0,0&quot; bkcolor=&quot;#FF2a2727&quot; hotbkcolor=&quot;#FFd20334&quot; selectedbkcolor=&quot;#FF6a011a&quot; pushedbkcolor=&quot;#FF6a011a&quot;"/>
+	
+	<Style name="combo_style_screen" value="dropboxsize=&quot;0,240&quot; itemtextcolor=&quot;#FFFFFFFF&quot; itemhottextcolor=&quot;#FFFFFFFF&quot; itemselectedtextcolor=&quot;#FFFFFFFF&quot; textcolor=&quot;#FFFFFFFF&quot; textpadding=&quot;5,1,28,1&quot; bkcolor=&quot;#FF202020&quot; itembkcolor=&quot;#FF202020&quot; itemselectedbkcolor=&quot;#FFba0731&quot; itemhotbkcolor=&quot;#FFba0731&quot; itemlinecolor=&quot;#FF000000&quot; normalimage=&quot;res='control/combox_screen_normal.png'&quot; hotimage=&quot;res='control/combox_screen_hot.png'&quot; pushedimage=&quot;res='control/combox_screen_hot.png'&quot;"/>
+	
+	<VerticalLayout name="root" width="784" height="518" bkimage="main\background4.png" vscrollbar="false" >
+        
+		<Label name="str_test" float="true" pos="0,0,0,0" width="0" height="0" resourcetext="true" visible="false"/>
+		
+       <!--  菜单栏 -->
+        <!-- <VerticalLayout name="appbar" width="151" height="30" bkcolor="#FFFFFFFF"> -->
+       <HorizontalLayout name="appbar" height="40" bkcolor="#000000FF" visible="true">
+			<!-- LOGO -->
+			<Label bkimage="file='main/logo5.png'" width="268" height="55" bkcolor="#00ff0000" padding="0,0,0,0"/>
+		    <Control />
+			<DeviceKeyButton name="control_light_status" style="k_btn_style" width="150" height="25" enable="true" float="false" padding="0,30,0,0"
+							visible="false"	bkcolor="#FF0099FF" hotbkcolor="#FF0000FF" pushedbkcolor="#FF001CA8"  textcolor="#FFFFFFFF" text="控制灯光"/>
+			<DeviceKeyButton name="acroxms_dkey_test_0" style="k_btn_style" width="120" height="25" enable="true" float="false" padding="0,30,0,0"
+							visible="false"	bkcolor="#FF0099FF" hotbkcolor="#FF0000FF" pushedbkcolor="#FF001CA8"  textcolor="#FFFFFFFF" text="测试按钮"/>
+			<Button name="cloudbtn" width="25" height="25"  tooltip="cloud_set_text" resourcetext="true" padding="18,30,0,0"
+				normalimage="file='sysbtn/btn_yd_normal.png'" visible="false"
+				hotimage="file='sysbtn/btn_yd_hot.png'" 
+				pushedimage="file='sysbtn/btn_yd_down.png'" />
+			<Button name="setbtn" width="20" height="20"  tooltip="device_update_setup_text" resourcetext="true" padding="15,12,0,0" visible="false"
+				normalimage="file='sysbtn/btn_skin_normal.png'"
+				hotimage="file='sysbtn/btn_Skin_hot.png'" 
+				pushedimage="file='sysbtn/btn_Skin_down.png'" />
+			<Button name="minbtn" width="20" height="20"  tooltip="min_text" resourcetext="true" padding="15,12,0,0"
+				normalimage="file='sysbtn/btn_mini_normal.png'"
+                hotimage="file='sysbtn/btn_mini_hot.png'" 
+				pushedimage="file='sysbtn/btn_mini_down.png'" />
+            <Button name="closebtn" width="20" height="20"  tooltip="close_text" resourcetext="true" padding="15,12,2,0"
+				normalimage="file='sysbtn/btn_close_normal.png'"
+				hotimage="file='sysbtn/btn_close_hot.png'" 
+				pushedimage="file='sysbtn/btn_close_down.png'" />
+			<Control width="11"/>
+        </HorizontalLayout>
+				
+		 <!-- <HorizontalLayout height="50"/> -->
+        <!-- </VerticalLayout> -->
+		<VerticalLayout height="580" vscrollbar="false" visible="true" bkcolor="#00fff00">
+								
+			<TabLayout name="device_switch" width="1000" height="580" vscrollbar="false">		
+				
+			</TabLayout>	
+			
+			<TabLayout name="device_power_switch" float="true" pos="800,0,0,0" vscrollbar="false" height="60" width="200" bkcolor="#00ffffff" >
+				
+			</TabLayout>			
+		</VerticalLayout>
+		
+		<!--设备选项卡-->
+		<HorizontalLayout float="true" pos="231,61,0,0" height="60" width="400" visible="false"> 
+			<Button width="10" name="device_select_prev" visible="true" height="58" normalimage="file='common/full.png'" padding="0,1,0,0" hotimage="file='common/full1.png'" pushedimage="file='common/full1.png'" />
+			<HorizontalLayout name="device_select_layout" height="60" width="360" borderround="10,10" bkcolor="#33538785" hscrollbar="false" padding="10,0,0,0" childalign="center"> 
+					
+			</HorizontalLayout>
+			<Button width="10" name="device_select_next" visible="true" height="58" normalimage="file='common/im_back_normal.png'" padding="10,1,0,0" hotimage="file='common/im_back_normal1.png'" pushedimage="file='common/im_back_normal1.png'" />			
+		</HorizontalLayout>
+		
+		<VerticalLayout name="No_device_Link" float="true" pos="0,0,0,0" width="900" height="650" bkcolor="#00000000" bkimage="file='main/NoDeviceLinkBack.png'" vscrollbar="false" visible="true" >
+			<Label bkimage="file='logo.png'" width="268" height="80" padding="0,0,0,0"/>
+			<VerticalLayout >
+				<Control/>
+				<Label resourcetext="true" style="label_style" font="3" text="message_text_1" align="center" visible="true"/>
+				<Label resourcetext="true" style="label_style" font="6" height="70" padding="0,30,0,0" text="message_text_1_1" align="center" valign="vcenter" wordbreak="true" textpadding="30,0,30,0" visible="true"/>
+				<Control/>
+				<HorizontalLayout height="35" padding="0,0,0,35">
+					<Control/>
+					<Button  width="80" height="35" name="nodevice_ok_btn" bkcolor="#FF000000" hotbkcolor="#FF032d2b" pushedbkcolor="#FF17393c" textcolor="#FFFFFFFF" text="OK" padding="10,0,35,0" /> 
+				</HorizontalLayout>
+			</VerticalLayout>
+			
+		</VerticalLayout>
+		
+		
+		
+   </VerticalLayout>
+</Window>

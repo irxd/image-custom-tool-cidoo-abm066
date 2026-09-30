@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+   	<DeviceOption name="MpDevicePowerItem" width="185" height="60" padding="0,0,0,0">
+		<HorizontalLayout name="device_power_Layout" height="50" padding="0,0,0,0" childpadding="5" visible="true" > 
+			<Control />
+			<Label name="device_phone_type" padding="0,8" autocalcwidth="false" width="20" height="34" visible="true" resourcetext="true" style="label_style" />
+			<HorizontalLayout height="50" width="165" padding="0,0,0,0" childpadding="5" visible="true" > 
+				<Label name="device_wuxian_logo" bkimage="file='power/wuxian_logo.png'" padding="0,13" width="33" height="24" visible="false"  />
+				<Progress name="device_Power_progress" textcolor="#FF333333" valign="vcenter" float="true" pos="47,18,0,0" height="14" width="47" style="label_style" forecolor="#FF333333" bkcolor="#FFFFFFFF" value="30" min="0" max="100"/>
+				<Label name="device_power_status" float="true" pos="38,13,0,0" width="62" height="24" bkimage="file='power/powering.png'" style="label_style" />
+				<Label name="device_power_value" float="true" pos="105,10,0,0" width="50" height="30" text="70%" style="label_style" visible="true" />
+			</HorizontalLayout>
+		</HorizontalLayout>   
+	</DeviceOption>
+</Window>

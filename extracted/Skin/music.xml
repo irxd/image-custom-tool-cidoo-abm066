@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="369,276" caption="0,0,0,40">
+	<HorizontalLayout name="root" width="369" height="276"   bkimage="file='main/AudioBK.png'" bkcolor="#FF032d2b" bordersize="1" bordercolor="#FF38757B">
+		<VerticalLayout width="150" height="250">
+			<HorizontalLayout width="150" height="30" padding="0,40,0,0">
+				<Option  name="audio_select_tab1" style="checkbox_style"   width="30" height="30" padding="10,0,0,0"  group="audio_table" selected="true" />
+				<Edit name="audio_edit_name1" width="100" height="28" style="edit_style" padding="0,0,0,0" maxchar="15" font="8" bkcolor="#FF032d2b" nativebkcolor="#FF032d2b" textcolor="#FFFDADADA" />					
+			</HorizontalLayout>	
+			<HorizontalLayout width="150" height="30" padding="0,10,0,0">
+				<Option  name="audio_select_tab2" style="checkbox_style"  width="30" height="30" padding="10,0,0,0" group="audio_table" selected="false"/>
+				<Edit name="audio_edit_name2" width="100" height="28" style="edit_style" padding="0,0,0,0" maxchar="15" font="8"  bkcolor="#FF032d2b" nativebkcolor="#FF032d2b" textcolor="#FFFDADADA" />					
+			</HorizontalLayout>	
+			<HorizontalLayout width="150" height="30" padding="0,10,0,0">
+				<Option  name="audio_select_tab3" style="checkbox_style"  width="30" height="30" padding="10,0,0,0" group="audio_table" selected="false" />
+				<Edit name="audio_edit_name3" width="100" height="28" style="edit_style" padding="0,0,0,0" maxchar="15" font="8"  bkcolor="#FF032d2b" nativebkcolor="#FF032d2b" textcolor="#FFFDADADA" />					
+			</HorizontalLayout>	
+			<HorizontalLayout width="150" height="30" padding="0,10,0,0">
+				<Option  name="audio_select_tab4" style="checkbox_style"  width="30" height="30" padding="10,0,0,0" group="audio_table"  selected="false" />
+				<Edit name="audio_edit_name4" width="100" height="28" style="edit_style" padding="0,0,0,0"  maxchar="15" font="8"  bkcolor="#FF032d2b" nativebkcolor="#FF032d2b" textcolor="#FFFDADADA" />					
+			</HorizontalLayout>				
+					
+		</VerticalLayout>
+		
+		
+		<HorizontalLayout width="170" height="250" padding="40,40,0,0">
+			<VerticalLayout width="20" height="230" padding="0,6,0,0">
+				<Slider name="audio_r_slider" padding="3,0,0,0" width="14" height="203"  hor="false" style="audiovslider_style"/>	
+				<Label  style="label_style" glowsize="0" height="14" padding="0,3,0,0" align="center" />
+			</VerticalLayout>	
+		
+			<VerticalLayout width="20" height="230" padding="40,6,0,0">
+				<Slider name="audio_g_slider" padding="3,0,0,0" width="14" height="203"  hor="false" style="audiovslider_style"/>	
+				<Label  style="label_style" glowsize="0" height="14" padding="0,3,0,0" align="center" />
+			</VerticalLayout>			
+		
+			<VerticalLayout width="20" height="230" padding="40,6,0,0">
+				<Slider name="audio_b_slider" padding="3,0,0,0" width="14" height="203"  hor="false" style="audiovslider_style"/>	
+				<Label  style="label_style" glowsize="0" height="14" padding="0,3,0,0" align="center" />
+			</VerticalLayout>			
+		</HorizontalLayout>
+		
+		
+		
+		<Label text="music_setting_text" textcolor="#FFbbbbbb" resourcetext="true" float="true" pos="12,5,0,0" width="300" height="30"/>		
+		<Button name="closebtn" float="true" pos="339,5,30,30" width="20" height="20" 
+			normalimage="file='sysbtn/btn_close_normal.png'"
+			hotimage="file='sysbtn/btn_close_hot.png'" 
+			pushedimage="file='sysbtn/btn_close_down.png'"  />		
+		<Button name="okbtn" float="true" style="button_style" pos="60,240,0,0" width="60" height="30" text="ok_text" resourcetext="true" />			
+	</HorizontalLayout>	
+
+
+</Window>

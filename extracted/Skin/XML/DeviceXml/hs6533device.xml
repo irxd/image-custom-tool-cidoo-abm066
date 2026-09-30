@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window >
+    <EevisionHS6533Device name="EevisionHS6533Device">
+		<Label name="text_test" float="true" pos="0,0" width="0" height="0" resourcetext="true" visible="false" />
+		<HorizontalLayout name="hs6533_device">
+			<DeviceProfileUI width="190" padding="18,0,0,0"/>
+			<!--设备功能切换区域-->
+			<TabLayout name="device_function_switch" width="766" height="510" padding="8,74,0,0" vscrollbar="false">       
+				<VerticalLayout width="766" height="488" >
+					<!-- 上 -->
+					<HorizontalLayout width="766" height="306">
+						<SelectPanel name="hs6533_device_key_light" bkimage="file='HS/headset.png' dest='170,0,498,300'" width="766" height="300" padding="0,0,0,0">					
+							<DeviceKeyButton name="key_0" style="k_btn_style" float="true"  pos="343,166,0,0" width="66" height="54" userdata="light_0"
+								lightimage="file=&apos;hs/light/0.png&apos;" />
+							<DeviceKeyButton name="key_1"  style="k_btn_style" float="true"  pos="340,187,0,0" width="41" height="82"  userdata="light_1"
+								lightimage="file=&apos;hs/light/1.png&apos;" />
+							<DeviceKeyButton name="key_2" style="k_btn_style" float="true"   pos="341,231,0,0" width="84" height="41"  userdata="light_2"
+								lightimage="file=&apos;hs/light/2.png&apos;" />
+							<DeviceKeyButton name="key_3"  style="k_btn_style" float="true"  pos="292,231,153,140"  width="153" height="140" userdata="light_3" 
+								lightimage="file=&apos;hs/light/3.png&apos;" visible="false"/>
+							<DeviceKeyButton name="key_4"  style="k_btn_style" float="true"   pos="395,201,0,0" width="55" height="70" userdata="light_4" 
+								lightimage="file=&apos;hs/light/4.png&apos;" />
+							<DeviceKeyButton name="key_5"  style="k_btn_style" float="true"  pos="400,245,204,140"  width="204" height="140" userdata="light_5"
+								lightimage="file=&apos;hs/light/0_5.png&apos;" visible="false"/>
+							<DeviceKeyButton name="key_6"  style="k_btn_style" float="true"  pos="500,245,204,140"  width="204" height="140" userdata="light_6"
+								lightimage="file=&apos;hs/light/0_6.png&apos;" visible="false"/>								
+							<DeviceKeyButton name="key_7"  style="k_btn_style" float="true"  pos="551,160,153,140"  width="153" height="140" userdata="light_7"
+								lightimage="file=&apos;hs/light/0_7.png&apos;" visible="false"/>
+							<DeviceKeyButton name="key_8" style="k_btn_style" float="true"   pos="551,90,153,140"  width="153" height="140" userdata="light_8"
+								lightimage="file=&apos;hs/light/0_8.png&apos;" visible="false"/>	
+							<DeviceKeyButton name="key_9" style="k_btn_style" float="true"   pos="551,32,153,140"  width="153" height="140" userdata="light_9"
+								lightimage="file=&apos;hs/light/0_9.png&apos;" visible="false"/>
+							<DeviceKeyButton name="key_10" style="k_btn_style" float="true"   pos="810,364,340,314"  width="340" height="314" userdata="light_10"
+								lightimage="file=&apos;hs/light/1_0.png&apos;" visible="false"/>
+							<DeviceKeyButton name="key_11" style="k_btn_style" float="true"    pos="810,210,340,314" width="340" height="314" userdata="light_11"
+								lightimage="file=&apos;hs/light/1_1.png&apos;" visible="false"/>
+							<DeviceKeyButton name="key_12" style="k_btn_style" float="true"   pos="810,150,340,314" width="340" height="314" userdata="light_12"
+								lightimage="file=&apos;hs/light/1_2.png&apos;" visible="false"/>
+							<DeviceKeyButton name="key_13" style="k_btn_style" float="true"   pos="810,50,340,314" width="340" height="314" userdata="light_13"
+								lightimage="file=&apos;hs/light/1_3.png&apos;" visible="false"/>
+							<DeviceKeyButton name="key_14" style="k_btn_style" float="true"   pos="212,0,340,314" width="426" height="314" userdata="light_14"
+								lightimage="file=&apos;hs/light/1_0.png&apos;" visible="false"/>									
+						</SelectPanel>														   					
+					</HorizontalLayout>
+					<Control/>
+					<!-- 下 -->
+					<Label bkimage="file='common/tiap12.png'"  text="anzsz_text" textcolor="#FFf49136" resourcetext="true" width="957" height="38" textpadding="10,0,0,0" visible="false"/>	
+					
+					<TabLayout name="device_key_function_switch" width="766" height="182" vscrollbar="false" bkcolor="#ff408185">		
+						<VerticalLayout width="766"  height="182" padding="0,0,0,0" inset="0,0,0,0">
+							<LightSetControlUI />
+						</VerticalLayout>		
+						<VerticalLayout width="766"  height="182" padding="0,0,0,0" inset="0,0,0,0">
+							<Voice6533SetControlUI />
+						</VerticalLayout>		
+						<VerticalLayout width="766"  height="182" padding="0,0,0,0" inset="0,0,0,0">
+							<MagicSetControlUI />
+						</VerticalLayout>						
+						
+					</TabLayout>					
+				</VerticalLayout>
+				<!--环绕声设置模块-->
+				<VerticalLayout width="766" height="490">
+					<VirtualSetControlUI/>
+				</VerticalLayout>
+			</TabLayout >
+		</HorizontalLayout>
+	</EevisionHS6533Device>
+</Window>

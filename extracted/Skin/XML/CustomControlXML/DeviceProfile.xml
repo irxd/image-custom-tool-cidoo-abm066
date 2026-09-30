@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+	<DeviceProfile name="DeviceProfileItem">
+	<HorizontalLayout >
+		<Label name="text_test" float="true" pos="0,0" width="0" height="0" resourcetext="true" visible="false" />
+		<HorizontalLayout width="187"  height="562" bkcolor="#ff285155">
+			<VerticalLayout width="187"  height="562">
+				<!--配置文件列表下拉框-->
+				<HorizontalLayout width="187" height="35" padding="0,33,0,0" visible="false">
+					<Combo name="device_profile_combo" style="combo_style" padding="1,0,0,0"
+					width="155" height="30" dropboxsize="0,300" enabled="true" itemalign="center"
+					dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;" itemtextpadding="3,5,0,0" itemalign="left">
+					</Combo>
+					<Button name="device_add_btn" width="30" height="30" tooltip="profile_add_text"
+					resourcetext="true"
+					normalimage="file='common/profile_add_normal.png'"
+					hotimage="file='common/profile_add_hot.png'"
+					pushedimage="file='common/profile_add_down.png'" 
+					disabledimage="file='common/profile_add_disable.png'" padding="1,0,0,0"/>				
+				</HorizontalLayout>
+				<!--功能选项切换-->
+				<VerticalLayout width="187" height="260" bkcolor="#00ffffff">
+				<!--按键选项位置-->
+					<Option text="tab_light_setting_text" name="deng_Op_tab"  style="tab_deng_style" width="187" height="35" padding="0,30,0,0" textpadding="44,0,0,0" align="left" visible="false" selected="false" resourcetext="true"/>
+					<Option text="tab_key_setting_text" name="key_Op_tab" style="tab_key_style" width="187" height="35" padding="0,0,0,0" textpadding="44,0,0,0" align="left" visible="false" resourcetext="true"/>
+					<Option text="tab_macro_setting_text" name="macro_Op_tab" style="tab_macro_style" width="187" height="35" padding="0,0,0,0" textpadding="44,0,0,0" align="left" visible="false" resourcetext="true"/>
+					<Option text="tab_advanced_setting_text" name="system_Op_tab" style="tab_dpi_style" width="187" height="35" padding="0,0,0,0" textpadding="44,0,0,0" align="left" visible="false" resourcetext="true"/>
+					<Option text="tab_cursor_setting_text" name="cursor_Op_tab" style="tab_cursor_style" width="187" height="35" padding="0,0,0,0" textpadding="44,0,0,0" align="left" visible="false" resourcetext="true" />
+					<Option text="tab_6533_voice_setting_text" name="6533_voice_Op_tab" style="tab_6533_voice_style" width="187" height="35" padding="0,0,0,0" textpadding="44,0,0,0" align="left" visible="false" resourcetext="true" />
+					<Option text="tab_magic_setting_text" name="magic_Op_tab" style="tab_magic_style" width="187" height="35" padding="0,0,0,0" textpadding="44,0,0,0" align="left" visible="false" resourcetext="true" />	
+					<Option text="tab_virtual7.1_setting_text" name="Virtual7.1_Op_tab" style="tab_virtual_style" width="187" height="35" padding="0,0,0,0" textpadding="44,0,0,0" align="left" visible="false" resourcetext="true"/>
+					<Option text="tab_view_screen_text" name="screen_Op_tab" style="tab_key_style" width="187" height="35" padding="0,0,0,0" textpadding="44,0,0,0" align="left" visible="true" resourcetext="true"/>
+				</VerticalLayout>
+
+				<HorizontalLayout name="device_profile_edit" width="187" height="140" visible="true" bkcolor="#00ffffff" padding="0,28,0,0">
+					<Edit name="device_profile_name_edit" style="edit_style" align="center" width="155" height="30" bordersize="1" padding="1,0,0,0"/>
+					<Button name="device_profile_edit_save_btn" tooltip="macro_btn_rename_text"
+								normalimage="common/profile_editname_normal.png"
+								hotimage="common/profile_editname_hot.png"
+								pushedimage="common/profile_editname_down.png"
+								disabledimage="common/profile_editname_disable.png"
+								width="30" height="30" padding="1,0,0,0" resourcetext="true"/> 
+								
+					<VerticalLayout height="70" visible="false">
+						<Edit name="device_profile_link_edit" style="edit_style" align="center" width="236" height="30" bordersize="1" readonly="true"/>
+						<HorizontalLayout name="device_profile_link_name_hor" width="236" height="30" visible="true">
+						
+							<Button name="device_profile_link_btn" float="false" height="30" width="30"
+								normalimage="file='common/Folder1.png'" hotimage="file='common/Folder.png'"
+								pushedimage="file='common/Folder.png'"/>
+							<CheckBox name="device_profile_link_check" width="223" height="30" resourcetext="true"
+								  padding="0,0,0,0" text="profile_link_soft_text" textcolor="#FFF97B03" align="center"
+								  normalimage="file='common/link_app_normal.png'"
+								  hotimage="file='common/link_app_down.png'"
+								  selectedimage="file='common/link_app_down.png'"/>
+						</HorizontalLayout>
+					</VerticalLayout>					
+				</HorizontalLayout>
+
+				<HorizontalLayout name="profile_menu_layout" padding="0,30,0,0" bkcolor="#ff17393c">
+					<Button name="device_export_btn" width="30" height="30" tooltip="profile_export_text"
+						resourcetext="true"
+						normalimage="file='common/profile_export_normal.png'"
+						hotimage="file='common/profile_export_hot.png'"
+						pushedimage="file='common/profile_export_down.png'" 
+						disabledimage="file='common/profile_export_disable.png'" padding="0,0,0,0" />
+					
+					<Button name="device_copy_btn" width="30" height="30" tooltip="profile_copy_text"
+						resourcetext="true"
+						normalimage="file='common/profile_copy_normal.png'"
+						hotimage="file='common/profile_copy_hot.png'"
+						pushedimage="file='common/profile_copy_down.png'" 
+						disabledimage="file='common/profile_copy_disable.png'" padding="9,0,0,0" />
+					<Button name="device_reset_btn" width="30" height="30" tooltip="default_set_text"
+						resourcetext="true"
+						normalimage="file='common/reset_profile.png'"
+						normalimage="file='common/profile_reset_normal.png'"
+						hotimage="file='common/profile_reset_hot.png'"
+						pushedimage="file='common/profile_reset_down.png'" 
+						disabledimage="file='common/profile_reset_disable.png'" padding="9,0,0,0" />
+					<Button name="device_edit_btn" width="30" height="30" visible="false"
+						resourcetext="true"
+						normalimage="file='common/profile_editname_normal.png'"
+						hotimage="file='common/profile_editname_hot.png'"
+						pushedimage="file='common/profile_editname_down.png'" 
+						disabledimage="file='common/profile_editname_disable.png'" padding="5,0,0,0"/>
+					<Button name="device_sub_btn" width="30" height="30" tooltip="profile_delete_text"
+						resourcetext="true"
+						normalimage="file='common/profile_sub_normal.png'"
+						hotimage="file='common/profile_sub_hot.png'"
+						pushedimage="file='common/profile_sub_down.png'" 
+						disabledimage="file='common/profile_sub_disable.png'" padding="9,0,0,0" />
+					<Button name="device_import_btn" width="30" height="30" tooltip="profile_import_text"
+						resourcetext="true"
+						normalimage="file='common/profile_import_normal.png'"
+						hotimage="file='common/profile_import_hot.png'"
+						pushedimage="file='common/profile_import_down.png'" 
+						disabledimage="file='common/profile_import_disable.png'" padding="9,0,0,0" />
+				</HorizontalLayout>				
+				
+			</VerticalLayout>
+			<VerticalLayout width="60" padding="5,55,0,0" >
+				<Button name="profile_fun_spread_btn" width="37" height="28" tooltip="profile_menu_text"
+					resourcetext="true"
+					normalimage="file='common/profile_set.png'"
+					hotimage="file='common/profile_set_hot.png'"
+					pushedimage="file='common/profile_set_hot.png'"
+					disabledimage="file='common/profile_set_disable.png'"/>
+
+			</VerticalLayout>
+		</HorizontalLayout>
+	</HorizontalLayout>
+	</DeviceProfile>
+</Window>

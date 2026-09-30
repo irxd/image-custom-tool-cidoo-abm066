@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+   	<DeviceOption name="DeviceOptionItem" width="80" height="55" padding="5,5,0,0" bkcolor="#0000FF00">
+		<VerticalLayout name="DeviceOptionlayout" width="80" height="55">
+			<HorizontalLayout name="DeviceOptionlayout" width="80" height="40">
+				<Control bkcolor="#000000FF" />
+				<CheckBox name="synchro_device_select" textcolor="#ffffffff" width="15" height="15" normalimage="file='common/kogei.png'" cursor="hand" selectedimage="file='common/kogei1.png'" disabledimage="file='common/kogei.png'" textpadding="25,0,0,0" align="left" resourcetext="false" padding="5,5,0,0" />
+				<Label name="synchro_device_select_status" width="15" height="15" bkimage="file='common/aclotsec_redbackground.png'" align="left" padding="5,5,0,0" visible="false" />
+				<Option name="device_select" bkcolor="#00FFFFFF" textcolor="#ffffffff" width="40" height="40" normalimage="file='common/device_ico/unknow_device_normal.png'" cursor="hand" selectedimage="file='common/device_ico/unknow_device_selected.png'" disabledimage="file='common/device_ico/unknow_device_normal'" textpadding="2,0,0,0" align="left" resourcetext="true" padding="10,0,10,0" />	
+			</HorizontalLayout >
+			<Label name="device_select_name" align="center" height="15" font="10" width="65" style="label_style" bkcolor="#00FF0000" padding="15,0,0,0" visible="false" />
+		</VerticalLayout >			
+	</DeviceOption>
+</Window>

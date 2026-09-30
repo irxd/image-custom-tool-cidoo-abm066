@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="630,500" caption="0,0,0,40">
+	<Style name="combo_style" value="dropboxsize=&quot;0,135&quot; itemtextcolor=&quot;#FFFDADADA&quot; itemhottextcolor=&quot;#FF000000&quot; itemselectedtextcolor=&quot;#FF000000&quot; textcolor=&quot;#FFFDADADA&quot; textpadding=&quot;5,1,28,1&quot; bkcolor=&quot;#FF17393c&quot; itembkcolor=&quot;#FF17393c&quot; itemselectedbkcolor=&quot;#FF04fff3&quot; itemhotbkcolor=&quot;#FF38757b&quot; itemlinecolor=&quot;#FF000000&quot; normalimage=&quot;res='control/combox_normal.png'&quot; hotimage=&quot;res='control/combox_hot.png'&quot; pushedimage=&quot;res='control/combox_hot.png'&quot;"/>
+	<HorizontalLayout width="630" height="500" name="root" bordersize="2" bordercolor="#FF285155" bkcolor="#FF032d2b">				
+		<VerticalLayout width="630" height="500" padding="23,19,0,0" >		             
+			<VerticalLayout name="cloud_game_list_layout" visible="true" width="630" height="300" padding="0,0,0,0">						   
+				<Label height="18" text="device_update_setup_text" resourcetext="true" style="label_style" padding="0,0,0,0" font="2"/>	
+				<HorizontalLayout height="35" padding="0,20,0,0" >
+					<Label height="35" padding="0,0,0,0" width="150" textpadding="0,0,0,0" text="language_text" resourcetext="true" font="4" textcolor="#FFFFFFFF"/>
+					<Combo name="Language_combox_info" style="combo_style" width="300" height="30" padding="20,0,0,0" 
+							dropbox="bordercolor=&quot;#FF000000&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF000000&quot;" scrollselect="false" itemtextpadding="5,5,0,0" itemalign="left" itemshowrowline="true" itemlinecolor="#FF000000" >								
+					</Combo>
+				</HorizontalLayout>					
+				<VerticalLayout  width="600" height="150" padding="0,0,0,0" >				    
+				
+					<Label width="550" height="30" textpadding="0,10,0,0" text="device_update_software_hardware_text" resourcetext="true" font="4" textcolor="#FFFFFFFF" />
+					
+					<List name="device_update_list_info" bkcolor="#00FF0000" width="570" vscrollbar="true" hscrollbar="true" height="220" visible="true" padding="0,0,20,0"
+							itemvalign="vcenter" itemselectedbkcolor="#00FF0000" itemdisabledbkcolor="#00000000" itembkcolor="#00171616"
+							itemhotbkcolor="#00FF0000" bordercolor="#00000000" bordersize="2" itemlinecolor="#FF000000" itemshowrowline="true">
+						<!-- 列表头 -->
+							<ListHeader width="570" menu="true" mouse="false" scaleheader="true" sepwidth="0" bordercolor="#FF000000" bordersize="2">
+								<ListHeaderItem text="device_update_list_header_name" scale="30" align="left" textpadding="25,0,0,0" textcolor="#FFFFFFFF" height="40" bkcolor="#000000FF" bordercolor="#00000000" bordersize="1" sepwidth="0" dragable="false" resourcetext="true"/>
+								<ListHeaderItem text="device_update_list_header_rev" scale="30" textcolor="#FFFFFFFF" height="40" bkcolor="#0000FF00" bordercolor="#00000000" bordersize="1" sepwidth="0" dragable="false" resourcetext="true"/>
+								<ListHeaderItem text="device_update_list_header_status" scale="40" textcolor="#FFFFFFFF" height="40" bkcolor="#00FF0000" bordercolor="#00000000" bordersize="1" sepwidth="0" dragable="false" resourcetext="true"/>
+							</ListHeader>
+					</List>	
+				</VerticalLayout>				
+				
+				
+			</VerticalLayout>	
+			<TabLayout width="630" name="get_update_tab_layout" height="200" visible="false" selectedid="0">
+				<VerticalLayout >
+					<HorizontalLayout height="50" >
+					    <Label name="update_status_image" width="28" height="28" bkimage=" " visible="false" padding="10,10,0,0" />
+						<Ring name="update_status_ring" padding="10,10,0,0" textcolor="#FF333333" align="center" valign="vcenter" height="28" width="28"  bkimage="common/account_noble_yuchi_tips_icon.png"/>
+						<Label name="Update_Status_text" height="50" text="GetUpdateInfoText" resourcetext="true"style="label_style" padding="10,0,0,0" font="4"/>
+					</HorizontalLayout>	
+					<Control />
+					<HorizontalLayout height="40" padding="0,0,0,20">	
+						 <Control />
+						 <Button name="update_fw_and_ap" width="110" height="35" enabled="true" visible="false" disabledtextcolor="#FF666666"
+					            text="Update_Text" resourcetext="true" font="7" 
+								bkimage="common/button_normal.png"
+								normalimage="common/button_normal.png"
+								hotimage="common/button_hot.png" 
+								pushedimage="common/button_down.png"
+								disabledimage="common/button_disable.png"
+								textcolor="#FFFFFFFF" 
+					            padding="0,0,0,0"/>
+						<Control />
+					</HorizontalLayout>	 
+				</VerticalLayout>
+				<VerticalLayout bkcolor="#FF000000">
+					<Label height="40" font="6" visible="true" text="UpdateTiShi" resourcetext="true" style="label_style" padding="20,10,0,0" />
+					<Label width="630" height="80" font="4" text="UpdateTiShiText" style="label_style" resourcetext="true" wordbreak="true" visible="true" padding="20,10,20,0" />
+					<HorizontalLayout height="40" padding="0,0,0,20">
+						<Control />
+						<Button name="update_OK_btn" width="110"  height="35" text="OK" font="7"
+								bkimage="common/button_normal.png"
+								normalimage="common/button_normal.png"
+								hotimage="common/button_hot.png" 
+								pushedimage="common/button_down.png"
+								disabledimage="common/button_disable.png" textcolor="#FFFFFFFF" 
+							    padding="0,0,0,0"/>
+						<Control />
+					</HorizontalLayout>	
+				</VerticalLayout>							
+			</TabLayout>
+			
+		</VerticalLayout>	
+		<Button name="closebtn" float="true" pos="595,16,0,0" width="20" height="20" 
+				normalimage="file='sysbtn/btn_close_normal.png'"
+				hotimage="file='sysbtn/btn_close_hot.png'" 
+				pushedimage="file='sysbtn/btn_close_down.png'"  />					
+			<Button name="okbtn" float="true" pos="840,0,0,0" width="25" height="25" visible="false" />
+	</HorizontalLayout>
+	
+</Window>

@@ -1,0 +1,418 @@
+{
+   "Device" : [
+      {
+         "CustomEQNameInfo" : null,
+         "EQHzValueInfo" : [
+            null,
+            [
+               {
+                  "value" : 7
+               },
+               {
+                  "value" : 11
+               },
+               {
+                  "value" : 2
+               },
+               {
+                  "value" : -3
+               },
+               {
+                  "value" : -1
+               },
+               {
+                  "value" : 4
+               },
+               {
+                  "value" : 9
+               },
+               {
+                  "value" : 12
+               },
+               {
+                  "value" : 9
+               },
+               {
+                  "value" : 5
+               }
+            ],
+            [
+               {
+                  "value" : 7
+               },
+               {
+                  "value" : 11
+               },
+               {
+                  "value" : 6
+               },
+               {
+                  "value" : -3
+               },
+               {
+                  "value" : -11
+               },
+               {
+                  "value" : -1
+               },
+               {
+                  "value" : 6
+               },
+               {
+                  "value" : 13
+               },
+               {
+                  "value" : 6
+               },
+               {
+                  "value" : 13
+               }
+            ],
+            [
+               {
+                  "value" : 10
+               },
+               {
+                  "value" : 4
+               },
+               {
+                  "value" : 0
+               },
+               {
+                  "value" : -3
+               },
+               {
+                  "value" : -4
+               },
+               {
+                  "value" : -3
+               },
+               {
+                  "value" : -2
+               },
+               {
+                  "value" : -1
+               },
+               {
+                  "value" : 0
+               },
+               {
+                  "value" : 0
+               }
+            ],
+            [
+               {
+                  "value" : 2
+               },
+               {
+                  "value" : 1
+               },
+               {
+                  "value" : -2
+               },
+               {
+                  "value" : -3
+               },
+               {
+                  "value" : -5
+               },
+               {
+                  "value" : -7
+               },
+               {
+                  "value" : 0
+               },
+               {
+                  "value" : 4
+               },
+               {
+                  "value" : 9
+               },
+               {
+                  "value" : 8
+               }
+            ],
+            [
+               {
+                  "value" : 0
+               },
+               {
+                  "value" : 0
+               },
+               {
+                  "value" : 0
+               },
+               {
+                  "value" : 0
+               },
+               {
+                  "value" : 0
+               },
+               {
+                  "value" : 0
+               },
+               {
+                  "value" : 0
+               },
+               {
+                  "value" : 0
+               },
+               {
+                  "value" : 0
+               },
+               {
+                  "value" : 0
+               }
+            ],
+            [
+               {
+                  "value" : 7
+               },
+               {
+                  "value" : 14
+               },
+               {
+                  "value" : -13
+               },
+               {
+                  "value" : -6
+               },
+               {
+                  "value" : -1
+               },
+               {
+                  "value" : 8
+               },
+               {
+                  "value" : 13
+               },
+               {
+                  "value" : 7
+               },
+               {
+                  "value" : 2
+               },
+               {
+                  "value" : 6
+               }
+            ],
+            [
+               {
+                  "value" : 14
+               },
+               {
+                  "value" : 10
+               },
+               {
+                  "value" : 4
+               },
+               {
+                  "value" : 0
+               },
+               {
+                  "value" : -4
+               },
+               {
+                  "value" : -3
+               },
+               {
+                  "value" : -1
+               },
+               {
+                  "value" : 1
+               },
+               {
+                  "value" : 2
+               },
+               {
+                  "value" : 3
+               }
+            ],
+            [
+               {
+                  "value" : 2
+               },
+               {
+                  "value" : 1
+               },
+               {
+                  "value" : -2
+               },
+               {
+                  "value" : -3
+               },
+               {
+                  "value" : -5
+               },
+               {
+                  "value" : -1
+               },
+               {
+                  "value" : 7
+               },
+               {
+                  "value" : 11
+               },
+               {
+                  "value" : 15
+               },
+               {
+                  "value" : 13
+               }
+            ],
+            [
+               {
+                  "value" : 8
+               },
+               {
+                  "value" : 2
+               },
+               {
+                  "value" : -4
+               },
+               {
+                  "value" : -8
+               },
+               {
+                  "value" : 1
+               },
+               {
+                  "value" : 3
+               },
+               {
+                  "value" : 8
+               },
+               {
+                  "value" : 11
+               },
+               {
+                  "value" : 14
+               },
+               {
+                  "value" : 16
+               }
+            ],
+            [
+               {
+                  "value" : -3
+               },
+               {
+                  "value" : 4
+               },
+               {
+                  "value" : 10
+               },
+               {
+                  "value" : 0
+               },
+               {
+                  "value" : -11
+               },
+               {
+                  "value" : 3
+               },
+               {
+                  "value" : 9
+               },
+               {
+                  "value" : 13
+               },
+               {
+                  "value" : 6
+               },
+               {
+                  "value" : 0
+               }
+            ],
+            [
+               {
+                  "value" : 18
+               },
+               {
+                  "value" : 14
+               },
+               {
+                  "value" : 8
+               },
+               {
+                  "value" : 2
+               },
+               {
+                  "value" : -3
+               },
+               {
+                  "value" : -6
+               },
+               {
+                  "value" : -1
+               },
+               {
+                  "value" : 2
+               },
+               {
+                  "value" : 5
+               },
+               {
+                  "value" : 6
+               }
+            ],
+            [
+               {
+                  "value" : 2
+               },
+               {
+                  "value" : 1
+               },
+               {
+                  "value" : -2
+               },
+               {
+                  "value" : -4
+               },
+               {
+                  "value" : -8
+               },
+               {
+                  "value" : 4
+               },
+               {
+                  "value" : 12
+               },
+               {
+                  "value" : 16
+               },
+               {
+                  "value" : 18
+               },
+               {
+                  "value" : 15
+               }
+            ]
+         ],
+         "LightInfo" : {
+            "Blue" : 0,
+            "Fx" : 0,
+            "Green" : 0,
+            "Light" : 3,
+            "MultiColor" : 0,
+            "Red" : 255,
+            "SelectItem" : 0,
+            "Speed" : 3
+         },
+         "LightList" : null,
+         "SystemSetStages" : {
+            "CustomEqSeletIndex" : 0,
+            "EqType" : 1,
+            "MagicEnable" : 0,
+            "MagicType" : 3,
+            "MicInSelect" : 1,
+            "MicInValue" : 76,
+            "MicMoniterSelect" : 1,
+            "MicMoniterValue" : 77
+         }
+      }
+   ],
+   "profileUUID" : "2019_04_12_19_28_31_736",
+   "profilename" : "profile1"
+}
+

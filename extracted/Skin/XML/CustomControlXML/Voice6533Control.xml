@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<Voice6533Control name="Voice6533ControlItem" width="770" height="190" padding="0,0,0,0" >
+		<HorizontalLayout width="770" height="190" bkcolor="#FF285155">
+			<!--布局左侧-->
+			<VerticalLayout width="220" padding="59,21,0,0">
+				<HorizontalLayout height="20">
+					<CheckBox name="6533_eq_option_1" width="55" font="9" height="20" text="FPS" style="button_style" bordercolor="#FF009089" bordersize="1"  style="label_style"/>
+					<CheckBox name="6533_eq_option_2" width="55" font="9" height="20" text="ROCK" style="button_style" bordercolor="#FF009089" bordersize="1" style="label_style"/>
+					<CheckBox name="6533_eq_option_3" width="55" font="9" height="20" text="BASS" style="button_style" bordercolor="#FF009089" bordersize="1" style="label_style"/>
+					<CheckBox name="6533_eq_option_4" width="55" font="9" height="20" text="TRI" style="button_style" bordercolor="#FF009089" bordersize="1" style="label_style"/>
+				</HorizontalLayout>
+				<HorizontalLayout height="20">
+					<CheckBox name="6533_eq_option_5" width="55" font="9" height="20" text="BALANCE" style="button_style" bordercolor="#FF009089" bordersize="1" style="label_style"/>
+					<CheckBox name="6533_eq_option_6" width="55" font="9" height="20" text="DANCE" style="button_style" bordercolor="#FF009089" bordersize="1" style="label_style"/>
+					<CheckBox name="6533_eq_option_7" width="55" font="9" height="20" text="BASSx2" style="button_style" bordercolor="#FF009089" bordersize="1" style="label_style"/>
+					<CheckBox name="6533_eq_option_8" width="55" font="9" height="20" text="TRIx2" style="button_style" bordercolor="#FF009089" bordersize="1" style="label_style"/>
+				</HorizontalLayout>
+				<HorizontalLayout height="20">
+					<CheckBox name="6533_eq_option_9" width="55" font="9" height="20" text="LIVE" style="button_style" bordercolor="#FF009089" bordersize="1" style="label_style"/>
+					<CheckBox name="6533_eq_option_10" width="55" font="9" height="20" text="CLASSIC" style="button_style" bordercolor="#FF009089" bordersize="1" style="label_style"/>
+					<CheckBox name="6533_eq_option_11" width="55" font="9" height="20" text="BASSx3" style="button_style" bordercolor="#FF009089" bordersize="1" style="label_style"/>
+					<CheckBox name="6533_eq_option_12" width="55" font="9" height="20" text="TRIx3" style="button_style" bordercolor="#FF009089" bordersize="1" style="label_style"/>
+				</HorizontalLayout>
+				<!--用户自定义EQ环绕音效-->
+				<CheckBox name="6533_eq_option_13" width="220" height="20" bkcolor="#ffffffff" font="9" text="Custom" style="button_style" bordercolor="#FF009089" bordersize="1" style="label_style"/>				
+				<VerticalLayout name="custom_eq_option_layout" height="78">	
+					<Combo name="custom_eq_name_combo" style="combo_style" width="220" height="20" itemtextpadding="0,6,0,0" itemalign="center" keyboard="false"
+						dropbox="bordercolor=&quot;#FF666666&quot; bordersize=&quot;1&quot; bkcolor=&quot;#FF888888&quot;" scrollselect="false" itemtextpadding="3,5,0,0" itemalign="left"/>					
+					<Edit name="custom_eq_name_edit" width="220" height="20" style="edit_style" align="center"/>
+					<HorizontalLayout height="20">
+						<Button name="hs_EQ_btn_save" text="Save" textcolor="#ffffffff" width="110" style="button_style" bordercolor="#FF009089" bordersize="1" enabled="true"/>
+						<Button name="hs_EQ_btn_delete" text="Delete" textcolor="#ffffffff" width="110" padding="0,0,0,0" style="button_style" bordercolor="#FF009089" bordersize="1" enabled="true"/>
+					</HorizontalLayout>
+				</VerticalLayout>	
+			</VerticalLayout>	
+			<Label bkimage="hs/middle_line.png" width="2" height="190" padding="5,7,0,0" visible="false"/>
+			<!--布局中间-->
+			<VerticalLayout width="347" padding="16,21,0,0">
+				<HorizontalLayout width="400" height="161">				
+					<VerticalLayout width="30" >
+						<Slider name="6533_eq_hz_slider_0" min="-20" max="20" value="4" style="vslider_style" width="14" height="125" isstretchfore="true" hor="false" padding="8,0,0,0"  />
+						<Label text="32Hz" height="11" style="label_style" font="9" align="center" padding="0,10,0,0"/>
+					</VerticalLayout>
+					
+					<VerticalLayout width="30" padding="0,0,0,0" >
+						<Slider name="6533_eq_hz_slider_1" min="-20" max="20" value="4" style="vslider_style" width="14" height="125" isstretchfore="true" hor="false" padding="8,0,0,0"  />
+						<Label text="62Hz" height="11" style="label_style" font="9" align="center" padding="0,10,0,0"/>
+					</VerticalLayout>
+					
+					<VerticalLayout width="30" padding="0,0,0,0">
+						<Slider name="6533_eq_hz_slider_2" min="-20" max="20" value="4" style="vslider_style" width="14" height="125" isstretchfore="true" hor="false" padding="8,0,0,0"  />
+						<Label text="125Hz" height="11" style="label_style" font="9" align="center" padding="0,10,0,0"/>
+					</VerticalLayout>
+					
+					<VerticalLayout width="30" padding="0,0,0,0">
+						<Slider name="6533_eq_hz_slider_3" min="-20" max="20" value="4" style="vslider_style" width="14" height="125" isstretchfore="true" hor="false" padding="8,0,0,0"  />
+						<Label text="250Hz" height="11" style="label_style" font="9" align="center" padding="0,10,0,0"/>
+					</VerticalLayout>
+					
+					<VerticalLayout width="30" padding="0,0,0,0">
+						<Slider name="6533_eq_hz_slider_4" min="-20" max="20" value="4" style="vslider_style" width="14" height="125" isstretchfore="true" hor="false" padding="8,0,0,0"  />
+						<Label text="500Hz" height="11" style="label_style" font="9" align="center" padding="0,10,0,0"/>
+					</VerticalLayout>
+					
+					<VerticalLayout width="30" padding="0,0,0,0">
+						<Slider name="6533_eq_hz_slider_5" min="-20" max="20" value="4" style="vslider_style" width="14" height="125" isstretchfore="true" hor="false" padding="8,0,0,0"  />
+						<Label text="1KHz" height="11" style="label_style" font="9" align="center" padding="0,10,0,0"/>
+					</VerticalLayout>
+					
+					<VerticalLayout width="30" padding="0,0,0,0">
+						<Slider name="6533_eq_hz_slider_6" min="-20" max="20" value="4" style="vslider_style" width="14" height="125" isstretchfore="true" hor="false" padding="8,0,0,0"  />
+						<Label text="2KHz" height="11" style="label_style" font="9" align="center" padding="0,10,0,0"/>
+					</VerticalLayout>
+					
+					<VerticalLayout width="30" padding="0,0,0,0">
+						<Slider name="6533_eq_hz_slider_7" min="-20" max="20" value="4" style="vslider_style" width="14" height="125" isstretchfore="true" hor="false" padding="8,0,0,0"  />
+						<Label text="4KHz" height="11" style="label_style" font="9" align="center" padding="0,10,0,0"/>
+					</VerticalLayout>
+					
+					<VerticalLayout width="30" padding="0,0,0,0">
+						<Slider name="6533_eq_hz_slider_8" min="-20" max="20" value="4" style="vslider_style" width="14" height="125" isstretchfore="true" hor="false" padding="8,0,0,0"  />
+						<Label text="8KHz" height="11" style="label_style" font="9" align="center" padding="0,10,0,0"/>
+					</VerticalLayout>
+					
+					<VerticalLayout width="30" padding="0,0,0,0" >
+						<Slider name="6533_eq_hz_slider_9" min="-20" max="20" value="4" style="vslider_style" width="14" height="125" isstretchfore="true" hor="false" padding="8,0,0,0"  />
+						<Label text="16KHz" height="11" style="label_style" font="9" align="center" padding="0,10,0,0"/>
+					</VerticalLayout>
+					<Label name="voice_db" bkimage="file='hs/dB.png'" width="39" height="121"/>
+				</HorizontalLayout>
+				
+			</VerticalLayout>
+			<Label bkimage="hs/middle_line.png" width="2" height="190" padding="5,7,0,0" visible="false"/>
+			<!--布局右侧-->
+			<VerticalLayout width="100" padding="0,21,0,0"  >				
+				
+				<HorizontalLayout height="182" padding="0,0,0,0">					
+					<VerticalLayout width="50" height="190" padding="0,0,0,0">
+						<Slider name="6533_MicIn_slider" enabled="true" width="14" height="125" padding="18,0,0,0" value="25" min="0" max="100" style="vslider_style" isstretchfore="true" hor="false"/>					
+						<Label text="Mic In" style="label_style" glowsize="0" font="9" resourcetext="false" align="center" width="50" height="11" padding="0,2,0,0"/>
+						<CheckBox name="6533_MicIn_option" width="34" height="14" normalimage="file='hs/off.png'" padding="8,3,0,0" selectedimage="file='hs/on.png'"/>
+					</VerticalLayout>
+					
+					<VerticalLayout width="50" height="190" padding="0,0,0,0" >
+						<Slider name="6533_MicMoniter_slider" enabled="true" padding="18,0,0,0" width="14" height="125" value="25" min="0" max="100" style="vslider_style" isstretchfore="true" hor="false"/>			
+						<Label text="Monitor" style="label_style" glowsize="0" font="9" resourcetext="false" align="center" padding="0,2,0,0" width="50" height="11"/>
+						<CheckBox name="6533_MicMoniter_option" width="34" height="14" normalimage="file='hs/off.png'" padding="8,3,0,0" selectedimage="file='hs/on.png'"/>
+					</VerticalLayout>
+				</HorizontalLayout>
+
+			</VerticalLayout>
+		
+		</HorizontalLayout>
+    
+	</Voice6533Control>
+</Window>

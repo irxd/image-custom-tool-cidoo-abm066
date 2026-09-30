@@ -1,0 +1,311 @@
+{
+    "DefaultLightName": [
+        [
+            {
+                "LightName": "light_mode_wave_text",
+				"value" : 0,
+				"visible" : false
+            },
+			{
+                "LightName": "light_mode_wave_text",
+				"value" : 1,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_cloud_text",
+				"value" : 2,
+				"visible" : true
+            },
+            {
+                "LightName": "light_mode_vortex_text",
+				"value" : 3,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_mix_color_text",
+				"value" : 4,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_breath_text",
+				"value" : 5,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_static_text",
+				"value" : 6,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_reaction_text",
+				"value" : 7,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_stone_text",
+				"value" : 8,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_traverse_text",
+				"value" : 9,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_stars_text",
+				"value" : 10,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_firework_open_text",
+				"value" : 11,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_roll_text",
+				"value" : 12,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_wave_bar_text",
+				"value" : 13,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_cartoon_text",
+				"value" : 14,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_rain_text",
+				"value" : 15,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_scan_text",
+				"value" : 16,
+				"visible" : true
+            },		
+            {
+                "LightName": "light_mode_zzcc_text",
+				"value" : 17,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_speed_text",
+				"value" : 18,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_zzcc_text",
+				"value" : 19,
+				"visible" : false
+            },
+			{
+                "LightName": "light_mode_custom_text",
+				"value" : 20,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_reaction_text",
+				"value" : 21,
+				"visible" : false
+            },			
+			{
+                "LightName": "light_mode_4color_breath_text",
+				"value" : 22,
+				"visible" : false
+            },
+			{
+                "LightName": "light_mode_4color_blink_text",
+				"value" : 23,
+				"visible" : false
+            },
+            {
+                "LightName": "light_mode_off_text",
+				"value" : 24,
+				"visible" : false
+            },	
+            {
+                "LightName": "light_mode_zzcc_text",
+				"value" : 25,
+				"visible" : false
+            },	
+			{
+                "LightName": "light_mode_4color_blink_text",
+				"value" : 26,
+				"visible" : false
+            },
+            {
+                "LightName": "light_mode_off_text",
+				"value" : 27,
+				"visible" : false
+            },	
+            {
+                "LightName": "light_mode_zzcc_text",
+				"value" : 28,
+				"visible" : false
+            },
+            {
+                "LightName": "light_mode_audiorecord_text",
+				"value" : 29,
+				"visible" : true
+            },
+            {
+                "LightName": "light_mode_capturecolor_text",
+				"value" : 30,
+				"visible" : true
+            }								
+        ],
+        [
+            {
+                "LightName": "light_mode_wave_text",
+				"value" : 0,
+				"visible" : true
+            },
+            {
+                "LightName": "light_mode_mix_color_text",
+				"value" : 1,
+				"visible" : true
+            },
+            {
+                "LightName": "light_mode_breath_text",
+				"value" : 2,
+				"visible" : true
+            },
+            {
+                "LightName": "light_mode_static_text",
+				"value" : 3,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_blink_text",
+				"value" : -1,
+				"visible" : false
+            },
+			{
+                "LightName": "light_mode_pulse_text",
+				"value" : 4,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_reaction_text",
+				"value" : 5,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_4color_breath_text",
+				"value" : -1,
+				"visible" : false
+            },
+			{
+                "LightName": "light_mode_4color_blink_text",
+				"value" : -1,
+				"visible" : false
+            },
+            {
+                "LightName": "light_mode_off_text",
+				"value" : 6,
+				"visible" : true
+            }
+        ],
+        [
+			{
+                "LightName": "light_mode_wave_text",
+				"value" : 0,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_mix_color_text",
+				"value" : 1,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_breath_text",
+				"value" : 2,
+				"visible" : true
+            },
+            {
+                "LightName": "light_mode_static_text",
+				"value" : 3,
+				"visible" : true
+            },
+            {
+                "LightName": "light_mode_blink_text",
+				"value" : 4,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_blink_text",
+				"value" : 5,
+				"visible" : false
+            },
+			{
+                "LightName": "light_mode_pulse_text",
+				"value" : 6,
+				"visible" : false
+            },
+			{
+                "LightName": "light_mode_emanate_text",
+				"value" : 7,
+				"visible" : false
+            },
+            
+            {
+                "LightName": "light_mode_off_text",
+				"value" : 8,
+				"visible" : true
+            }
+        ],
+		[
+			{
+                "LightName": "light_mode_wave_text",
+				"value" : 0,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_mix_color_text",
+				"value" : 1,
+				"visible" : true
+            },
+			{
+                "LightName": "light_mode_breath_text",
+				"value" : 2,
+				"visible" : true
+            },
+            {
+                "LightName": "light_mode_static_text",
+				"value" : 3,
+				"visible" : true
+            },
+            {
+                "LightName": "light_mode_blink_text",
+				"value" : 4,
+				"visible" : false
+            },
+			{
+                "LightName": "light_mode_blink_text",
+				"value" : 5,
+				"visible" : false
+            },
+			{
+                "LightName": "light_mode_pulse_text",
+				"value" : 6,
+				"visible" : false
+            },
+			{
+                "LightName": "light_mode_emanate_text",
+				"value" : 7,
+				"visible" : false
+            },
+            
+            {
+                "LightName": "light_mode_off_text",
+				"value" : 8,
+				"visible" : true
+            }
+        ]
+	]
+		
+}
+

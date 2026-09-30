@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window >
+    <EevisionMousePadDevice name="EevisionMousePadDevice">
+		<Label name="text_test" float="true" pos="0,0" width="0" height="0" resourcetext="true" visible="false" />
+		<HorizontalLayout name="mp_device">
+			<DeviceProfileUI width="190" padding="18,0,0,0"/>
+			<!--设备功能切换区域-->
+			<TabLayout name="device_function_switch" width="766" height="510" padding="8,74,0,0" bkcolor="#00ffffff" vscrollbar="false">       
+				<VerticalLayout width="766" height="488" >
+					<!-- 上 鼠标垫图 -->
+					<HorizontalLayout width="766" height="306">
+						<SelectPanel name="mousepad_device_key_light" bkimage="file='mp/mp.png' dest='220,0,549,297'" width="766" height="300" padding="0,0,0,0" bkcolor="#00ffffff">					
+							<DeviceKeyButton name="key_0" style="k_btn_style" float="true"  pos="255,36,0,0"  width="78" height="12" userdata="light_0"
+								lightimage="file=&apos;mp/light/0_0.png&apos;" />
+							<DeviceKeyButton name="key_1"  style="k_btn_style" float="true"  pos="220,36,0,0"  width="81" height="128"  userdata="light_1"
+								lightimage="file=&apos;mp/light/0_1.png&apos;" />
+							<DeviceKeyButton name="key_2" style="k_btn_style" float="true"   pos="220,86,0,0"  width="12" height="162"  userdata="light_2"
+								lightimage="file=&apos;mp/light/0_2.png&apos;" />
+							<DeviceKeyButton name="key_3"  style="k_btn_style" float="true"  pos="220,204,0,0"  width="81" height="87" userdata="light_3" 
+								lightimage="file=&apos;mp/light/0_3.png&apos;" />
+							<DeviceKeyButton name="key_4"  style="k_btn_style" float="true"  pos="253,279,0,0"  width="130" height="12" userdata="light_4" 
+								lightimage="file=&apos;mp/light/0_4.png&apos;" />
+							<DeviceKeyButton name="key_5"  style="k_btn_style" float="true"  pos="356,279,0,0"  width="129" height="12" userdata="light_5"
+								lightimage="file=&apos;mp/light/0_5.png&apos;" />
+							<DeviceKeyButton name="key_6"  style="k_btn_style" float="true"  pos="457,204,0,0"  width="82" height="87" userdata="light_6"
+								lightimage="file=&apos;mp/light/0_6.png&apos;" />								
+							<DeviceKeyButton name="key_7"  style="k_btn_style" float="true"  pos="527,84,0,0"  width="12" height="162" userdata="light_7"
+								lightimage="file=&apos;mp/light/0_7.png&apos;"  />
+							<DeviceKeyButton name="key_8" style="k_btn_style" float="true"   pos="482,36,0,0"  width="57" height="88" userdata="light_8"
+								lightimage="file=&apos;mp/light/0_8.png&apos;" />	
+							<DeviceKeyButton name="key_9" style="k_btn_style" float="true"   pos="431,36,0,0"  width="76" height="18" userdata="light_9"
+								lightimage="file=&apos;mp/light/0_9.png&apos;" />
+							<DeviceKeyButton name="key_10" style="k_btn_style" float="true"   pos="810,364,340,314"  width="340" height="314" userdata="light_10"
+								lightimage="file=&apos;mp/light/1_0.png&apos;" visible="false"/>
+							<DeviceKeyButton name="key_11" style="k_btn_style"float="true"    pos="810,210,340,314" width="340" height="314" userdata="light_11"
+								lightimage="file=&apos;mp/light/1_1.png&apos;" visible="false"/>
+							<DeviceKeyButton name="key_12" style="k_btn_style" float="true"   pos="810,150,340,314" width="340" height="314" userdata="light_12"
+								lightimage="file=&apos;mp/light/1_2.png&apos;" visible="false"/>
+							<DeviceKeyButton name="key_13" style="k_btn_style" float="true"   pos="810,50,340,314" width="340" height="314" userdata="light_13"
+								lightimage="file=&apos;mp/light/1_3.png&apos;"  visible="false"/>
+							<DeviceKeyButton name="key_14" style="k_btn_style" float="true"   pos="212,0,340,314" width="426" height="314" userdata="light_14"
+								lightimage="file=&apos;mp/light/1_0.png&apos;" visible="false"/>									
+						</SelectPanel>								
+					</HorizontalLayout>
+					<Control/>
+					<!-- 下 -->
+					<Label bkimage="file='common/tiap12.png'"  text="anzsz_text" textcolor="#FFf49136" resourcetext="true" width="957" height="38" textpadding="10,0,0,0" visible="false"/>	
+					
+					<TabLayout name="device_key_function_switch" height="182" vscrollbar="false" bkcolor="#ff408185">		
+						<VerticalLayout width="766"  height="182" padding="0,0,0,0" inset="0,0,0,0">
+							<LightSetControlUI />
+						</VerticalLayout>		
+					</TabLayout>
+					
+				</VerticalLayout>
+			</TabLayout >
+		</HorizontalLayout>
+	</EevisionMousePadDevice>
+</Window>

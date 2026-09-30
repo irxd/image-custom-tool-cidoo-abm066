@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="740,480" bktrans="true" caption="0,0,0,40" gdiplustext="true" textrenderinghint="0">
+	<HorizontalLayout name="root" width="740" height="480" inset="10,10,10,10" bordersize="2" bordercolor="#FF285155" bkcolor="#FF032d2b" bkimage="file='common/bk_dlg2.png' corner='30,30,30,30'">
+		<VerticalLayout  >
+
+			<HorizontalLayout width="300" height="47" padding="10,10,0,0">
+				<Label height="18" text="color_lump_text" resourcetext="true" textcolor="#FFFFFFFF" autocalcwidth="true" font="50" padding="0,8" />
+				<Button width="50" height="32" name="color_show_btn" cursor="arrow" bordercolor="#FFCCCCCC" bordersize="1" padding="9,0,0,0"  bkcolor="#FFFF0000"/>
+			</HorizontalLayout >
+
+			<Label width="700" height="1" bkcolor="#FF285155" padding="10,0" />	
+			
+			<HorizontalLayout padding="10,10,0,0" >
+				<!--颜色板-->
+				<VerticalLayout width="310" >
+					<Label width="250" height="16" text="custom_color_text" resourcetext="true" textcolor="#FFFFFFFF"/>
+					<HorizontalLayout width="310" height="32" padding="0,10,0,0" >
+						<Label text="R" width="10" textcolor="#FFFFFFFF"/>
+						<Edit name="color_edit_r" align="center" style="edit_style" numberonly="true" width="70" height="32" maxchar="3" bordersize="1" bordercolor="#FFCCCCCC" borderround="3,3" padding="10,0,0,0"/>
+						
+						<Label text="G" width="10" textcolor="#FFFFFFFF" padding="20,0,0,0"/>
+						<Edit name="color_edit_g" align="center" style="edit_style" numberonly="true" width="70" height="32" maxchar="3" bordersize="1" bordercolor="#FFCCCCCC" borderround="3,3" padding="10,0,0,0"/>
+						
+						<Label text="B" width="10" textcolor="#FFFFFFFF" padding="20,0,0,0"/>
+						<Edit name="color_edit_b" align="center" style="edit_style" numberonly="true" width="70" height="32" maxchar="3" bordersize="1" bordercolor="#FFCCCCCC" borderround="3,3" padding="10,0,0,0"/>						
+					</HorizontalLayout>
+					<HorizontalLayout width="310" height="303" padding="0,10,0,0">
+						<ColorPalette name="Pallet" width="310" height="303" palletheight="275" barheight="30" thumbimage="common/cursor.png" bordersize="1" bordercolor="#FFcccccc"/>
+					</HorizontalLayout>
+					
+				</VerticalLayout>
+				
+				<!--颜色块-->
+				<VerticalLayout width="192" padding="15,0,0,0" >
+					<!--基础颜色-->
+					<VerticalLayout width="186" height="183" bkcolor="#00FF0000">
+						<Label width="150" height="16" text="basic_color_text" resourcetext="true" textcolor="#FFFFFFFF" glowsize="0" />
+						<VerticalLayout width="186" height="147"  padding="0,10" >						
+							<HorizontalLayout width="200" height="30" childpadding="9" >						
+								<Option name="color_option_0" style="color_option_style" bkcolor="#FFff262a" selectedbkcolor="#FFff262a" borderround="3,3" width="30" height="30" group="color_option_group"/>
+								<Option name="color_option_1" style="color_option_style" bkcolor="#FFff4a23" selectedbkcolor="#FFff4a23" borderround="3,3" width="30" height="30" group="color_option_group"/>
+								<Option name="color_option_2" style="color_option_style" bkcolor="#FFff8746" selectedbkcolor="#FFff8746" borderround="3,3" width="30" height="30" group="color_option_group"/>
+								<Option name="color_option_3" style="color_option_style" bkcolor="#FFffb239" selectedbkcolor="#FFffb239" borderround="3,3" width="30" height="30" group="color_option_group"/>
+								<Option name="color_option_4" style="color_option_style" bkcolor="#FFffda78" selectedbkcolor="#FFffda78" borderround="3,3" width="30" height="30" group="color_option_group"/>
+							</HorizontalLayout>
+							<HorizontalLayout width="200" height="30" childpadding="9" padding="0,9,0,0">
+								<Option name="color_option_5" style="color_option_style" bkcolor="#FFffe822" selectedbkcolor="#FFffe822" borderround="3,3" width="30" height="30" group="color_option_group"/>
+								<Option name="color_option_6" style="color_option_style" bkcolor="#FFd0ff13" selectedbkcolor="#FFd0ff13" borderround="3,3" width="30" height="30" group="color_option_group"/>				
+								<Option name="color_option_7" style="color_option_style" bkcolor="#FF85ff1f" selectedbkcolor="#FF85ff1f" borderround="3,3" width="30" height="30" group="color_option_group"/>
+								<Option name="color_option_8" style="color_option_style" bkcolor="#FF7bfb7b" selectedbkcolor="#FF7bfb7b" borderround="3,3" width="30" height="30" group="color_option_group"/>
+								<Option name="color_option_9" style="color_option_style" bkcolor="#FF7bfbb7" selectedbkcolor="#FF7bfbb7" borderround="3,3" width="30" height="30" group="color_option_group"/>
+							</HorizontalLayout>
+							<HorizontalLayout width="200" height="30" childpadding="9" padding="0,9,0,0">
+								<Option name="color_option_10" style="color_option_style" bkcolor="#FF18fff2" selectedbkcolor="#FF18fff2" borderround="3,3" width="30" height="30" group="color_option_group"/>
+								<Option name="color_option_11" style="color_option_style" bkcolor="#FF23dcff" selectedbkcolor="#FF23dcff" borderround="3,3" width="30" height="30" group="color_option_group"/>
+								<Option name="color_option_12" style="color_option_style" bkcolor="#FF09a2ff" selectedbkcolor="#FF09a2ff" borderround="3,3" width="30" height="30" group="color_option_group"/>
+								<Option name="color_option_13" style="color_option_style" bkcolor="#FF0021ff" selectedbkcolor="#FF0021ff" borderround="3,3" width="30" height="30" group="color_option_group"/>
+								<Option name="color_option_14" style="color_option_style" bkcolor="#FF5001fe" selectedbkcolor="#FF5001fe" borderround="3,3" width="30" height="30" group="color_option_group"/>
+							</HorizontalLayout>
+							<HorizontalLayout width="200" height="30" childpadding="9" padding="0,9,0,0">
+								<Option name="color_option_15" style="color_option_style" bkcolor="#FF8a01fe" selectedbkcolor="#FF8a01fe" borderround="3,3" width="30" height="30" group="color_option_group"/>
+								<Option name="color_option_16" style="color_option_style" bkcolor="#FFfe01fb" selectedbkcolor="#FFfe01fb" borderround="3,3" width="30" height="30" group="color_option_group"/>				
+								<Option name="color_option_17" style="color_option_style" bkcolor="#FFff74d9" selectedbkcolor="#FFff74d9" borderround="3,3" width="30" height="30" group="color_option_group"/>
+								<Option name="color_option_18" style="color_option_style" bkcolor="#FFff005a" selectedbkcolor="#FFff005a" borderround="3,3" width="30" height="30" group="color_option_group"/>
+								<Option name="color_option_19" style="color_option_style" bkcolor="#FFffffff" selectedbkcolor="#FFffffff" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>
+							</HorizontalLayout>
+						</VerticalLayout>
+					</VerticalLayout>
+					
+					<!--收藏颜色-->
+					<VerticalLayout width="186" height="183" bkcolor="#00FFFF00" padding="0,10">
+						<Label width="150" height="16" text="collect_color_text" resourcetext="true" textcolor="#FFFFFFFF" glowsize="0" />
+						<VerticalLayout width="186" height="147"  padding="0,10" >		
+							<HorizontalLayout width="200" height="30" childpadding="9" >						
+								<Option name="collect_color_option_0" style="color_option_style" bkcolor="#FFFF0000" selectedbkcolor="#FFFF0000" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>
+								<Option name="collect_color_option_1" style="color_option_style" bkcolor="#FFFF7200" selectedbkcolor="#FFFF7200" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>
+								<Option name="collect_color_option_2" style="color_option_style" bkcolor="#FFFFF005" selectedbkcolor="#FFFFF005" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>
+								<Option name="collect_color_option_3" style="color_option_style" bkcolor="#FF00d70F" selectedbkcolor="#FF00d70F" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>
+								<Option name="collect_color_option_4" style="color_option_style" bkcolor="#FF0099FF" selectedbkcolor="#FF0099FF" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>
+							</HorizontalLayout>
+							<HorizontalLayout width="200" height="30" childpadding="9" padding="0,9,0,0">
+								<Option name="collect_color_option_5" style="color_option_style" bkcolor="#FF3153FF" selectedbkcolor="#FF3153FF" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>
+								<Option name="collect_color_option_6" style="color_option_style" bkcolor="#FF5e01d2" selectedbkcolor="#FF5e01d2" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>				
+								<Option name="collect_color_option_7" style="color_option_style" bkcolor="#FFee00f1" selectedbkcolor="#FFee00f1" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>
+								<Option name="collect_color_option_8" style="color_option_style" bkcolor="#FFff008a" selectedbkcolor="#FFff008a" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>
+								<Option name="collect_color_option_9" style="color_option_style" bkcolor="#FFffa800" selectedbkcolor="#FFffa800" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>
+							</HorizontalLayout>
+							<HorizontalLayout width="200" height="30" childpadding="9" padding="0,9,0,0">
+								<Option name="collect_color_option_10" style="color_option_style" bkcolor="#FF8dff8d" selectedbkcolor="#FF8dff8d" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>
+								<Option name="collect_color_option_11" style="color_option_style" bkcolor="#FF3defff" selectedbkcolor="#FF3defff" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>
+								<Option name="collect_color_option_12" style="color_option_style" bkcolor="#FF004891" selectedbkcolor="#FF004891" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0" />
+								<Option name="collect_color_option_13" style="color_option_style" bkcolor="#FFFFFFFF" selectedbkcolor="#FFFFFFFF" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>
+								<Option name="collect_color_option_14" style="color_option_style" bkcolor="#FFFFFFFF" selectedbkcolor="#FFFFFFFF" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>
+							</HorizontalLayout>
+							<HorizontalLayout width="200" height="30" childpadding="9" padding="0,9,0,0">
+								<Option name="collect_color_option_15" style="color_option_style" bkcolor="#FF3153FF" selectedbkcolor="#FF3153FF" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>
+								<Option name="collect_color_option_16" style="color_option_style" bkcolor="#FF5e01d2" selectedbkcolor="#FF5e01d2" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>				
+								<Option name="collect_color_option_17" style="color_option_style" bkcolor="#FFee00f1" selectedbkcolor="#FFee00f1" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0"/>
+								<Option name="collect_color_option_18" style="color_option_style" bkcolor="#FFff008a" selectedbkcolor="#FFff008a" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0" />
+								<Option name="collect_color_option_19" style="color_option_style" bkcolor="#FFffa800" selectedbkcolor="#FFffa800" borderround="3,3" width="30" height="30" group="color_option_group" bordercolor="#ffcccccc" bordersize="0" />
+							</HorizontalLayout>
+						</VerticalLayout>
+					</VerticalLayout>
+										
+				</VerticalLayout>
+				
+				<!--随机颜色-->
+				<VerticalLayout name="7color_layout" width="170" padding="15,0,0,0" >
+					<Label text="random_color_text" resourcetext="true" textcolor="#FFFFFFFF"/>
+					<CheckBox name="7color" height="30" style="checkbox_block_style" align="left" text="random_all_color_text" resourcetext="true" textcolor="#FF111111" textpadding="20,0,0,0" padding="0,10,0,0" group="7color_option_group" EnableAutoCheck="true"/>
+					<CheckBox name="7color_collect" height="30" style="checkbox_block_style" align="left" text="从收藏颜色中随机" textcolor="#FFcccccc" textpadding="20,0,0,0" padding="0,10,0,0" group="7color_option_group" EnableAutoCheck="true" visible="false"/>
+				</VerticalLayout>
+			
+			</HorizontalLayout>
+			
+		</VerticalLayout>
+		
+		<Button name="closebtn" float="true" pos="700,14" width="20" height="20" 
+			normalimage="file='sysbtn/btn_close_normal.png'"
+			hotimage="file='sysbtn/btn_close_hot.png'" 
+			pushedimage="file='sysbtn/btn_close_down.png'"  />
+	
+		<Button name="okbtn2" float="true" pos="630,364,110,15" width="110" height="32" text="ok_text" resourcetext="true" font="5" textcolor="#FFFFFFFF" visible="false"
+				bkimage="sysbtn/btn_dxz_normal.png"
+				normalimage="sysbtn/btn_dxz_normal.png"
+				hotimage="sysbtn/btn_dxz_highlight.png" 
+				pushedimage="sysbtn/btn_dxz_down.png" />
+				
+		<Button name="okbtn" float="true" pos="610,420" width="110" height="35" resourcetext="true" text="ok_text" textcolor="#FFFFFFFF" font="7" 
+			  bkimage="common/ok_btn_normal.png" 
+			  normalimage="common/ok_btn_normal.png"
+			  hotimage="common/ok_btn_hot.png"
+			  pushedimage="common/ok_btn_down.png"
+			  disabledimage="common/ok_btn_disable.png"   padding="10,20,0,0"/>			
+	
+	</HorizontalLayout>
+
+	
+
+</Window>

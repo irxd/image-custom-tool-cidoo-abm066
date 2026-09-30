@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window  showshadow="true" >
+
+<!-- Menu样式 -->
+<Default name="Menu" shared="true" value="bordersize=&quot;1&quot; width=&quot;300&quot; borderround=&quot;2,2&quot; bordercolor=&quot;0x303132&quot; inset=&quot;2,2,2,2&quot; itemtextpadding=&quot;20,0,0,0&quot; bkcolor=&quot;0xFF333333&quot; itemtextcolor=&quot;0xFF999999&quot; itemhottextcolor=&quot;0xFFFF0000&quot; itemselectedbkcolor=&quot;0xFF000000&quot; itemselectedtextcolor=&quot;0xFFFFFFFF&quot;" />
+<!-- ExplandIcon样式 -->
+<Default name="ExplandIcon" shared="true" value="menu/menu_expand.png" />
+
+  <Menu killfocusenble="true" width="300">
+     <MenuElement text="redio_previous" width="300" expland="true" resourcetext="true" killfocusenble="true" >
+      <MenuElement name="redio_previous_record_time" text="redio" width="300"  resourcetext="true"/>
+     <!--  <MenuElement name="redio_previous_constant_time" text="redio_constant_time"  resourcetext="true" visible="false">
+		 <Edit name="menuitembtn" height="25" text="255" width="70" normalimage="res='button_normal.png' corner='4,4,4,4'" hotimage="res='button_hover.png' corner='4,4,4,4'" pushedimage="res='button_pushed.png' corner='4,4,4,4'"/>
+		<Label text="redio_constant_time" visible="true" height="25" resourcetext="true" textcolor="#FFFFFFFF" glowsize="0" font="6" align="left" autocalcwidth="true" textpadding="10,0,0,0" />
+	  </MenuElement> -->
+      <MenuElement name="redio_previous_ignore_time" text="redio_ignore_time" width="300" resourcetext="true" />
+
+    </MenuElement>
+
+    <MenuElement text="redio_later" expland="true" width="300" resourcetext="true" killfocusenble="true" >
+      <MenuElement name="redio_later_record_time" text="redio" width="300" resourcetext="true"/>
+      <!-- <MenuElement name="redio_later_constant_time" text=""   resourcetext="true" visible="false">
+		<Label text="redio_constant_time"  padding="20,2,0,0" visible="true" height="25" resourcetext="true" textcolor="#FFFFFFFF" glowsize="0" font="6" align="left" autocalcwidth="true" textpadding="10,0,0,0" />
+		<Edit name="menuitembtn" padding="2,2,0,0" height="25" text="255" width="70" normalimage="res='button_normal.png' corner='4,4,4,4'" hotimage="res='button_hover.png' corner='4,4,4,4'" pushedimage="res='button_pushed.png' corner='4,4,4,4'"/>
+		<Label text="redio_constant_time"  padding="20,2,0,0" visible="true" height="25" resourcetext="true" textcolor="#FFFFFFFF" glowsize="0" font="6" align="left" autocalcwidth="true" textpadding="10,0,0,0" />
+	  </MenuElement> -->
+      <MenuElement name="redio_later_ignore_time" text="redio_ignore_time" width="300" resourcetext="true"/>
+
+    </MenuElement>
+	
+	<MenuElement text="macro_btn_shubiao" expland="true" resourcetext="true">
+	  <MenuElement text="mouse_key_left" expland="true" width="300" resourcetext="true">
+		<MenuElement name="left_down" text="macro_combo_upordown_item2" width="300" resourcetext="true"/>
+		<MenuElement name="left_up" text="macro_combo_upordown_item1" width="300" resourcetext="true"/>
+		<MenuElement name="left_click" text="redio_action_click" width="300" resourcetext="true"/>
+	  </MenuElement>
+	  <MenuElement text="mouse_key_middle" expland="true" width="300" resourcetext="true">
+		<MenuElement name="middle_down" text="macro_combo_upordown_item2" width="300" resourcetext="true"/>
+		<MenuElement name="middle_up" text="macro_combo_upordown_item1" width="300" resourcetext="true"/>
+		<MenuElement name="middle_click" text="redio_action_click" width="300" resourcetext="true"/>
+	  </MenuElement>
+	  <MenuElement text="mouse_key_right" expland="true" width="300" resourcetext="true">
+		<MenuElement name="right_down" text="macro_combo_upordown_item2" width="300" resourcetext="true"/>
+		<MenuElement name="right_up" text="macro_combo_upordown_item1"  resourcetext="true"/>
+		<MenuElement name="right_click" text="redio_action_click"  resourcetext="true"/>
+	  </MenuElement>
+	  <MenuElement text="mouse_key_forward" expland="true" width="300" resourcetext="true">
+		<MenuElement name="forward_down" text="macro_combo_upordown_item2" width="300" resourcetext="true"/>
+		<MenuElement name="forward_up" text="macro_combo_upordown_item1" width="300" resourcetext="true"/>
+		<MenuElement name="forward_click" text="redio_action_click" width="300" resourcetext="true"/>
+	  </MenuElement>
+	  <MenuElement text="mouse_key_back" expland="true" width="300" resourcetext="true">
+		<MenuElement name="back_down" text="macro_combo_upordown_item2" width="300"  resourcetext="true"/>
+		<MenuElement name="back_up" text="macro_combo_upordown_item1" width="300" resourcetext="true"/>
+		<MenuElement name="back_click" text="redio_action_click" width="300" resourcetext="true"/>
+	  </MenuElement>
+    </MenuElement>
+    <!-- <MenuElement height="30" >
+      <VerticalLayout bkcolor="#FFFFFFFE">
+        <Button name="menuitembtn" height="30" text="菜单按钮" normalimage="res='button_normal.png' corner='4,4,4,4'" hotimage="res='button_hover.png' corner='4,4,4,4'" pushedimage="res='button_pushed.png' corner='4,4,4,4'"/>
+      </VerticalLayout>
+    </MenuElement> -->
+    <MenuElement name="macro_action_edit" text="redio_action_edit" resourcetext="true"/>
+  </Menu>
+</Window>
