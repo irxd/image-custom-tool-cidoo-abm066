@@ -9,12 +9,10 @@ cd "$DIR"
 
 echo "=================================================="
 echo " Starting CIDOO ABM066 LCD Tool..."
-echo " Opening browser at http://127.0.0.1:5000"
-echo " (Press Ctrl+C in this window to stop the server)"
+echo " Web UI will open in your browser automatically."
+echo " (Keep this window open while using the tool;"
+echo "  press Ctrl+C to stop the server)"
 echo "=================================================="
 
-# Wait 1 second and open default browser
-(sleep 1 && open "http://127.0.0.1:5000") &
-
-# Start python backend server
+# Start python backend server (auto-opens default browser)
 python3 server.py

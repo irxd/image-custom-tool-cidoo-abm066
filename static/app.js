@@ -4,6 +4,10 @@
  * live preview playback, and REST API communication with the backend.
  */
 
+const SCREEN_WIDTH = 96;
+const SCREEN_HEIGHT = 160;
+const RAW_FRAME_SIZE = SCREEN_WIDTH * SCREEN_HEIGHT * 2; // 30,720 bytes
+
 // State
 let rawFileBuffer = null;
 let currentFileType = null;
@@ -15,6 +19,7 @@ let isPlaying = false;
 let playTimer = null;
 let animationSpeedMs = 40;
 let currentFitMode = 'cover';
+let currentRotation = 0; // 0, 90, 180, 270 degrees
 let isDeviceConnected = false;
 let isUploading = false;
 let progressPollInterval = null;
@@ -26,6 +31,7 @@ const screenBezel = document.getElementById('screenBezel');
 const screenEmptyPrompt = document.getElementById('screenEmptyPrompt');
 const scale1x = document.getElementById('scale1x');
 const scale2x = document.getElementById('scale2x');
+const scale3x = document.getElementById('scale3x');
 
 const statusBadge = document.getElementById('deviceStatusBadge');
 const statusText = document.getElementById('statusText');
@@ -49,6 +55,7 @@ const speedSlider = document.getElementById('speedSlider');
 const speedValue = document.getElementById('speedValue');
 const speedPresets = document.querySelectorAll('.preset-btn');
 
+const rotationButtons = document.querySelectorAll('#rotationControl .segment-btn');
 const fitButtons = document.querySelectorAll('#fitModeControl .segment-btn');
 const slotSelect = document.getElementById('slotSelect');
 const maxFramesInput = document.getElementById('maxFramesInput');
@@ -132,17 +139,29 @@ btnSyncTime.addEventListener('click', async () => {
 });
 
 
-// --- Scale 1x / 2x Toggle ---
+// --- Scale 1x / 2x / 3x Toggle ---
 scale1x.addEventListener('click', () => {
   scale1x.classList.add('active');
   scale2x.classList.remove('active');
-  screenBezel.classList.remove('scale-2x');
+  if (scale3x) scale3x.classList.remove('active');
+  screenBezel.classList.remove('scale-2x', 'scale-3x');
 });
 scale2x.addEventListener('click', () => {
   scale2x.classList.add('active');
   scale1x.classList.remove('active');
+  if (scale3x) scale3x.classList.remove('active');
+  screenBezel.classList.remove('scale-3x');
   screenBezel.classList.add('scale-2x');
 });
+if (scale3x) {
+  scale3x.addEventListener('click', () => {
+    scale3x.classList.add('active');
+    scale1x.classList.remove('active');
+    scale2x.classList.remove('active');
+    screenBezel.classList.remove('scale-2x');
+    screenBezel.classList.add('scale-3x');
+  });
+}
 
 
 // --- Drag & Drop / File Input ---
@@ -190,18 +209,29 @@ async function handleFile(file) {
 }
 
 
-// --- Fit Calculation ---
-function drawFitted(ctx, source, srcW, srcH, fit) {
+// --- Fit & Rotation Calculation ---
+function drawFitted(ctx, source, srcW, srcH, fit, rotation = currentRotation) {
   ctx.fillStyle = '#000000';
-  ctx.fillRect(0, 0, 240, 135);
+  ctx.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+
+  const rad = (rotation * Math.PI) / 180;
+  const isPerpendicular = (rotation === 90 || rotation === 270);
+  const effW = isPerpendicular ? srcH : srcW;
+  const effH = isPerpendicular ? srcW : srcH;
 
   if (fit === 'stretch') {
-    ctx.drawImage(source, 0, 0, srcW, srcH, 0, 0, 240, 135);
+    ctx.save();
+    ctx.translate(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+    ctx.rotate(rad);
+    const drawW = isPerpendicular ? SCREEN_HEIGHT : SCREEN_WIDTH;
+    const drawH = isPerpendicular ? SCREEN_WIDTH : SCREEN_HEIGHT;
+    ctx.drawImage(source, 0, 0, srcW, srcH, -drawW / 2, -drawH / 2, drawW, drawH);
+    ctx.restore();
     return;
   }
 
-  const scaleW = 240 / srcW;
-  const scaleH = 135 / srcH;
+  const scaleW = SCREEN_WIDTH / effW;
+  const scaleH = SCREEN_HEIGHT / effH;
   let scale;
 
   if (fit === 'cover') {
@@ -212,29 +242,34 @@ function drawFitted(ctx, source, srcW, srcH, fit) {
 
   const destW = srcW * scale;
   const destH = srcH * scale;
-  const destX = (240 - destW) / 2;
-  const destY = (135 - destH) / 2;
 
-  ctx.drawImage(source, 0, 0, srcW, srcH, destX, destY, destW, destH);
+  ctx.save();
+  ctx.translate(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+  ctx.rotate(rad);
+  ctx.drawImage(source, 0, 0, srcW, srcH, -destW / 2, -destH / 2, destW, destH);
+  ctx.restore();
 }
 
 
 // --- RGB565 Conversion Helper ---
+// The CIDOO ABM066 LCD controller scans along the vertical axis (160 scanlines of 96 columns).
+// Memory is organized column-major: Column x (0..95), Row y (0..159) -> (x * 160 + y) * 2
 function canvasToRgb565(ctx) {
-  const imgData = ctx.getImageData(0, 0, 240, 135).data;
-  const out = new Uint8Array(240 * 135 * 2);
-  let src = 0;
-  let dst = 0;
-  for (let i = 0; i < 240 * 135; i++) {
-    const r = imgData[src];
-    const g = imgData[src + 1];
-    const b = imgData[src + 2];
-    // Big Endian 16-bit RGB565: RRRRRGGG GGGBBBBB
-    const val = ((r >> 3) << 11) | ((g >> 2) << 5) | (b >> 3);
-    out[dst] = (val >> 8) & 0xFF;
-    out[dst + 1] = val & 0xFF;
-    src += 4;
-    dst += 2;
+  const imgData = ctx.getImageData(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT).data;
+  const out = new Uint8Array(RAW_FRAME_SIZE);
+
+  for (let y = 0; y < SCREEN_HEIGHT; y++) {
+    for (let x = 0; x < SCREEN_WIDTH; x++) {
+      const src = (y * SCREEN_WIDTH + x) * 4;
+      const r = imgData[src];
+      const g = imgData[src + 1];
+      const b = imgData[src + 2];
+      // Big Endian 16-bit RGB565: RRRRRGGG GGGBBBBB
+      const val = ((r >> 3) << 11) | ((g >> 2) << 5) | (b >> 3);
+      const dst = (x * SCREEN_HEIGHT + y) * 2;
+      out[dst] = (val >> 8) & 0xFF;
+      out[dst + 1] = val & 0xFF;
+    }
   }
   return out;
 }
@@ -258,7 +293,7 @@ async function processStaticImage(fileOrBlob) {
 
 function renderStaticFrame() {
   if (!sourceImage) return;
-  drawFitted(screenCtx, sourceImage, sourceImage.naturalWidth, sourceImage.naturalHeight, currentFitMode);
+  drawFitted(screenCtx, sourceImage, sourceImage.naturalWidth, sourceImage.naturalHeight, currentFitMode, currentRotation);
   const rgb565 = canvasToRgb565(screenCtx);
   decodedFrames = [{
     canvas: null,
@@ -293,8 +328,8 @@ async function processGif(buffer) {
   const offCtx = offscreen.getContext('2d', { willReadFrequently: true });
 
   const targetCanvas = document.createElement('canvas');
-  targetCanvas.width = 240;
-  targetCanvas.height = 135;
+  targetCanvas.width = SCREEN_WIDTH;
+  targetCanvas.height = SCREEN_HEIGHT;
   const targetCtx = targetCanvas.getContext('2d', { willReadFrequently: true });
 
   const pixelBuf = new Uint8ClampedArray(width * height * 4);
@@ -333,14 +368,14 @@ async function processGif(buffer) {
     const frameImageData = new ImageData(pixelBuf, width, height);
     offCtx.putImageData(frameImageData, 0, 0);
 
-    // Render onto 240x135 with fit
-    drawFitted(targetCtx, offscreen, width, height, currentFitMode);
+    // Render onto 96x160 with fit and rotation
+    drawFitted(targetCtx, offscreen, width, height, currentFitMode, currentRotation);
     const rgb565 = canvasToRgb565(targetCtx);
 
     // Save frame snapshot canvas for quick preview scrubbing
     const frameSnap = document.createElement('canvas');
-    frameSnap.width = 240;
-    frameSnap.height = 135;
+    frameSnap.width = SCREEN_WIDTH;
+    frameSnap.height = SCREEN_HEIGHT;
     frameSnap.getContext('2d').drawImage(targetCanvas, 0, 0);
 
     decodedFrames.push({
@@ -385,7 +420,16 @@ function recomputeFramesForFit() {
 }
 
 
-// --- Fit Mode Buttons ---
+// --- Rotation & Fit Mode Buttons ---
+rotationButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    rotationButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentRotation = parseInt(btn.dataset.rotation) || 0;
+    recomputeFramesForFit();
+  });
+});
+
 fitButtons.forEach(btn => {
   btn.addEventListener('click', () => {
     fitButtons.forEach(b => b.classList.remove('active'));
@@ -529,7 +573,7 @@ btnUpload.addEventListener('click', async () => {
   const frameCount = decodedFrames.length;
 
   // Combine raw RGB565 frames into one binary Uint8Array
-  const frameSize = 240 * 135 * 2; // 64,800
+  const frameSize = RAW_FRAME_SIZE; // 30,720 bytes (96x160 RGB565)
   const combined = new Uint8Array(frameCount * frameSize);
   for (let i = 0; i < frameCount; i++) {
     combined.set(decodedFrames[i].rgb565, i * frameSize);

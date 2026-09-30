@@ -141,10 +141,10 @@ class CidooABM066:
     USAGE = 0x92
     REPORT_ID = 4
     REPORT_LEN = 64
-    SCREEN_WIDTH = 240
-    SCREEN_HEIGHT = 135
-    RAW_FRAME_SIZE = SCREEN_WIDTH * SCREEN_HEIGHT * 2  # 64,800 bytes
-    PADDED_FRAME_SIZE = 65536                          # 64 KB block
+    SCREEN_WIDTH = 96
+    SCREEN_HEIGHT = 160
+    RAW_FRAME_SIZE = SCREEN_WIDTH * SCREEN_HEIGHT * 2  # 30,720 bytes
+    PADDED_FRAME_SIZE = 32768                          # 32 KB flash block per frame
     CHUNK_SIZE = 56                                    # 56 bytes payload per 64-byte packet
 
     def __init__(self):
@@ -252,6 +252,13 @@ class CidooABM066:
         cmd_id = pkt[3]
 
         for attempt in range(max(1, retries)):
+            # Drain any residual/stale reports before sending
+            for _ in range(3):
+                self.last_response = None
+                _cf.CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0.001, False)
+                if self.last_response is None:
+                    break
+
             self.last_response = None
             out_buf = (ctypes.c_uint8 * self.REPORT_LEN)(*pkt)
             ret = _iokit.IOHIDDeviceSetReport(self.device, 1, self.REPORT_ID, out_buf, self.REPORT_LEN)
@@ -354,10 +361,10 @@ class CidooABM066:
         progress_cb: Optional[Callable[[int, int, str], None]] = None
     ) -> bool:
         """
-        Upload one or more 240x135 RGB565 frames to keyboard LCD flash memory.
-        frames: list of bytes objects, each 64,800 bytes (240*135*2 in RGB565 Big Endian).
+        Upload one or more 96x160 RGB565 frames to keyboard LCD flash memory.
+        frames: list of bytes objects, each 30,720 bytes (96*160*2 in RGB565 Big Endian).
         slot: 1 for Custom 1, 2 for Custom 2.
-        interval_ms: frame delay in milliseconds (e.g. 25, 40, 50, 100).
+        interval_ms: frame delay in milliseconds (e.g. 25, 40, 50, 60, 100).
         progress_cb: optional callback(bytes_sent, total_bytes, message).
         """
         if not frames:
@@ -366,9 +373,9 @@ class CidooABM066:
         frame_count = len(frames)
         for i, f in enumerate(frames):
             if len(f) != self.RAW_FRAME_SIZE:
-                raise ValueError(f"Frame {i} size {len(f)} does not match 240x135 RGB565 ({self.RAW_FRAME_SIZE} bytes)")
+                raise ValueError(f"Frame {i} size {len(f)} does not match 96x160 RGB565 ({self.RAW_FRAME_SIZE} bytes)")
 
-        # Prepare flash stream: each frame padded to 65,536 bytes (64 KB flash block)
+        # Prepare flash stream: each frame padded to 32,768 bytes (32 KB flash block)
         full_buffer = bytearray()
         for f in frames:
             full_buffer.extend(f)
@@ -381,10 +388,16 @@ class CidooABM066:
         # Step 1: Command 0x23 (Start screen upload / Erase)
         if progress_cb:
             progress_cb(0, total_bytes, "Starting custom screen mode...")
-        pkt = bytearray(self.REPORT_LEN)
-        pkt[0] = self.REPORT_ID
-        pkt[3] = 0x23
-        resp = self.send_packet(pkt, timeout=2.5, retries=5)
+        resp = None
+        for attempt in range(5):
+            pkt = bytearray(self.REPORT_LEN)
+            pkt[0] = self.REPORT_ID
+            pkt[3] = 0x23
+            resp = self.send_packet(pkt, timeout=2.0, retries=3)
+            if resp and resp[3] == 0x23:
+                break
+            time.sleep(0.4)
+
         if not resp or resp[3] != 0x23:
             raise RuntimeError(f"Start upload (0x23) failed: resp={resp.hex() if resp else None}")
 
@@ -480,25 +493,29 @@ def rgb_to_rgb565_be(r: int, g: int, b: int) -> bytes:
     return bytes([(val >> 8) & 0xFF, val & 0xFF])
 
 
-def rgba_pixels_to_rgb565(rgba_bytes: bytes, width: int = 240, height: int = 135) -> bytes:
-    """Convert RGBA buffer (width*height*4 bytes) into RGB565 big endian (width*height*2 bytes)."""
+def rgba_pixels_to_rgb565(rgba_bytes: bytes, width: int = 96, height: int = 160) -> bytes:
+    """
+    Convert RGBA buffer (width*height*4 bytes, row-major) into RGB565 big endian (width*height*2 bytes).
+    The CIDOO ABM066 LCD controller scans along the vertical axis (160 scanlines of 96 columns),
+    requiring hardware buffer indexing: (x * height + y) * 2.
+    """
     expected = width * height * 4
     if len(rgba_bytes) < expected:
         raise ValueError(f"Expected at least {expected} RGBA bytes, got {len(rgba_bytes)}")
 
     out = bytearray(width * height * 2)
-    in_idx = 0
-    out_idx = 0
 
-    for _ in range(width * height):
-        r = rgba_bytes[in_idx]
-        g = rgba_bytes[in_idx + 1]
-        b = rgba_bytes[in_idx + 2]
-        # alpha is rgba_bytes[in_idx + 3]
-        val = ((r >> 3) << 11) | ((g >> 2) << 5) | (b >> 3)
-        out[out_idx] = (val >> 8) & 0xFF
-        out[out_idx + 1] = val & 0xFF
-        in_idx += 4
-        out_idx += 2
+    for y in range(height):
+        for x in range(width):
+            in_idx = (y * width + x) * 4
+            r = rgba_bytes[in_idx]
+            g = rgba_bytes[in_idx + 1]
+            b = rgba_bytes[in_idx + 2]
+            # 16-bit Big Endian RGB565: RRRRRGGG GGGBBBBB
+            val = ((r >> 3) << 11) | ((g >> 2) << 5) | (b >> 3)
+            # Hardware column-major address: Column x (0..95), Row y (0..159)
+            out_idx = (x * height + y) * 2
+            out[out_idx] = (val >> 8) & 0xFF
+            out[out_idx + 1] = val & 0xFF
 
     return bytes(out)

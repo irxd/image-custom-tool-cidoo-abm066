@@ -59,8 +59,8 @@ def cmd_sync_time(args):
         dev.close()
 
 
-def convert_image_magick(filepath: str, fit: str = 'cover', max_frames: int = 100) -> Tuple[List[bytes], int]:
-    """Convert image or GIF into 240x135 RGB565 frames using ImageMagick."""
+def convert_image_magick(filepath: str, fit: str = 'cover', max_frames: int = 100, rotate: int = 0) -> Tuple[List[bytes], int]:
+    """Convert image or GIF into 96x160 RGB565 frames using ImageMagick."""
     if not shutil.which('magick'):
         return None, 40
 
@@ -77,19 +77,20 @@ def convert_image_magick(filepath: str, fit: str = 'cover', max_frames: int = 10
     except Exception:
         pass
 
-    # Build resize arguments based on fit mode
+    # Build resize arguments based on fit mode (screen resolution: 96x160)
+    rot_args = ['-rotate', str(rotate)] if rotate in (90, 180, 270) else []
     if fit == 'cover':
-        resize_args = ['-resize', '240x135^', '-gravity', 'center', '-extent', '240x135']
+        resize_args = rot_args + ['-resize', '96x160^', '-gravity', 'center', '-extent', '96x160']
     elif fit == 'contain':
-        resize_args = ['-resize', '240x135', '-background', 'black', '-gravity', 'center', '-extent', '240x135']
+        resize_args = rot_args + ['-resize', '96x160', '-background', 'black', '-gravity', 'center', '-extent', '96x160']
     else:  # stretch
-        resize_args = ['-resize', '240x135!']
+        resize_args = rot_args + ['-resize', '96x160!']
 
     cmd = ['magick', filepath, '-coalesce'] + resize_args + ['-depth', '8', 'rgba:-']
     res = subprocess.run(cmd, capture_output=True, check=True)
     raw_rgba = res.stdout
 
-    bytes_per_frame = 240 * 135 * 4  # 129,600
+    bytes_per_frame = 96 * 160 * 4  # 61,440 bytes
     total_frames = len(raw_rgba) // bytes_per_frame
     if total_frames == 0:
         raise ValueError(f"No frames could be extracted from {filepath}")
@@ -101,22 +102,25 @@ def convert_image_magick(filepath: str, fit: str = 'cover', max_frames: int = 10
     rgb565_frames = []
     for i in range(total_frames):
         chunk = raw_rgba[i * bytes_per_frame : (i + 1) * bytes_per_frame]
-        rgb565 = rgba_pixels_to_rgb565(chunk, 240, 135)
+        rgb565 = rgba_pixels_to_rgb565(chunk, 96, 160)
         rgb565_frames.append(rgb565)
 
     return rgb565_frames, delay_ms
 
 
-def convert_image_sips(filepath: str) -> List[bytes]:
-    """Fallback static image converter using macOS built-in sips tool."""
+def convert_image_sips(filepath: str, rotate: int = 0) -> List[bytes]:
+    """Fallback static image converter using macOS built-in sips tool (96x160)."""
     import tempfile
     with tempfile.NamedTemporaryFile(suffix='.bmp', delete=False) as tmp:
         tmp_bmp = tmp.name
 
     try:
-        # Resize to 240x135
-        subprocess.run(['/usr/bin/sips', '-z', '135', '240', '-s', 'format', 'bmp', filepath, '--out', tmp_bmp],
-                       check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        # Resize to 96x160 (sips takes height width)
+        sips_cmd = ['/usr/bin/sips']
+        if rotate in (90, 180, 270):
+            sips_cmd += ['-r', str(rotate)]
+        sips_cmd += ['-z', '160', '96', '-s', 'format', 'bmp', filepath, '--out', tmp_bmp]
+        subprocess.run(sips_cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         with open(tmp_bmp, 'rb') as f:
             bmp_data = f.read()
 
@@ -144,7 +148,7 @@ def convert_image_sips(filepath: str) -> List[bytes]:
                 g = bmp_data[px_start + 1]
                 r = bmp_data[px_start + 2]
                 val = ((r >> 3) << 11) | ((g >> 2) << 5) | (b >> 3)
-                dst_idx = (y * w + x) * 2
+                dst_idx = (x * h + y) * 2
                 rgb565_out[dst_idx] = (val >> 8) & 0xFF
                 rgb565_out[dst_idx + 1] = val & 0xFF
 
@@ -160,17 +164,18 @@ def cmd_upload(args):
         print(f"Error: File not found: {filepath}")
         sys.exit(1)
 
-    print(f"Processing '{filepath}'...")
-    frames, detected_interval = convert_image_magick(filepath, fit=args.fit, max_frames=args.max_frames)
+    rotate = getattr(args, 'rotate', 0)
+    print(f"Processing '{filepath}' (target 96x160, rotate {rotate}°)...")
+    frames, detected_interval = convert_image_magick(filepath, fit=args.fit, max_frames=args.max_frames, rotate=rotate)
     if not frames:
         print("ImageMagick not found, falling back to macOS sips (static images only)...")
-        frames = convert_image_sips(filepath)
+        frames = convert_image_sips(filepath, rotate=rotate)
         detected_interval = 40
 
     interval = args.interval if args.interval is not None else detected_interval
     slot = args.slot
 
-    print(f"Extracted {len(frames)} frame(s) (240x135 RGB565).")
+    print(f"Extracted {len(frames)} frame(s) (96x160 RGB565).")
     print(f"Target: Slot {slot}, Interval: {interval}ms")
 
     dev = CidooABM066()
@@ -229,6 +234,8 @@ def main():
     p_upload.add_argument('--interval', type=int, default=None, help='Animation speed in ms (e.g. 25, 40, 50, 100)')
     p_upload.add_argument('--fit', choices=['cover', 'contain', 'stretch'], default='cover',
                           help='Aspect ratio scaling mode (default: cover)')
+    p_upload.add_argument('--rotate', type=int, choices=[0, 90, 180, 270], default=0,
+                          help='Rotate image clockwise in degrees (0, 90, 180, 270, default: 0)')
     p_upload.add_argument('--max-frames', type=int, default=80, help='Maximum frames to upload (default: 80)')
     p_upload.set_defaults(func=cmd_upload)
 

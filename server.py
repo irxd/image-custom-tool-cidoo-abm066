@@ -13,6 +13,7 @@ import base64
 import threading
 import mimetypes
 import traceback
+import webbrowser
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
 
@@ -199,7 +200,7 @@ class CidooAPIHandler(BaseHTTPRequestHandler):
 
         if 'application/octet-stream' in content_type:
             raw_bytes = self.rfile.read(content_len)
-            frame_size = CidooABM066.RAW_FRAME_SIZE  # 64800
+            frame_size = CidooABM066.RAW_FRAME_SIZE  # 30,720 (96x160 RGB565)
             if len(raw_bytes) % frame_size != 0:
                 self.send_json(400, {
                     "success": False,
@@ -311,14 +312,37 @@ class CidooAPIHandler(BaseHTTPRequestHandler):
             self.send_error(500, f"Error reading file: {e}")
 
 
-def run_server(port: int = 5000, host: str = '127.0.0.1'):
-    server_address = (host, port)
-    httpd = ThreadingHTTPServer(server_address, CidooAPIHandler)
-    print(f"==================================================")
-    print(f" CIDOO ABM066 LCD Web Server running at:")
-    print(f" http://{host}:{port}/")
-    print(f" Press Ctrl+C to stop.")
-    print(f"==================================================")
+def run_server(port: int = 8066, host: str = '127.0.0.1', auto_open: bool = True):
+    # Enable address reuse to avoid [Errno 48]
+    ThreadingHTTPServer.allow_reuse_address = True
+
+    httpd = None
+    active_port = port
+    for p in range(port, port + 20):
+        try:
+            httpd = ThreadingHTTPServer((host, p), CidooAPIHandler)
+            active_port = p
+            break
+        except OSError as e:
+            if e.errno == 48:  # Address already in use
+                continue
+            raise
+
+    if not httpd:
+        print(f"Error: Could not bind to any port between {port} and {port + 20}")
+        sys.exit(1)
+
+    url = f"http://{host}:{active_port}/"
+    print("==================================================")
+    print(" CIDOO ABM066 LCD Web Server running at:")
+    print(f" {url}")
+    print(" (Press Ctrl+C to stop the server)")
+    print("==================================================")
+
+    if auto_open:
+        # Launch browser 0.3s after the server is actively listening
+        threading.Timer(0.3, lambda: webbrowser.open(url)).start()
+
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
@@ -328,7 +352,9 @@ def run_server(port: int = 5000, host: str = '127.0.0.1'):
 
 
 if __name__ == '__main__':
-    port = 5000
-    if len(sys.argv) > 1 and sys.argv[1].isdigit():
-        port = int(sys.argv[1])
-    run_server(port)
+    port = 8066
+    auto_open = '--no-open' not in sys.argv
+    for arg in sys.argv[1:]:
+        if arg.isdigit():
+            port = int(arg)
+    run_server(port=port, auto_open=auto_open)

@@ -1,24 +1,25 @@
 # CIDOO ABM066 LCD Custom Tool for macOS
 
-Native macOS replacement for the Windows-only `Image Custom Tool 0703.exe`. This tool allows you to customize the 240×135 color LCD screen on your **CIDOO ABM066** mechanical keyboard directly from macOS, without needing a Windows machine or virtual machine.
+Native macOS replacement for the Windows-only `Image Custom Tool 0703.exe`. This tool allows you to customize the 96×160 color TFT-LCD screen on your **CIDOO ABM066** mechanical keyboard directly from macOS, without needing a Windows machine or virtual machine.
 
 ---
 
 ## ✨ Features
 
-- **Double-Click Web GUI**: Clean, dark-mode interface with a live 240×135 preview of your LCD screen.
+- **Double-Click Web GUI**: Clean, dark-mode interface with a live 96×160 portrait preview of your keyboard's LCD screen.
 - **Zero External Dependencies**: Built with native macOS `IOKit` / `CoreFoundation` via Python standard library `ctypes`.
 - **Full GIF & Image Support**: Supports animated GIFs, PNG, JPG, BMP, and WebP.
-- **Client-Side Frame Processing**: Fast frame extraction, resizing, and 16-bit Big-Endian RGB565 encoding.
+- **Client-Side Frame Processing**: Fast frame extraction, resizing, rotation, and 16-bit Big-Endian RGB565 encoding.
 - **Interactive Animation Controls**:
   - Play / Pause / Step through frames.
   - Frame timeline scrubber.
-  - Animation speed slider (25ms to 200ms) with presets (Fast, Smooth, Normal, Slow).
+  - Animation speed slider (20ms to 200ms) with presets (Fast, Smooth, Normal, Slow).
   - Frame limit selector (up to 80 frames recommended for flash memory).
-- **Aspect Ratio Fit Modes**:
-  - **Cover**: Fills the entire 240×135 screen, cropping excess evenly.
-  - **Contain**: Fits the whole image inside 240×135 with black letterbox bars.
-  - **Stretch**: Stretches directly to 240×135 pixels.
+- **Aspect Ratio Fit & Rotation Controls**:
+  - **Rotation**: 0°, 90° clockwise, 180°, or 270° clockwise to easily adapt landscape media to portrait.
+  - **Cover**: Fills the entire 96×160 screen, cropping excess evenly.
+  - **Contain**: Fits the whole image inside 96×160 with black letterbox bars.
+  - **Stretch**: Stretches directly to 96×160 pixels.
 - **Clock Synchronization**: One-click sync of your keyboard's LCD clock to current Mac local time.
 - **Dual Slot Support**: Upload to Slot 1 (Custom 1) or Slot 2 (Custom 2).
 - **Command Line Interface (CLI)**: For terminal users, automation, or shell scripting.
@@ -32,13 +33,13 @@ In macOS Finder, simply double-click:
 ```
 CIDOO ABM066 Tool.command
 ```
-This will start the local server and automatically open the tool in your default web browser (`http://127.0.0.1:5000`).
+This will start the local server and automatically open the tool in your default web browser (`http://127.0.0.1:8066`).
 
 ### Option 2: Run via Terminal
 ```bash
 python3 server.py
 ```
-Then open `http://127.0.0.1:5000` in Safari, Chrome, or any browser.
+Then open `http://127.0.0.1:8066` in Safari, Chrome, or any browser.
 
 ---
 
